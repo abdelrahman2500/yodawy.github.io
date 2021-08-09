@@ -1,23 +1,18 @@
 import logo from './logo.svg';
 import './App.scss';
+import { ContextProvider } from './context/Context';
+import { useState } from 'react';
+import Branches from './components/barnches/branches';
 
 function App() {
+
+const[lang, setLang]= useState(localStorage.getItem("lang"))
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ContextProvider>
+        <Branches />
+      </ContextProvider>
     </div>
   );
 }
