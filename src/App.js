@@ -1,17 +1,23 @@
-import logo from "./logo.svg";
 import "./App.scss";
-import { ContextProvider } from "./context/Context";
-import { useState } from "react";
+import { useContext } from "react";
+import { Context } from "./context/Context";
 import Navbar from "./components/navbar/Navbar";
 
 function App() {
-  const [lang, setLang] = useState(localStorage.getItem("lang"));
+  const context = useContext(Context);
 
   return (
-    <div className="App">
-      <ContextProvider>
-        <Navbar />
-      </ContextProvider>
+    <div className="text-capitalize">
+      {context.lang === "en" ? (
+        <div className="AppEn">
+          {/* hello english */}
+          <Navbar />
+        </div>
+      ) : (
+        <div className="AppAr" dir="rtl">
+          {/* hello arabic */}
+        </div>
+      )}
     </div>
   );
 }
