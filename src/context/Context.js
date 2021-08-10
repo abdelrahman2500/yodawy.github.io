@@ -20,7 +20,7 @@ export function ContextProvider(props) {
         fetch('http://localhost:3001/products')
             .then((response) => response.json())
             .then((productsData) => setProducts(productsData));
-    },[products])
+    },[])
 
     return(
         <Context.Provider value={{lang, changeLang, products}}>
