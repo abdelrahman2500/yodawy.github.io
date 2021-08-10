@@ -1,7 +1,6 @@
 import React from 'react'
-import './index.scss'
 
-export default function Home() {
+export default function HomeAr() {
     return (
         <div>
             {/* navbar */}
