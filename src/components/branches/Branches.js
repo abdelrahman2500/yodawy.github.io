@@ -8,21 +8,22 @@ export default function Branches() {
   const context = useContext(Context);
 
   useEffect(() => {
-    context.products.map((pro) =>
-      setBranches(branches.add(pro.categoryName.toUpperCase()))
-    );
+    context.products.map((pro) => setBranches(branches.add(pro.categoryName)));
     setmyArr([...branches]);
   }, [context.products]);
 
   console.log(myArr);
 
   return (
-    <div className="container">
-      <ul className="row justify-content-center">
+    <div className="container d-sm-none d-md-block">
+      <ul className="row justify-content-center list-unstyled">
         {myArr.map((x) => {
           return (
-            <li key={x} className="d-none d-md-block col-md-4 col-lg-auto mt-2">
-              <a href="https://www.yodawy.com/shop/" className="tt">
+            <li
+              key={x}
+              className="col-md-4 col-lg-auto my-2 text-uppercase fw-bold "
+            >
+              <a href="https://www.yodawy.com/shop/" className="hoverA">
                 <span>{x}</span>
               </a>
             </li>
