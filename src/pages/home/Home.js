@@ -1,28 +1,31 @@
-import React from 'react'
-import './index.scss'
+/** @format */
+
+import React from "react";
+import "./index.scss";
+import Branches from "../../components/branches/Branches";
 
 export default function Home() {
-    return (
-        <div>
-            {/* navbar */}
+  return (
+    <div>
+      {/* navbar */}
 
-            {/* barnches */}
+      {/* barnches */}
+      <Branches />
+      {/* header */}
 
-            {/* header */}
+      {/* Categories */}
 
-            {/* Categories */}
+      {/* Best Sellers */}
 
-            {/* Best Sellers */}
+      {/* Who We Are */}
 
-            {/* Who We Are */}
+      {/* about us component */}
 
-            {/* about us component */}
+      {/* Featured products */}
 
-            {/* Featured products */}
+      {/* Subscribe */}
 
-            {/* Subscribe */}
-
-            {/* footer */}
-        </div>
-    )
+      {/* footer */}
+    </div>
+  );
 }
