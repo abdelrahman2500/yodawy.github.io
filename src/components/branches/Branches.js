@@ -15,22 +15,25 @@ export default function Branches() {
   console.log(myArr);
 
   return (
-    <div className="container d-sm-none d-md-block">
-      <ul className="row justify-content-center list-unstyled">
-        {myArr.map((x) => {
-          return (
-            <li
-              key={x}
-              className="col-md-4 col-lg-auto my-2 text-uppercase fw-bold "
-            >
-              <a href="https://www.yodawy.com/shop/" className="hoverA">
-                <span>{x}</span>
-              </a>
-            </li>
-          );
-        })}
-      </ul>
+    <div className="branches">
+      <div className="container d-sm-none d-md-block">
+        <ul className="row justify-content-center list-unstyled">
+          {myArr.map((branch) => {
+            return (
+              <li
+                key={branch}
+                className="col-md-4 col-lg-auto my-2 text-uppercase fw-bold "
+              >
+                <a href="https://www.yodawy.com/shop/" className="hoverA">
+                  <span>{branch}</span>
+                </a>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
     </div>
+    
   );
 }
 
