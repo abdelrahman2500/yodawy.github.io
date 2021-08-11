@@ -15,7 +15,7 @@ export default function Branches(props) {
   console.log(myArr);
 
   return (
-    <div className={props.nothome == true ? "branches d-sm-none d-md-block my-3" : "branches border1 d-sm-none d-md-block my-3"} >
+    <div className={props.nothome == true ? "branches d-none d-md-block my-3" : "branches border1 d-none d-md-block my-3"} >
       <div className="container">
         <ul className="row justify-content-center list-unstyled mb-0">
           {myArr.map((branch) => {

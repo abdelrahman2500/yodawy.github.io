@@ -1,14 +1,12 @@
-/** @format */
-
-//import React, { Component } from "react";
-import { Button } from "bootstrap";
+import React from 'react'
 import "./index.scss";
-//import { NavLink, Link } from "react-router-dom";
+import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-const Navbar = (props) => {
+export default function Navbar(props) {
   return (
-    <>
-      <div className="top py-1">
+    <div className="main-navbar">
+      <div className={props.compo == false ? "d-none" : "top py-1 d-none d-md-block"}>
         <div className="container">
           <div className="row align-items-center">
             <div className="col-6 ">
@@ -20,7 +18,6 @@ const Navbar = (props) => {
               <span>
                 <i class="fab fa-facebook-f"></i>
               </span>
-
               <span>
                 <i class="fab fa-instagram"></i>
               </span>
@@ -37,10 +34,52 @@ const Navbar = (props) => {
           </div>
         </div>
       </div>
-      <div className="middle fw-bold p-0">
-        
+      <div className="middle fw-bold p-0 d-none d-md-block ">
+        <nav className="navbar navbar-expand-lg navbar-dark">
+          <div className="container">
+            <Link className={props.compo == true ? "d-none" : "navbar-brand"} to="/">
+              <div className="box">
+                <img src={"/images/logo/Yodawylogo.png"} />
+              </div>
+            </Link>
+            <button className="navbar-toggler m-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span className="navbar-toggler-icon"></span>
+            </button>
+            <div className="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul className="navbar-nav m-auto mb-2 mb-lg-0">
+                <li className="nav-item">
+                  <NavLink className="nav-link" aria-current="page" to="/shop">shop</NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink className="nav-link" to="/pharamcies">For pharmacies</NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink className="nav-link" to="/insurers">For Insurers</NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink className="nav-link" to="/doctors">For doctors</NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink className="nav-link" to="/about">about us</NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink className="nav-link" to="/blog">blog</NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink className="nav-link" to="/contact">contact</NavLink>
+                </li>
+                <button
+                  className={props.compo == true ? "d-none": "btn btn-light"}
+                  onClick={() => localStorage.setItem("lang", "ar")}
+                >
+                العربية
+              </button>
+              </ul>
+            </div>
+          </div>
+        </nav>
       </div>
-      <div className="search">
+      <div  className={props.compo == false ? "d-none" :"search"}>
         <div className="container">
           <div className="row">
             <div className="col-3">
@@ -65,66 +104,6 @@ const Navbar = (props) => {
           </div>
         </div>
       </div>
-    </>
-  );
-};
-
-export default Navbar;
-
-{
-  /* <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-
-<div class="container-fluid">
-
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav m-auto">
-      <li class="nav-item">
-        <a class="nav-link " aria-current="page" href="#">
-          Shop
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">
-          For Pharmacies
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">
-          For Insurers
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">
-          For Doctors
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">
-          About Us
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">
-          Blog
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">
-          Contact
-        </a>
-      </li>
-      {/* <li class="nav-item">
-      <a
-        class="nav-link disabled"
-        href="#"
-        tabindex="-1"
-        aria-disabled="true"
-      >
-        Disabled
-      </a>
-    </li> */
+    </div>
+  )
 }
-//     </ul>
-//   </div>
-// </div>
-// </nav> */}
