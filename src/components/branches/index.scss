@@ -1,0 +1,22 @@
+/** @format */
+.branches{
+  border-top: 1px solid grey;
+  .hoverA {
+    color: #122357;
+    text-decoration: none;
+    transition: .3s;
+    &:hover {
+      color: orange;
+    }
+    span {
+      font-size: 12px;
+    }
+  }
+  
+}
+
+.border1{
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+}
+

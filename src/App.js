@@ -1,7 +1,10 @@
+/** @format */
+
 import "./App.scss";
 import { useContext } from "react";
 import { Context } from "./context/Context";
-import Navbar from "./components/navbar/Navbar";
+import Home from "./pages/home/Home";
+import HomeAr from "./pages/home/HomeAr";
 
 function App() {
   const context = useContext(Context);
@@ -11,11 +14,12 @@ function App() {
       {context.lang === "en" ? (
         <div className="AppEn">
           {/* hello english */}
-          <Navbar />
+          <Home />
         </div>
       ) : (
         <div className="AppAr" dir="rtl">
           {/* hello arabic */}
+          <HomeAr />
         </div>
       )}
     </div>

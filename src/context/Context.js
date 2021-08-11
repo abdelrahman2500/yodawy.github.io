@@ -1,30 +1,40 @@
-import { createContext, useEffect, useState } from "react";
+/** @format */
 
-export const Context = createContext()
+import { createContext, useEffect, useState } from "react";
+import data from "../data.json";
+
+export const Context = createContext();
 
 export function ContextProvider(props) {
-
-    const[products,setProducts] = useState([])
-    const[lang, setLang] = useState(localStorage.setItem("lang", localStorage.getItem("lang") === null ? "en" : localStorage.getItem("lang")))
-
-    const changeLang = function(){
-        localStorage.setItem("lang", localStorage.getItem("lang") === "ar" ? "en" : "ar")
-        setLang(localStorage.getItem("lang"))
-    }
-
-    useEffect(()=> {
-        setLang(localStorage.getItem("lang"))
-    },[lang, changeLang])
-
-    useEffect(()=> {
-        fetch('http://localhost:3001/products')
-            .then((response) => response.json())
-            .then((productsData) => setProducts(productsData));
-    },[])
-
-    return(
-        <Context.Provider value={{lang, changeLang, products}}>
-            {props.children}
-        </Context.Provider>
+  const [products, setProducts] = useState([]);
+  const [lang, setLang] = useState(
+    localStorage.setItem(
+      "lang",
+      localStorage.getItem("lang") === null
+        ? "en"
+        : localStorage.getItem("lang")
     )
+  );
+
+  const changeLang = function () {
+    localStorage.setItem(
+      "lang",
+      localStorage.getItem("lang") === "ar" ? "en" : "ar"
+    );
+    setLang(localStorage.getItem("lang"));
+  };
+
+  useEffect(() => {
+    setLang(localStorage.getItem("lang"));
+  }, [lang, changeLang]);
+
+  useEffect(() => {
+    setProducts(data.products);
+  });
+
+  return (
+    <Context.Provider value={{ lang, changeLang, products }}>
+      {props.children}
+    </Context.Provider>
+  );
 }
