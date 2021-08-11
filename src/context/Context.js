@@ -1,6 +1,9 @@
-import { createContext, useEffect, useState } from "react";
 
-export const Context = createContext()
+
+import { createContext, useEffect, useState } from "react";
+import data from "../data.json";
+
+export const Context = createContext();
 
 export function ContextProvider(props) {
 
@@ -16,11 +19,9 @@ export function ContextProvider(props) {
         setLang(localStorage.getItem("lang"))
     }, [lang, changeLang])
 
-    // useEffect(()=> {
-    //     fetch('http://localhost:3001/products')
-    //         .then((response) => response.json())
-    //         .then((productsData) => setProducts(productsData));
-    // },[products])
+    useEffect(() => {
+        setProducts(data.products);
+    });
 
     return (
         <Context.Provider value={{ lang, changeLang, products }}>
@@ -28,3 +29,10 @@ export function ContextProvider(props) {
         </Context.Provider>
     )
 }
+
+
+
+
+
+
+
