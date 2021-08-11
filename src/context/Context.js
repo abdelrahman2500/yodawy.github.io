@@ -1,6 +1,7 @@
 /** @format */
 
 import { createContext, useEffect, useState } from "react";
+import data from "../data.json";
 
 export const Context = createContext();
 
@@ -28,10 +29,8 @@ export function ContextProvider(props) {
   }, [lang, changeLang]);
 
   useEffect(() => {
-    fetch("http://localhost:3001/products")
-      .then((response) => response.json())
-      .then((productsData) => setProducts(productsData));
-  }, []);
+    setProducts(data.products);
+  });
 
   return (
     <Context.Provider value={{ lang, changeLang, products }}>
