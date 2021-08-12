@@ -2,13 +2,13 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Context } from "../../context/Context";
 import "./index.scss";
-export default function Brands() {
+export default function BrandsAr() {
   const [brands, setBrands] = useState(new Set());
   const [myArr, setmyArr] = useState([]);
   const context = useContext(Context);
 
   useEffect(() => {
-    context.products.map((pro) => setBrands(brands.add(pro.brand)));
+    context.products.map((pro) => setBrands(brands.add(pro.brandAr)));
     setmyArr([...brands]);
   }, [context.products]);
 

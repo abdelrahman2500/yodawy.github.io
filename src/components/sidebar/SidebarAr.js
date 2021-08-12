@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import BrandsAr from "../brands/BrandsAr";
 
 export default function SidebarAr() {
     return (
@@ -7,7 +8,7 @@ export default function SidebarAr() {
 
             {/* brands */}
 
-            
+            <BrandsAr/>
         </div>
     )
 }

@@ -1,4 +1,5 @@
 import React from 'react'
+import Brands from "../brands/Brands"
 
 export default function Sidebar() {
     return (
@@ -6,8 +7,8 @@ export default function Sidebar() {
             {/* categories */}
 
             {/* brands */}
-
             
+            <Brands/>
         </div>
     )
 }
