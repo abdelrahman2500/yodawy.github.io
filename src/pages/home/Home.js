@@ -7,6 +7,7 @@ import Navbar from "./../../components/navbar/Navbar";
 import Header from "../../components/header/Header";
 import WhoWeAre from "../../components/who-we-are/WhoWeAre";
 import AboutComp from "../../components/about-comp/AboutComp";
+import Subscribe from "../../components/subscribe/Subscribe";
 
 export default function Home() {
   return (
@@ -28,7 +29,7 @@ export default function Home() {
       {/* Featured products */}
 
       {/* Subscribe */}
-
+        <Subscribe />
       {/* footer */}
     </div>
   );
