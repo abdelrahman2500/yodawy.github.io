@@ -30,7 +30,7 @@ export default function NavbarAr(props) {
               </span>
               <button
                 className="btn btn-light"
-                onClick={() => localStorage.setItem("lang", "ar")}
+                onClick={() => localStorage.setItem("lang", "en")}
               >
                 English
               </button>
