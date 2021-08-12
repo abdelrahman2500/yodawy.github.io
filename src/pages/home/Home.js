@@ -13,7 +13,7 @@ export default function Home() {
       {/* barnches */}
         <Branches nothome={true} />
       {/* header */}
-    
+
       {/* Categories */}
 
       {/* Best Sellers */}
