@@ -8,8 +8,8 @@ export default function HeaderAr() {
     <div className="header my-4">
       <div className="mx-4 inner p-5">
         <div className="row">
-          <div className="d-none d-sm-block col-sm-7 align-self-center text-center">
-            <h1 className="mb-5">يُداوي: دليلك للصحة والجمال</h1>
+          <div className="d-none d-sm-block col-sm-7 align-self-center text-center py-5">
+            <h2 className="mb-4 h1">يُداوي: دليلك للصحة والجمال</h2>
             <p>
               استمتع بتجربة تسوق سهلة مع آلاف منتجات العناية الشخصية بتوصيل فوري
               إلى باب المنزل.

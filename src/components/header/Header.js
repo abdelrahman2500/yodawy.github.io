@@ -9,7 +9,9 @@ export default function Header() {
       <div className="mx-4 inner p-5">
         <div className="row">
           <div className="d-none d-sm-block col-sm-7 align-self-center text-center">
-            <h1 className="mb-5">Yodawy: Your Guide To Health & Wellbeing</h1>
+            <h2 className="mb-4 h1">
+              Yodawy: Your Guide To Health & Wellbeing
+            </h2>
             <p>
               Browse thousands of products and healthcare essentials and enjoy a
               seamless checkout experience with instant delivery. Exclusive
