@@ -1,75 +1,109 @@
-/** @format */
-
-//import React, { Component } from "react";
+import React from 'react'
 import "./index.scss";
-//import { NavLink, Link } from "react-router-dom";
+import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-const Navbar = (props) => {
+export default function Navbar(props) {
   return (
-    <>
-      <div className="row" id="div1">
-        <div className="col-9">
-          <span>need help? 1500</span>
-        </div>
-        <div className="col-3">
-          <span>
-            <i class="fab fa-facebook-f"></i>
-          </span>
-        </div>
-      </div>
-
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav m-auto">
-              <li class="nav-item">
-                <img src={"/images/logo/Yodawy.jpeg"} />
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">
-                  Home
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  Features
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  Pricing
-                </a>
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link disabled"
-                  href="#"
-                  tabindex="-1"
-                  aria-disabled="true"
-                >
-                  Disabled
-                </a>
-              </li>
-            </ul>
+    <div className="main-navbar">
+      <div className={props.compo == false ? "d-none" : "top py-1 d-none d-md-block"}>
+        <div className="container">
+          <div className="row align-items-center">
+            <div className="col-6 ">
+              <span className="first-span">
+                need help? <strong>15005</strong>{" "}
+              </span>
+            </div>
+            <div className="col-6 text-end icons">
+              <span>
+                <i class="fab fa-facebook-f"></i>
+              </span>
+              <span>
+                <i class="fab fa-instagram"></i>
+              </span>
+              <span>
+                <i class="fab fa-linkedin-in"></i>
+              </span>
+              <button
+                className="btn btn-light"
+                onClick={() => localStorage.setItem("lang", "ar")}
+              >
+                العربية
+              </button>
+            </div>
           </div>
         </div>
-      </nav>
-
-      <div id="div2">
-        <form className="d-flex">
-          <input
-            className="form-control me-2"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
-          />
-          <button className="btn btn-outline-success" type="submit">
-            Search
-          </button>
-        </form>
       </div>
-    </>
-  );
-};
-
-export default Navbar;
+      <div className="middle fw-bold p-0 d-none d-md-block ">
+        <nav className="navbar navbar-expand-lg navbar-dark">
+          <div className="container">
+            <Link className={props.compo == true ? "d-none" : "navbar-brand"} to="/">
+              <div className="box">
+                <img src={"/images/logo/Yodawylogo.png"} />
+              </div>
+            </Link>
+            <button className="navbar-toggler m-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span className="navbar-toggler-icon"></span>
+            </button>
+            <div className="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul className="navbar-nav m-auto mb-2 mb-lg-0">
+                <li className="nav-item">
+                  <NavLink className="nav-link" aria-current="page" to="/shop">shop</NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink className="nav-link" to="/pharamcies">For pharmacies</NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink className="nav-link" to="/insurers">For Insurers</NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink className="nav-link" to="/doctors">For doctors</NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink className="nav-link" to="/about">about us</NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink className="nav-link" to="/blog">blog</NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink className="nav-link" to="/contact">contact</NavLink>
+                </li>
+                <button
+                  className={props.compo == true ? "d-none": "btn btn-light"}
+                  onClick={() => localStorage.setItem("lang", "ar")}
+                >
+                العربية
+              </button>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div  className={props.compo == false ? "d-none" :"search"}>
+        <div className="container">
+          <div className="row">
+            <div className="col-3">
+              <div className="box">
+                <img src={"/images/logo/Yodawylogo.png"} />
+              </div>
+            </div>
+            <div className="col-9 search-input">
+              <div class="input-group mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Recipient's username"
+                  aria-label="Recipient's username"
+                  aria-describedby="basic-addon2"
+                />
+                <span class="input-group-text" id="basic-addon2">
+                  <i className="fas fa-search"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}

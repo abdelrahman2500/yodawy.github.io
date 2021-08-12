@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <div>
       {/* navbar */}
-      <Navbar />
+      <Navbar compo={true} />
       {/* barnches */}
       <Branches nothome={true} />
       {/* header */}

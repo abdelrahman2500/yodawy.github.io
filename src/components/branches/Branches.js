@@ -41,31 +41,3 @@ export default function Branches(props) {
     </div>
   );
 }
-
-//
-//
-//
-//
-// // for (let i = 0; i < context.products.length; i++) {
-//   var category = context.products[i].categoryName;
-
-//   if (category.includes("_")) {
-//     category = category.replace("_", " ");
-//   }
-//   if (category === "bath body") {
-//     category = "bath & body";
-//   }
-//   set1.add(category.toUpperCase());
-// }
-//
-//
-//
-//
-//                x  {brancheses}
-//   BEAUTY   CONTACT LENCES      DERMOCOSMETICS     HAIR CARE     BABY
-//   BATH & BODY    MEN CARE    ORAL CARE      PERSONAL CARE
-//
-//
-//
-//        url contact-lenses in yodawy -
-//  https://www.yodawy.com/shop/contact-lenses
