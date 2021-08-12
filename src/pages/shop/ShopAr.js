@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Shop() {
+export default function ShopAr() {
     return (
         <div className="shop">
             {/* navbar */}

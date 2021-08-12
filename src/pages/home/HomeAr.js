@@ -1,27 +1,32 @@
-import React from 'react'
+/** @format */
+
+import React from "react";
+import BranchesAr from "../../components/branches/BranchesAr";
+import HeaderAr from "../../components/header/HeaderAr";
 
 export default function HomeAr() {
-    return (
-        <div>
-            {/* navbar */}
+  return (
+    <div>
+      {/* navbar */}
 
-            {/* barnches */}
+      {/* barnches */}
+      <BranchesAr />
 
-            {/* header */}
+      {/* header */}
+      <HeaderAr />
+      {/* Categories */}
 
-            {/* Categories */}
+      {/* Best Sellers */}
 
-            {/* Best Sellers */}
+      {/* Who We Are */}
 
-            {/* Who We Are */}
+      {/* about us component */}
 
-            {/* about us component */}
+      {/* Featured products */}
 
-            {/* Featured products */}
+      {/* Subscribe */}
 
-            {/* Subscribe */}
-
-            {/* footer */}
-        </div>
-    )
+      {/* footer */}
+    </div>
+  );
 }
