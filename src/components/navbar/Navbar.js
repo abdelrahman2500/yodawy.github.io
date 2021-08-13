@@ -2,7 +2,7 @@ import React from "react";
 import "./index.scss";
 import { NavLink } from "react-router-dom";
 import { Link } from "react-router-dom";
-
+import Contact from "../../pages/contact/Contact";
 
 export default function Navbar(props) {
   return (
@@ -29,20 +29,31 @@ export default function Navbar(props) {
               <span>
                 <i class="fab fa-linkedin-in"></i>
               </span>
-            
+
               <button
                 className="btn btn-light"
                 onClick={() => localStorage.setItem("lang", "ar")}
               >
                 العربية
               </button>
-              
             </div>
           </div>
         </div>
       </div>
-      <div className={props.compo==false?"middle fw-bold p-0 fixed-top ":"middle fw-bold p-0 d-none d-md-block "}>
-        <nav className={props.compo==false?"navbar navbar-expand-lg navbar-dark bg-transparent":"navbar navbar-expand-lg navbar-dark"}>
+      <div
+        className={
+          props.compo == false
+            ? "middle fw-bold p-0 fixed-top "
+            : "middle fw-bold p-0 d-none d-md-block "
+        }
+      >
+        <nav
+          className={
+            props.compo == false
+              ? "navbar navbar-expand-lg navbar-dark bg-transparent"
+              : "navbar navbar-expand-lg navbar-dark"
+          }
+        >
           <div className="container">
             <Link
               className={props.compo == true ? "d-none" : "navbar-brand"}
@@ -99,7 +110,11 @@ export default function Navbar(props) {
                   </NavLink>
                 </li>
                 <li className="nav-item">
-                  <NavLink className="nav-link" to="/contact">
+                  <NavLink
+                    className="nav-link"
+                    
+                    to="/contact"
+                  >
                     contact
                   </NavLink>
                 </li>
