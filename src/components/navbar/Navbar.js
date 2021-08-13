@@ -137,7 +137,9 @@ export default function Navbar(props) {
           <div className="row align-items-center ">
             <div className="col-3">
               <div className="box  m-lg-4">
-                <img src={"/images/logo/Yodawylogo.png"} />
+                <Link to="/">
+                  <img src={"/images/logo/Yodawylogo.png"} />
+                </Link>
               </div>
             </div>
             <div className="col-9 search-input ">
