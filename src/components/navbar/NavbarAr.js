@@ -3,10 +3,9 @@ import "./index.scss";
 import { NavLink } from "react-router-dom";
 import { Link } from "react-router-dom";
 
-
-export default function Navbar(props) {
+export default function NavbarAr(props) {
   return (
-    <div className="main-navbar">
+    <div className="main-navbar ar-style">
       <div
         className={
           props.compo == false ? "d-none" : "top py-1 d-none d-md-block"
@@ -16,10 +15,10 @@ export default function Navbar(props) {
           <div className="row align-items-center">
             <div className="col-6 ">
               <span className="first-span">
-                need help? <strong>15005</strong>{" "}
+                هل تريد المساعدة ؟ <strong>15005</strong>{" "}
               </span>
             </div>
-            <div className="col-6 text-end icons">
+            <div className="col-6 text-start icons">
               <span>
                 <i class="fab fa-facebook-f"></i>
               </span>
@@ -29,14 +28,12 @@ export default function Navbar(props) {
               <span>
                 <i class="fab fa-linkedin-in"></i>
               </span>
-            
               <button
                 className="btn btn-light"
-                onClick={() => localStorage.setItem("lang", "ar")}
+                onClick={() => localStorage.setItem("lang", "en")}
               >
-                العربية
+                English
               </button>
-              
             </div>
           </div>
         </div>
@@ -49,7 +46,7 @@ export default function Navbar(props) {
               to="/"
             >
               <div className="box">
-                <img src={"/images/logo/Yodawylogo.png"} />
+                <img src={"/images/logo/Yodawy-logo-ar.png"} />
               </div>
             </Link>
             <button
@@ -70,44 +67,44 @@ export default function Navbar(props) {
               <ul className="navbar-nav m-auto mb-2 mb-lg-0">
                 <li className="nav-item ">
                   <NavLink className="nav-link" aria-current="page" to="/shop">
-                    shop
+                    السوق
                   </NavLink>
                 </li>
                 <li className="nav-item">
                   <NavLink className="nav-link" to="/pharamcies">
-                    For pharmacies
+                    الصيدليات
                   </NavLink>
                 </li>
                 <li className="nav-item">
                   <NavLink className="nav-link" to="/insurers">
-                    For Insurers
+                    التأمين الصحى
                   </NavLink>
                 </li>
                 <li className="nav-item">
                   <NavLink className="nav-link" to="/doctors">
-                    For doctors
+                    الأطباء
                   </NavLink>
                 </li>
                 <li className="nav-item">
                   <NavLink className="nav-link" to="/about">
-                    about us
+                   عن يداوي
                   </NavLink>
                 </li>
                 <li className="nav-item">
                   <NavLink className="nav-link" to="/blog">
-                    blog
+                   المدونة
                   </NavLink>
                 </li>
                 <li className="nav-item">
                   <NavLink className="nav-link" to="/contact">
-                    contact
+                    تواصل معنا
                   </NavLink>
                 </li>
                 <button
                   className={props.compo == true ? "d-none" : "btn btn-light"}
                   onClick={() => localStorage.setItem("lang", "ar")}
                 >
-                  العربية
+                  English
                 </button>
               </ul>
             </div>
@@ -119,7 +116,7 @@ export default function Navbar(props) {
           <div className="row align-items-center ">
             <div className="col-3">
               <div className="box  m-lg-4">
-                <img src={"/images/logo/Yodawylogo.png"} />
+                <img src={"/images/logo/Yodawy-logo-ar.png"} />
               </div>
             </div>
             <div className="col-9 search-input ">
@@ -127,7 +124,7 @@ export default function Navbar(props) {
                 <input
                   type="text"
                   class="form-control"
-                  placeholder="Search For Products"
+                  placeholder="ابحث عن منتج"
                   aria-label="Recipient's username"
                   aria-describedby="basic-addon2"
                 />

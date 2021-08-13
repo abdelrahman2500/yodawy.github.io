@@ -1,27 +1,36 @@
-import React from 'react'
+/** @format */
+
+import React from "react";
+import AboutCompAr from "../../components/about-comp/AboutCompAr";
+import BranchesAr from "../../components/branches/BranchesAr";
+import HeaderAr from "../../components/header/HeaderAr";
+import NavbarAr from "../../components/navbar/NavbarAr";
+import SubscribeAr from "../../components/subscribe/SubscribeAr";
+import WhoWeAreAr from "../../components/who-we-are/WhoWeAreAr";
 
 export default function HomeAr() {
-    return (
-        <div>
-            {/* navbar */}
+  return (
+    <div>
+      {/* navbar */}
+      <NavbarAr compo={true} />
+      {/* barnches */}
+      <BranchesAr nothome={true} />
 
-            {/* barnches */}
+      {/* header */}
+      <HeaderAr />
+      {/* Categories */}
 
-            {/* header */}
+      {/* Best Sellers */}
 
-            {/* Categories */}
+      {/* Who We Are */}
+        <WhoWeAreAr />
+      {/* about us component */}
+        <AboutCompAr />
+      {/* Featured products */}
 
-            {/* Best Sellers */}
-
-            {/* Who We Are */}
-
-            {/* about us component */}
-
-            {/* Featured products */}
-
-            {/* Subscribe */}
-
-            {/* footer */}
-        </div>
-    )
+      {/* Subscribe */}
+        <SubscribeAr />
+      {/* footer */}
+    </div>
+  );
 }

@@ -1,11 +1,10 @@
 import React from 'react'
-import Navbar from '../../components/navbar/Navbar'
 
-export default function Shop() {
+export default function ShopAr() {
     return (
         <div className="shop">
             {/* navbar */}
-                <Navbar />
+
             {/* barnches */}
 
             {/* sidebar and products */}

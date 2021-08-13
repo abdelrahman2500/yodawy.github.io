@@ -1,0 +1,29 @@
+.about-comp{
+    .elem{
+        background-color: #dbebf8;
+        color:#12233f;
+        h2{
+            font-size: 2.5rem;
+        }
+        p{
+            font-size: 1rem;
+            font-weight: 500;
+        }
+        input{
+            background-color: #f59a2a;
+            color: #fff;
+            padding: 10px 40px;
+            border-radius: 10px;
+            font-size: 18px;
+            border: 1px solid #f59a2a;
+            &:hover{
+                background-color: transparent;
+            }
+        }
+        .box{
+            img{
+                
+            }
+        }
+    }
+}
