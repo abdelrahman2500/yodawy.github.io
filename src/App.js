@@ -6,6 +6,7 @@ import HomeAr from "./pages/home/HomeAr";
 import { Route, Switch } from "react-router-dom";
 import ForPharmacies from './pages/pharmacies/ForPharmacies';
 import ForDoctors from './pages/doctors/Doctors';
+import Contact from "./pages/contact/Contact";
 
 function App() {
   const context = useContext(Context);
@@ -35,7 +36,7 @@ function App() {
               <Home />
             </Route>
             <Route path="/contact" exact>
-              <Home />
+              <Contact />
             </Route>
           </Switch>
         </div>

@@ -32,20 +32,32 @@ export default function Navbar(props) {
               <span>
                 <i className="fab fa-linkedin-in"></i>
               </span>
-            
+
               <button
                 className="btn btn-light"
                 onClick={() => context.changeLang()}
               >
                 العربية
               </button>
-              
+
             </div>
           </div>
         </div>
       </div>
-      <div className={props.compo==false?"middle fw-bold p-0 fixed-top ":"middle fw-bold p-0 d-none d-md-block "}>
-        <nav className={props.compo==false?"navbar navbar-expand-lg navbar-dark bg-transparent":"navbar navbar-expand-lg navbar-dark"}>
+      <div
+        className={
+          props.compo === false
+            ? "middle fw-bold p-0 fixed-top "
+            : "middle fw-bold p-0 d-none d-md-block "
+        }
+      >
+        <nav
+          className={
+            props.compo === false
+              ? "navbar navbar-expand-lg navbar-dark bg-transparent"
+              : "navbar navbar-expand-lg navbar-dark"
+          }
+        >
           <div className="container">
             <Link
               className={props.compo == true ? "d-none" : "navbar-brand"}
@@ -102,7 +114,10 @@ export default function Navbar(props) {
                   </NavLink>
                 </li>
                 <li className="nav-item">
-                  <NavLink className="nav-link" to="/contact">
+                  <NavLink
+                    className="nav-link"
+                    to="/contact"
+                  >
                     contact
                   </NavLink>
                 </li>
