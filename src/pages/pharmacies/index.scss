@@ -1,5 +1,5 @@
 .caro{
-    // background-color: green;
+    color: white;
     height: 100vh;
     .carousel{
         .control-dots{
@@ -27,6 +27,16 @@
             display: none;
         }
     } 
+    h1{
+        font-size: 70px;font-weight: 900;line-height: 70px;
+    }
+    h2{
+        font-size: 32px;font-weight: 700;line-height: 32px;
+    }
+    p{
+        font-size: 22px;font-weight: 400;line-height: 26px;text-align: center;
+    }
+    
 }
 
 
