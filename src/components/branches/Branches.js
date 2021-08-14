@@ -1,6 +1,5 @@
 /** @format */
 import React, { useContext, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import { Context } from "../../context/Context";
 import "./index.scss";
 export default function Branches(props) {
@@ -12,6 +11,8 @@ export default function Branches(props) {
     context.products.map((pro) => setBranches(branches.add(pro.categoryName)));
     setmyArr([...branches]);
   }, [context.products]);
+
+  console.log(myArr);
 
   return (
     <div
@@ -29,9 +30,9 @@ export default function Branches(props) {
                 key={branch}
                 className="col-md-4 col-lg-auto my-2 text-uppercase fw-bold "
               >
-                <Link to="/shop" className="hoverA">
+                <a href="https://www.yodawy.com/shop/" className="hoverA">
                   <span>{branch}</span>
-                </Link>
+                </a>
               </li>
             );
           })}

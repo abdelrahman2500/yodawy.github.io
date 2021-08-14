@@ -1,14 +1,12 @@
 import React from 'react'
-import BranchesAr from '../../components/branches/BranchesAr'
-import NavbarAr from '../../components/navbar/NavbarAr'
 
 export default function ShopAr() {
     return (
         <div className="shop">
             {/* navbar */}
-                <NavbarAr compo={true} />
+
             {/* barnches */}
-                <BranchesAr nothome={false} />
+
             {/* sidebar and products */}
             <div className="container my-3">
                 <div className="row">

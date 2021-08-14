@@ -1,10 +1,5 @@
-import React, { useContext, useEffect, useState } from 'react'
-import Branches from '../../components/branches/Branches'
+import React from 'react'
 import Navbar from '../../components/navbar/Navbar'
-import Sidebar from '../../components/sidebar/Sidebar';
-import { Context } from './../../context/Context';
-
-import './index.scss'
 
 export default function Shop() {
     const context = useContext(Context)
@@ -23,22 +18,21 @@ export default function Shop() {
         setProducts(context.products)
     },[context.products])
 
-
-
     return (
         <div className="shop">
             {/* navbar */}
-                <Navbar compo={true} />
+                <Navbar />
             {/* barnches */}
-                <Branches nothome={false} />
+
             {/* sidebar and products */}
             <div className="container my-3">
                 <div className="row">
-                    <div className="d-none d-sm-block col-3">
+                    <div className="d-none d-md-block col-3">
                         {/* sidebar */}
-                        <Sidebar />
+
+                        
                     </div>
-                    <div className="col-12 col-sm-8">
+                    <div className="col-8">
                         {/* products */}
                         <div className="filter border p-2 bg-light">
                             <div className="container">

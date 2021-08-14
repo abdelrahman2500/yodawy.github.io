@@ -1,7 +1,9 @@
-/** @format */
-
-import React from "react";
+import React from 'react'
 
 export default function Filter() {
-  return <div className="filter"></div>;
+    return (
+        <div className="filter">
+            
+        </div>
+    )
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
+import "./index.scss";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
@@ -9,8 +9,6 @@ import "../node_modules/@fortawesome/fontawesome-free/css/all.css";
 import "../node_modules/@fortawesome/fontawesome-free/js/all";
 import { ContextProvider } from "./context/Context";
 import { BrowserRouter as Router } from "react-router-dom";
-
-
 
 ReactDOM.render(
   <React.StrictMode>
