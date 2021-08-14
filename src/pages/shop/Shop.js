@@ -5,38 +5,32 @@ import Sidebar from '../../components/sidebar/Sidebar';
 import { Context } from './../../context/Context';
 
 import './index.scss'
+import Footer from './../../components/footer/Footer';
 
 export default function Shop() {
     const context = useContext(Context)
-    const[products, setProducts] = useState([])
-    const[show, setShow] = useState(localStorage.setItem("show-style", localStorage.getItem("show-style") === null ? 4 : localStorage.getItem("show-style")))
+    const [products, setProducts] = useState([])
+    const [show, setShow] = useState(localStorage.setItem("show-style", localStorage.getItem("show-style") === null ? 4 : localStorage.getItem("show-style")))
 
-    function showStyle3(){
-        setShow(localStorage.setItem("show-style",4))
-    }
-    function showStyle2(){
-        setShow(localStorage.setItem("show-style",6))
-    }
-    function showStyle1(){
-        setShow(localStorage.setItem("show-style",12))
+
+    function showStyle(col) {
+        setShow(localStorage.setItem("show-style", col))
     }
 
-    useEffect(()=>{
+    useEffect(() => {
         setShow(localStorage.getItem("show-style"))
-    },[show])
+    }, [show])
 
-    useEffect(()=>{
+    useEffect(() => {
         setProducts(context.products)
-    },[context.products])
-
-
+    }, [context.products])
 
     return (
         <div className="shop">
             {/* navbar */}
-                <Navbar compo={true} />
+            <Navbar compo={true} />
             {/* barnches */}
-                <Branches nothome={false} />
+            <Branches nothome={false} />
             {/* sidebar and products */}
             <div className="container my-3">
                 <div className="row">
@@ -51,13 +45,13 @@ export default function Shop() {
                                 <div className="row">
                                     <div className="d-none d-md-block col-5">
                                         <div className="icons">
-                                            <button className="btn" onClick={()=> showStyle1()}>
+                                            <button className="btn" onClick={() => showStyle(12)}>
                                                 <i class="fas fa-bars" ></i>
                                             </button>
-                                            <button className="btn" onClick={()=> showStyle2()}>
+                                            <button className="btn" onClick={() => showStyle(6)}>
                                                 <i class="fas fa-th-large"></i>
                                             </button>
-                                            <button className="btn" onClick={()=> showStyle3()}>
+                                            <button className="btn" onClick={() => showStyle(4)}>
                                                 <i class="fas fa-th" ></i>
                                             </button>
                                         </div>
@@ -69,7 +63,7 @@ export default function Shop() {
                         </div>
                         <div className="products mt-3">
                             <div className="row">
-                                {products.map(product => 
+                                {products.map(product =>
                                     <div className={`col-12 col-sm-${show}`} key={product.id}>
                                         {product.price}
                                     </div>
@@ -80,7 +74,7 @@ export default function Shop() {
                 </div>
             </div>
             {/* footer */}
-
+            <Footer />
 
         </div>
     )
