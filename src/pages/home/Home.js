@@ -5,6 +5,7 @@ import "./index.scss";
 import Branches from "../../components/branches/Branches";
 import Navbar from "./../../components/navbar/Navbar";
 import Header from "../../components/header/Header";
+import BestSeller from "../../components/bestSellers/BestSeller";
 import WhoWeAre from "../../components/who-we-are/WhoWeAre";
 import AboutComp from "../../components/about-comp/AboutComp";
 import Subscribe from "../../components/subscribe/Subscribe";
@@ -22,15 +23,15 @@ export default function Home() {
       {/* Categories */}
 
       {/* Best Sellers */}
-
+      <BestSeller />
       {/* Who We Are */}
-        <WhoWeAre />
+      <WhoWeAre />
       {/* about us component */}
-        <AboutComp />
+      <AboutComp />
       {/* Featured products */}
 
       {/* Subscribe */}
-        <Subscribe />
+      <Subscribe />
       {/* footer */}
       <Footer />
     </div>
