@@ -2,11 +2,13 @@
 
 import React from "react";
 import AboutCompAr from "../../components/about-comp/AboutCompAr";
+import BestSeller from "../../components/bestSellers/BestSeller";
 import BranchesAr from "../../components/branches/BranchesAr";
 import HeaderAr from "../../components/header/HeaderAr";
 import NavbarAr from "../../components/navbar/NavbarAr";
 import SubscribeAr from "../../components/subscribe/SubscribeAr";
 import WhoWeAreAr from "../../components/who-we-are/WhoWeAreAr";
+import BestSellerAr from "../../components/bestSellers/BestSellerAr";
 
 export default function HomeAr() {
   return (
@@ -21,15 +23,15 @@ export default function HomeAr() {
       {/* Categories */}
 
       {/* Best Sellers */}
-
+      <BestSellerAr />
       {/* Who We Are */}
-        <WhoWeAreAr />
+      <WhoWeAreAr />
       {/* about us component */}
-        <AboutCompAr />
+      <AboutCompAr />
       {/* Featured products */}
 
       {/* Subscribe */}
-        <SubscribeAr />
+      <SubscribeAr />
       {/* footer */}
     </div>
   );

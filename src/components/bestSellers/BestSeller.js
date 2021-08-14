@@ -95,7 +95,7 @@ export default function BestSeller() {
   };
   return (
     <div className="best_seller my-4">
-      <div className="container-fluid">
+      <div className="container">
         <div className="row my-3">
           <div className="text-center head">Best Sellers</div>
         </div>
