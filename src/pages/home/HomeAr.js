@@ -10,6 +10,7 @@ import NavbarAr from "../../components/navbar/NavbarAr";
 import SubscribeAr from "../../components/subscribe/SubscribeAr";
 import WhoWeAreAr from "../../components/who-we-are/WhoWeAreAr";
 import BestSellerAr from "../../components/bestSellers/BestSellerAr";
+import CategoriesAr from "../../components/categories/CategoriesAr";
 
 export default function HomeAr() {
   return (
@@ -22,7 +23,7 @@ export default function HomeAr() {
       {/* header */}
       <HeaderAr />
       {/* Categories */}
-
+      <CategoriesAr/>
       {/* Best Sellers */}
       <BestSellerAr />
       {/* Who We Are */}
