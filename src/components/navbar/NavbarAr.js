@@ -56,7 +56,7 @@ export default function NavbarAr(props) {
               to="/"
             >
               <div className="box">
-                <img src={"/images/logo/Yodawy-logo-ar.png"} />
+                <img src={"/images/logo/arabic-logo-300x137.png"} />
               </div>
             </Link>
             <button
