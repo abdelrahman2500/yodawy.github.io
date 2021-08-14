@@ -5,6 +5,9 @@ import Home from "./pages/home/Home";
 import HomeAr from "./pages/home/HomeAr";
 import { Route, Switch } from "react-router-dom";
 import ForPharmacies from './pages/pharmacies/ForPharmacies';
+import ForDoctors from './pages/doctors/Doctors';
+import ForInsurers from "./pages/insurers/insurers";
+import AboutUs from "./pages/about-us/AboutUs";
 
 function App() {
   const context = useContext(Context);
@@ -22,13 +25,13 @@ function App() {
               <ForPharmacies />
             </Route>
             <Route path="/insurers" exact>
-              <Home />
+              <ForInsurers />
             </Route>
             <Route path="/doctors" exact>
-              <Home />
+              <ForDoctors />
             </Route>
             <Route path="/about" exact>
-              <Home />
+              <AboutUs />
             </Route>
             <Route path="/blog" exact>
               <Home />
