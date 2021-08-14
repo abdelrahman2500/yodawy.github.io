@@ -2,19 +2,39 @@ import React from 'react'
 import "./index.scss"
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-export default function ForDoctors() {
+export default function ForInsurers() {
     return (
         <div className="caro">
             <Carousel axis='vertical' showArrows={false} emulateTouch={true} showThumbs={false}>
                 <div>
-                    <div style={{ height: '100vh', backgroundColor: "#09A4E9" }}>
+                    <div style={{ height: '100vh', backgroundColor: "#02408A" }}>
                         <div className="container h-100">
                             <div className="row h-100 align-items-center">
                                 <div className="col-12 text-center">
                                     <div className="row">
-                                        <h1 className="p-3">Revolutionizing Prescriptions</h1>
-                                        <h2 className="p-2">A new era of prescriptions- for empowered doctor</h2>
-                                        <p className="p-2">Yodawy’s Doctor App is an innovative digital solution that enables physicians to focus on their medical practice rather than administration. Through issuing pre-approved prescriptions, doctors and patients save valuable time with an effortlessly digitized process.</p>
+                                        <h1 className="p-3">Health Insurance: Re-imagined</h1>
+                                        <h2 className="p-2">Patient-centric experiences designed to make health insurance easier</h2>
+                                        <div className="row">
+                                            <div className="col-2 d-none d-sm-block p-5">
+                                                <img className="img-responsive" src="../images/logo/metlife.png" />
+                                            </div>
+                                            <div className="col-2 d-none d-sm-block p-5">
+                                                <img className="img-responsive" src="../images/logo/axa.png" />
+                                            </div>
+                                            <div className="col-2 d-none d-sm-block p-5">
+                                                <img className="img-responsive" src="../images/logo/mednet.png" />
+                                            </div>
+                                            <div className="col-2 d-none d-sm-block p-5">
+                                                <img className="img-responsive" src="../images/logo/amc.png" />
+                                            </div>
+                                            <div className="col-2 d-none d-sm-block p-5">
+                                                <img className="img-responsive" src="../images/logo/nextcare.png" />
+                                            </div>
+                                            <div className="col-2 d-none d-sm-block p-5">
+                                                <img className="img-responsive" src="../images/logo/unicare.png" />
+                                            </div>
+                                        </div>
+                                        <p className="p-2">Our digital infrastructure is designed to transform health insurance providers and empower their end-to-end process. Patients simply add their insurance cards and order their medications to be delivered at home. We worry about the rest.</p>
                                         <a id="scroll1" href="#div2"><i className="fas fa-long-arrow-alt-down">Scroll</i></a>
                                     </div>
                                 </div>
@@ -23,7 +43,7 @@ export default function ForDoctors() {
                     </div>
                 </div>
                 <div>
-                    <div className="row align-items-center" style={{ height: '100vh', backgroundColor: "#FF963C" }}>
+                    <div className="row align-items-center" style={{ height: '100vh', backgroundColor: "#09A4E9" }}>
                         <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
                             <div className="carousel-indicators mt-5">
                                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
@@ -38,7 +58,7 @@ export default function ForDoctors() {
                                         <div className="row h-100">
                                             <div className="col-12 text-center">
                                                 <div className="row">
-                                                    <h1 className="p-3">Get To Know The Doctor’s App</h1>
+                                                    <h1 className="p-3">It’s Never Been Easier</h1>
                                                     <p className="p-2">Scroll right to explore Yodawy’s doctor app features and get to know why this solution is a true revolution in the digital healthcare world.</p>
                                                 </div>
                                             </div>

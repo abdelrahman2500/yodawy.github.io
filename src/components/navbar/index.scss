@@ -1,4 +1,3 @@
-
 .top {
   background-color: #f0f2f5;
   font-size: 12px;
@@ -7,7 +6,6 @@
   .icons {
     span {
       margin-inline: 10px;
-
 
       i {
       }
@@ -18,28 +16,31 @@
 }
 .middle {
   font-size: 12px;
-  nav{
-    background-color: #12233F;
-    .box{
+  nav {
+    background-color: #12233f;
+    .box {
       width: 100%;
       height: 34px;
-      img{
+      img {
         width: 100%;
         height: 100%;
       }
     }
-    ul{
-      li{
+    ul {
+      li {
         margin-inline: 10px;
       }
     }
   }
-  
 }
 
 .search {
   .box {
+    width: 100%;
+    height: 34px;
     img {
+      width: 80%;
+      height: 100%;
     }
   }
   .search-input {
@@ -52,53 +53,18 @@
   }
 }
 
-// #div1 {
-//   background-color: lightgray;
-//   padding: 5px;
-// }
-
-// #div2 {
-//   margin-top: 30px;
-// }
-
-// #navbarNav {
-//   height: 50px;
-// }
-// img {
-//   // height: 50%;
-//   width: 100%;
-//   // margin-top: 30px;
-//   // margin-left: 50px;
-// }
-// #face,
-// #insta {
-//   margin-right: 15px;
-// }
-// #linked {
-//   margin-right: 50px;
-// }
-// #form {
-//   margin-right: 100px;
-//   width: 100%;
-// }
-// #search {
-//   border-radius: 20px;
-// }
-
-// #form {
-//   position: relative;
-//   padding: 0;
-//   margin: 0;
-// }
-// #search {
-//   height: 30px;
-//   margin-right: 0px;
-//   padding-left: 30px;
-// }
-// #icon {
-//   position: absolute;
-//   bottom: 8px;
-//   left: 10px;
-//   width: 15px;
-//   height: 15px;
-// }
+.ar-style {
+  .input-group
+    > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+      border-radius: 0.25rem;
+      margin-right: -1px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .input-group:not(.has-validation) > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu), .input-group:not(.has-validation) > .dropdown-toggle:nth-last-child(n+3) {
+    border-radius: 0.25rem;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    
+}
+}

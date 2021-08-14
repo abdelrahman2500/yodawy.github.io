@@ -1,0 +1,64 @@
+.who-we-are{
+    .top{
+        background-color: transparent;
+        h2{
+            color:#12233f;
+            font-size: 2.5rem;
+            margin-top: 15px;
+        }
+        .pp{
+            font-size: 1rem;
+            color:#5b6c8f;
+            margin-top: 15px;
+        }
+    }
+    .cont{
+        .box{
+            svg{
+                transition: .3s;
+                // &:hover{
+                //     filter: invert(1);
+                // }
+            }
+            h5{
+                color: #162946;
+            }
+            p{
+                font-size: .8rem;
+                color:#5b6c8f;
+                margin-top: 15px;
+            }
+        }
+
+    }
+}
+.ar {
+    .box{
+        
+        @media (min-width : "768px"){
+            &:not(:last-child){
+                border-left: 2px solid #e6eafd;
+            }
+        }
+        @media (max-width : "767px"){
+            &:not(:last-child){
+                border-bottom: 2px solid #e6eafd;
+            }
+        }
+    }
+}
+.en {
+    .box{
+        
+        @media (min-width : "768px"){
+            &:not(:last-child){
+                border-right: 2px solid #e6eafd;
+            }
+        }
+        @media (max-width : "767px"){
+            &:not(:last-child){
+                border-bottom: 2px solid #e6eafd;
+            }
+        }
+    }
+}

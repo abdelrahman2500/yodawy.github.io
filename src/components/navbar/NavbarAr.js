@@ -4,12 +4,12 @@ import { NavLink } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { Context } from './../../context/Context';
 
+export default function NavbarAr(props) {
 
-export default function Navbar(props) {
   const context = useContext(Context)
 
   return (
-    <div className="main-navbar">
+    <div className="main-navbar ar-style">
       <div
         className={
           props.compo == false ? "d-none" : "top py-1 d-none d-md-block"
@@ -19,10 +19,10 @@ export default function Navbar(props) {
           <div className="row align-items-center">
             <div className="col-6 ">
               <span className="first-span">
-                need help? <strong>15005</strong>{" "}
+                هل تريد المساعدة ؟ <strong>15005</strong>{" "}
               </span>
             </div>
-            <div className="col-6 text-end icons">
+            <div className="col-6 text-start icons">
               <span>
                 <i className="fab fa-facebook-f"></i>
               </span>
@@ -32,39 +32,25 @@ export default function Navbar(props) {
               <span>
                 <i className="fab fa-linkedin-in"></i>
               </span>
-
               <button
                 className="btn btn-light"
                 onClick={() => context.changeLang()}
               >
-                العربية
+                English
               </button>
-
             </div>
           </div>
         </div>
       </div>
-      <div
-        className={
-          props.compo === false
-            ? "middle fw-bold p-0 fixed-top "
-            : "middle fw-bold p-0 d-none d-md-block "
-        }
-      >
-        <nav
-          className={
-            props.compo === false
-              ? "navbar navbar-expand-lg navbar-dark bg-transparent"
-              : "navbar navbar-expand-lg navbar-dark"
-          }
-        >
+      <div className={props.compo==false?"middle fw-bold p-0 fixed-top ":"middle fw-bold p-0 d-none d-md-block "}>
+        <nav className={props.compo==false?"navbar navbar-expand-lg navbar-dark bg-transparent":"navbar navbar-expand-lg navbar-dark"}>
           <div className="container">
             <Link
               className={props.compo == true ? "d-none" : "navbar-brand"}
               to="/"
             >
               <div className="box">
-                <img src={"/images/logo/Yodawylogo.png"} />
+                <img src={"/images/logo/Yodawy-logo-ar.png"} />
               </div>
             </Link>
             <button
@@ -85,47 +71,44 @@ export default function Navbar(props) {
               <ul className="navbar-nav m-auto mb-2 mb-lg-0">
                 <li className="nav-item ">
                   <NavLink className="nav-link" aria-current="page" to="/shop">
-                    shop
+                    السوق
                   </NavLink>
                 </li>
                 <li className="nav-item">
                   <NavLink className="nav-link" to="/pharamcies">
-                    For pharmacies
+                    الصيدليات
                   </NavLink>
                 </li>
                 <li className="nav-item">
                   <NavLink className="nav-link" to="/insurers">
-                    For Insurers
+                    التأمين الصحى
                   </NavLink>
                 </li>
                 <li className="nav-item">
                   <NavLink className="nav-link" to="/doctors">
-                    For doctors
+                    الأطباء
                   </NavLink>
                 </li>
                 <li className="nav-item">
                   <NavLink className="nav-link" to="/about">
-                    about us
+                   عن يداوي
                   </NavLink>
                 </li>
                 <li className="nav-item">
                   <NavLink className="nav-link" to="/blog">
-                    blog
+                   المدونة
                   </NavLink>
                 </li>
                 <li className="nav-item">
-                  <NavLink
-                    className="nav-link"
-                    to="/contact"
-                  >
-                    contact
+                  <NavLink className="nav-link" to="/contact">
+                    تواصل معنا
                   </NavLink>
                 </li>
                 <button
                   className={props.compo == true ? "d-none" : "btn btn-light"}
                   onClick={() => context.changeLang()}
                 >
-                  العربية
+                  English
                 </button>
               </ul>
             </div>
@@ -138,7 +121,7 @@ export default function Navbar(props) {
             <div className="col-3">
               <div className="box  m-lg-4">
                 <Link to="/">
-                  <img src={"/images/logo/Yodawylogo.png"} />
+                  <img src={"/images/logo/Yodawy-logo-ar.png"} />
                 </Link>
               </div>
             </div>
@@ -147,7 +130,7 @@ export default function Navbar(props) {
                 <input
                   type="text"
                   className="form-control"
-                  placeholder="Search For Products"
+                  placeholder="ابحث عن منتج"
                   aria-label="Recipient's username"
                   aria-describedby="basic-addon2"
                 />
