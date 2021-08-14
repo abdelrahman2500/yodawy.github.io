@@ -3,6 +3,7 @@ import "./index.scss";
 
 export default function Categories(){
     return(
+        <div class="categories">
         <div class="container">
         <h1 class="header">Categories</h1>
         <div class="category__img-container">
@@ -66,6 +67,7 @@ export default function Categories(){
                 </div>
             </div>
         </div>
+    </div>
     </div>
     </div>
     );
