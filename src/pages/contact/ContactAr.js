@@ -2,10 +2,11 @@ import React from "react";
 import "./index.scss";
 import NavbarAr from "../../components/navbar/NavbarAr";
 import BranchesAr from "../../components/branches/BranchesAr";
+import FooterAr from './../../components/footer/FooterAr';
 
 export default function ContactAr() {
   return (
-    <>
+    <div className="ar">
       <NavbarAr compo={true} />
       <BranchesAr nothome={false} />
 
@@ -250,11 +251,11 @@ export default function ContactAr() {
               <div class="col-12 ">
                 <div class="form-check ">
                   <input
-                    class="form-check-input text-end"
+                    class="form-check-input"
                     type="checkbox"
                     id="gridCheck"
                   />
-                  <label class="form-check-label text-end" for="gridCheck">
+                  <label class="form-check-label" for="gridCheck">
                     أنا لست برنامج روبوت
                   </label>
                 </div>
@@ -268,6 +269,7 @@ export default function ContactAr() {
           </div>
         </div>
       </div>
-    </>
+      <FooterAr />
+    </div>
   );
 }
