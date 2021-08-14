@@ -7,6 +7,8 @@ import { Route, Switch } from "react-router-dom";
 import ForPharmacies from './pages/pharmacies/ForPharmacies';
 import ForDoctors from './pages/doctors/Doctors';
 import Contact from "./pages/contact/Contact";
+import Shop from './pages/shop/Shop';
+import ShopAr from './pages/shop/ShopAr';
 
 function App() {
   const context = useContext(Context);
@@ -19,6 +21,9 @@ function App() {
           <Switch>
             <Route path="/" exact>
               <Home />
+            </Route>
+            <Route path="/shop" exact>
+              <Shop />
             </Route>
             <Route path="/pharamcies" exact>
               <ForPharmacies />
@@ -46,6 +51,9 @@ function App() {
           <Switch>
             <Route path="/" exact>
               <HomeAr />
+            </Route>
+            <Route path="/shop" exact>
+              <ShopAr />
             </Route>
             <Route path="/pharamcies" exact>
               <ForPharmacies />

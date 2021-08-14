@@ -10,6 +10,8 @@ import "../node_modules/@fortawesome/fontawesome-free/js/all";
 import { ContextProvider } from "./context/Context";
 import { BrowserRouter as Router } from "react-router-dom";
 
+
+
 ReactDOM.render(
   <React.StrictMode>
     <ContextProvider>

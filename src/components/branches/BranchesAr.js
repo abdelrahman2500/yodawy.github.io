@@ -2,6 +2,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Context } from "../../context/Context";
 import "./index.scss";
+import { Link } from 'react-router-dom';
 export default function BranchesAr(props) {
   const [branches, setBranches] = useState(new Set());
   const [myArr, setmyArr] = useState([]);
@@ -27,9 +28,9 @@ export default function BranchesAr(props) {
           {myArr.map((branch) => {
             return (
               <li key={branch} className="col-md-4 col-lg-auto my-2 fw-bold ">
-                <a href="https://www.yodawy.com/shop/" className="hoverA">
-                  <span style={{ fontSize: "10px" }}>{branch}</span>
-                </a>
+                <Link to="/shop" className="hoverA">
+                  <span>{branch}</span>
+                </Link>
               </li>
             );
           })}

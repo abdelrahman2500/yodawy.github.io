@@ -24,13 +24,19 @@ export default function Navbar(props) {
             </div>
             <div className="col-6 text-end icons">
               <span>
-                <i className="fab fa-facebook-f"></i>
+                <a href="https://www.facebook.com/">
+                  <i className="fab fa-facebook-f"></i>
+                </a>
               </span>
               <span>
-                <i className="fab fa-instagram"></i>
+                <a href="https://www.instagram.com/">
+                  <i className="fab fa-instagram"></i>
+                </a>
               </span>
               <span>
-                <i className="fab fa-linkedin-in"></i>
+                <a href="https://www.linkedin.com/">
+                  <i className="fab fa-linkedin-in"></i>
+                </a>
               </span>
 
               <button

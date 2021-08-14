@@ -3,6 +3,7 @@
 import React from "react";
 import AboutCompAr from "../../components/about-comp/AboutCompAr";
 import BranchesAr from "../../components/branches/BranchesAr";
+import FooterAr from "../../components/footer/FooterAr";
 import HeaderAr from "../../components/header/HeaderAr";
 import NavbarAr from "../../components/navbar/NavbarAr";
 import SubscribeAr from "../../components/subscribe/SubscribeAr";
@@ -31,6 +32,7 @@ export default function HomeAr() {
       {/* Subscribe */}
         <SubscribeAr />
       {/* footer */}
+        <FooterAr />
     </div>
   );
 }
