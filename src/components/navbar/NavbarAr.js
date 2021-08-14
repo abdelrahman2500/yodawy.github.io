@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./index.scss";
 import { NavLink } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { Context } from './../../context/Context';
 
 export default function NavbarAr(props) {
+
+  const context = useContext(Context)
+
   return (
     <div className="main-navbar ar-style">
       <div
@@ -19,18 +23,24 @@ export default function NavbarAr(props) {
               </span>
             </div>
             <div className="col-6 text-start icons">
-              <span>
-                <i class="fab fa-facebook-f"></i>
+            <span>
+                <a href="https://www.facebook.com/">
+                  <i className="fab fa-facebook-f"></i>
+                </a>
               </span>
               <span>
-                <i class="fab fa-instagram"></i>
+                <a href="https://www.instagram.com/">
+                  <i className="fab fa-instagram"></i>
+                </a>
               </span>
               <span>
-                <i class="fab fa-linkedin-in"></i>
+                <a href="https://www.linkedin.com/">
+                  <i className="fab fa-linkedin-in"></i>
+                </a>
               </span>
               <button
                 className="btn btn-light"
-                onClick={() => localStorage.setItem("lang", "en")}
+                onClick={() => context.changeLang()}
               >
                 English
               </button>
@@ -102,7 +112,7 @@ export default function NavbarAr(props) {
                 </li>
                 <button
                   className={props.compo == true ? "d-none" : "btn btn-light"}
-                  onClick={() => localStorage.setItem("lang", "ar")}
+                  onClick={() => context.changeLang()}
                 >
                   English
                 </button>
@@ -116,19 +126,21 @@ export default function NavbarAr(props) {
           <div className="row align-items-center ">
             <div className="col-3">
               <div className="box  m-lg-4">
-                <img src={"/images/logo/Yodawy-logo-ar.png"} />
+                <Link to="/">
+                  <img src={"/images/logo/Yodawy-logo-ar.png"} />
+                </Link>
               </div>
             </div>
             <div className="col-9 search-input ">
-              <div class="input-group mb-0">
+              <div className="input-group mb-0">
                 <input
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   placeholder="ابحث عن منتج"
                   aria-label="Recipient's username"
                   aria-describedby="basic-addon2"
                 />
-                <span class="input-group-text" id="basic-addon2">
+                <span className="input-group-text" id="basic-addon2">
                   <i className="fas fa-search"></i>
                 </span>
               </div>

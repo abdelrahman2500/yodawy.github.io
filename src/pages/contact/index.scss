@@ -1,0 +1,78 @@
+.main-div {
+  .accordion-div {
+    .head1 {
+      font-size: 2.5rem;
+      //line-height: 40px;
+      font-weight: bold;
+    }
+    p {
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+    .accordion {
+      border: none;
+      .accordion-item {
+        margin-bottom: 10px;
+        border: none;
+      }
+      .accordion-button {
+        background-color: #f0f2f5;
+
+        border: none;
+        &:active,
+        &:focus {
+          outline: none;
+          box-shadow: none;
+        }
+      }
+
+      .accordion-button:not(.collapsed) {
+        color: #12233f;
+      }
+    }
+  }
+  .form-div {
+    .head2 {
+      font-weight: bold;
+      font-size: 2rem;
+
+      margin-bottom: 20px;
+    }
+    form {
+      .name,
+      .email,
+      .phone,
+      .message {
+        border-radius: 5px;
+        border: none;
+        background-color: #f0f2f5;
+        padding: 10px;
+      }
+      textarea {
+        border-radius: 5px;
+        border: none;
+        background-color: #f0f2f5;
+      }
+
+      button {
+        border-radius: 5px;
+        padding: 10px 35px;
+        background-color: #f59a2a;
+        border: 1px solid #f59a2a;
+        color: white;
+        transition: 0.3s;
+        &:hover {
+          background-color: white;
+          color: #f59a2a;
+        }
+      }
+    }
+  }
+}
+
+.ar{
+  .accordion-button::after{
+    margin-left: 0;
+    margin-right: auto;
+  }
+}
