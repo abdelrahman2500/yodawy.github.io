@@ -16,9 +16,9 @@ export default function BestSellerAr() {
           display: "block",
           background: "#18a2d3",
           width: "33px",
-          height: "40%",
+          height: "40px",
           textAlign: "center",
-          paddingTop: "37px",
+          paddingTop: "11px",
           borderRadius: "30%",
         }}
         onClick={onClick}
@@ -49,7 +49,7 @@ export default function BestSellerAr() {
   const settings = {
     slidesToShow: 1,
     slidesToScroll: 1,
-    dots: true,
+    dots: false,
     focusOnSelect: true,
     autoplay: true,
     autoplaySpeed: 5000,
@@ -95,7 +95,7 @@ export default function BestSellerAr() {
   };
   return (
     <div className="best_seller my-4">
-      <div className="container-fluid">
+      <div className="container">
         <div className="row my-3">
           <div className="text-center head">الأكثر مبيعا</div>
         </div>
