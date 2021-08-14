@@ -2,6 +2,7 @@ import React from "react";
 import "./index.scss";
 import Navbar from "../../components/navbar/Navbar";
 import Branches from "../../components/branches/Branches";
+import Footer from "../../components/footer/Footer";
 
 export default function Contact() {
   return (
@@ -267,6 +268,7 @@ export default function Contact() {
             </form>
           </div>
         </div>
+        <Footer />
       </div>
     </>
   );
