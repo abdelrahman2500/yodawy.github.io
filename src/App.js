@@ -12,6 +12,8 @@ import Contact from "./pages/contact/Contact";
 import ContactAr from "./pages/contact/ContactAr";
 import Shop from "./pages/shop/Shop";
 import ShopAr from "./pages/shop/ShopAr";
+import Blog from './pages/blog/Blog';
+import BlogAr from './pages/blog/BlogsAr';
 
 function App() {
   const context = useContext(Context);
@@ -41,7 +43,7 @@ function App() {
               <AboutUs />
             </Route>
             <Route path="/blog" exact>
-              <Home />
+              <Blog />
             </Route>
             <Route path="/contact" exact>
               <Contact />
@@ -71,7 +73,7 @@ function App() {
               <HomeAr />
             </Route>
             <Route path="/blog" exact>
-              <HomeAr />
+              <BlogAr />
             </Route>
             <Route path="/contact" exact>
               <ContactAr />

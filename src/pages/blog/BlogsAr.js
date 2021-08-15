@@ -1,16 +1,16 @@
 import React from 'react'
 
 import './index.scss'
-import Navbar from './../../components/navbar/Navbar';
-import Footer from './../../components/footer/Footer';
 import { Link } from 'react-router-dom';
-import Branches from './../../components/branches/Branches';
+import NavbarAr from './../../components/navbar/NavbarAr';
+import BranchesAr from './../../components/branches/BranchesAr';
+import FooterAr from './../../components/footer/FooterAr';
 
-export default function Blog() {
+export default function BlogAr() {
     return (
-        <div className="blog">
-        <Navbar  compo={true}/>
-        <Branches nothome={false} />
+        <div className="blog ar">
+        <NavbarAr  compo={true}/>
+        <BranchesAr nothome={false} />
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12 col-md-8 col-lg-8 ">
@@ -21,10 +21,10 @@ export default function Blog() {
                                         <img class="card-img-top" src="/images/blog/image/mid-section-woman-having-stomach-ache_23-2147948390.jpeg"/>
                                     </div> 
                                     <div class="card-body px-0">
-                                        <h6 class="card-title">March 22, 2021</h6>
+                                        <h6 class="card-title">مارس 18, 2021</h6>
                                         <div class="card-text">
-                                            <Link className="text-decoration-none" to="/blog"><h4>What are the symptoms of irritable bowel syndrome (IBS)?</h4></Link>
-                                            <p>The irritable bowel syndrome (IBS), also known as “irritable colon”, is a common long-term disorder that affects the large intestine with symptoms varied in severity and duration from one individual to the other.</p>
+                                            <Link className="text-decoration-none" to="/blog"><h4>إيه هي جرثومة المعدة؟ (الوقاية والأعراض والعلاج)</h4></Link>
+                                            <p>تُعتبر جرثومة المعدة من الأمراض الأكثر شيوعًا بين الناس، لدرجة أنّها بتصيب نحو نصف سكان العالم تقريبًا بحسب المكتبة الوطنية للطب في الولايات المتحدة، وبتسبب سلسلة من الأمراض في الجهاز الهضمي.</p>
                                         </div>
                                     </div>
                                     
@@ -37,10 +37,10 @@ export default function Blog() {
                                         <img class="card-img-top" src="/images/blog/image/diana-polekhina-ZSpkUThb7qk-unsplash-992x525.jpg" />
                                     </div>
                                         <div class="card-body px-0">
-                                        <h6 class="card-title">March 22, 2021</h6>
+                                        <h6 class="card-title">22 مارس 2021</h6>
                                         <div class="card-text">
-                                            <Link className="text-decoration-none" to="/blog"><h4>How many calories should I eat every day?</h4></Link>
-                                            <p>This is the question most people ask, wondering if this food or that is good for their diet or not. And calories in this regard are the amount of energy we get from the foods we consume.</p>
+                                            <Link className="text-decoration-none" to="/blog"><h4>كم عدد السعرات الحرارية التي يجب أن أتناولها كل يوم؟</h4></Link>
+                                            <p>هذا هو السؤال الذي يطرحه معظم الناس ، ويتساءلون ما إذا كان هذا الطعام أو ذاك مفيدًا لنظامهم الغذائي أم لا. والسعرات الحرارية في هذا الصدد هي كمية الطاقة التي نحصل عليها من الأطعمة التي نستهلكها.</p>
                                         </div>
                                     </div>
                                     
@@ -53,10 +53,10 @@ export default function Blog() {
                                         <img class="card-img-top" src="/images/blog/image/john-cameron-9xpBfMMcCj4-unsplash-992x525.jpg"/>
                                     </div>
                                         <div class="card-body px-0">
-                                        <h6 class="card-title">March 22, 2021</h6>
+                                        <h6 class="card-title">22 مارس 2021</h6>
                                         <div class="card-text">
-                                            <Link className="text-decoration-none" to="/blog"><h4>What’s the difference between Antigen and PCR tests for Coronavirus?</h4></Link>
-                                            <p>The spread of SARS-CoV-2 and its disease Covid-19 caused a lot of controversies and transformed the shape of modern life in many aspects.</p>
+                                            <Link className="text-decoration-none" to="/blog"><h4>ما الفرق بين اختبار المستضد واختبارات تفاعل البوليميراز المتسلسل لفيروس كورونا؟</h4></Link>
+                                            <p>تسبب انتشار السارس- CoV-2 ومرضه كوفيد-19 في الكثير من الجدل حول شكل الحياة الحديثة في العديد من الجوانب.</p>
                                         </div>
                                     </div>
                                     
@@ -68,39 +68,39 @@ export default function Blog() {
                     <div class=" col-sm-12 col-md-4 col-lg-4">
                         <div class="row d-none d-md-block">
                             <div class="category col-12 mb-4">
-                                <h3 className="fw-bold mb-3">Categories</h3>
+                                <h3 className="fw-bold mb-3">فئات</h3>
                                 <div className="row">
                                     <div className="col-12">
                                         <Link to='/blog'>
-                                            <p className="lead">Fitness & Lifestyle</p>
+                                            <p className="lead">اللياقة ونمط الحياة</p>
                                         </Link>
                                     </div>
                                     <div className="col-12">
                                         <Link to='/blog'>
-                                            <p className="lead">Health Advice</p>
+                                            <p className="lead">المشورة الصحية</p>
                                         </Link>
                                     </div>
                                     <div className="col-12">
                                         <Link to='/blog'>
-                                            <p className="lead">World After Covid-19</p>
+                                            <p className="lead">العالم بعد كوفيد-19</p>
                                         </Link>
                                     </div>
                                 </div>
                             </div>
                             <div class="tags col-12">
-                                <h3 className="fw-bold mb-3">Tags</h3>
+                                <h3 className="fw-bold mb-3">العلامات</h3>
                                 <div className="t text-uppercase">
-                                    <span className="m-1"><Link to="/blog">antigen</Link></span>
-                                    <span className="m-1"><Link to="/blog">calories</Link></span>
-                                    <span className="m-1"><Link to="/blog">oronavirus</Link></span>
-                                    <span className="m-1"><Link to="/blog">covid-19</Link></span>
-                                    <span className="m-1"><Link to="/blog">healthy advice</Link></span>
-                                    <span className="m-1"><Link to="/blog">healthy life</Link></span>
-                                    <span className="m-1"><Link to="/blog">ibs</Link></span>
-                                    <span className="m-1"><Link to="/blog">life style</Link></span>
-                                    <span className="m-1"><Link to="/blog">pcr</Link></span>
-                                    <span className="m-1"><Link to="/blog">symptoms</Link></span>
-                                    <span className="m-1"><Link to="/blog">fitness</Link></span>
+                                    <span className="m-1"><Link to="/blog">مولد المضاد</Link></span>
+                                    <span className="m-1"><Link to="/blog">سعرات حراريه</Link></span>
+                                    <span className="m-1"><Link to="/blog">فيروس كورونا</Link></span>
+                                    <span className="m-1"><Link to="/blog">كوفيد-19</Link></span>
+                                    <span className="m-1"><Link to="/blog">نصيحة صحية</Link></span>
+                                    <span className="m-1"><Link to="/blog">حياة صحية</Link></span>
+                                    <span className="m-1"><Link to="/blog">متلازمة القولون المتهيج</Link></span>
+                                    <span className="m-1"><Link to="/blog">أسلوب الحياة</Link></span>
+                                    <span className="m-1"><Link to="/blog">بى سى أر</Link></span>
+                                    <span className="m-1"><Link to="/blog">أعراض</Link></span>
+                                    <span className="m-1"><Link to="/blog">لياقة بدنية</Link></span>
                                 </div>
                             </div>
                         </div>
@@ -109,7 +109,7 @@ export default function Blog() {
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingOne">
                                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                            Categories
+                                        فئات
                                         </button>
                                     </h2>
                                     <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
@@ -118,17 +118,17 @@ export default function Blog() {
                                             <div className="row">
                                                     <div className="col-12">
                                                         <Link to='/blog'>
-                                                            <p className="lead">Fitness & Lifestyle</p>
+                                                            <p className="lead">لياقة بدنية ونمط حياة</p>
                                                         </Link>
                                                     </div>
                                                     <div className="col-12">
                                                         <Link to='/blog'>
-                                                            <p className="lead">Health Advice</p>
+                                                            <p className="lead">المشورة الصحية</p>
                                                         </Link>
                                                     </div>
                                                     <div className="col-12">
                                                         <Link to='/blog'>
-                                                            <p className="lead">World After Covid-19</p>
+                                                            <p className="lead">العالم بعد كوفيد -19</p>
                                                         </Link>
                                                     </div>
                                                 </div>
@@ -139,24 +139,24 @@ export default function Blog() {
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingTwo">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        Tags
+                                    العلامات
                                     </button>
                                     </h2>
                                     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
                                             <div class="tags col-12">
                                                 <div className="t text-uppercase">
-                                                    <span className="m-1"><Link to="/blog">antigen</Link></span>
-                                                    <span className="m-1"><Link to="/blog">calories</Link></span>
-                                                    <span className="m-1"><Link to="/blog">oronavirus</Link></span>
-                                                    <span className="m-1"><Link to="/blog">covid-19</Link></span>
-                                                    <span className="m-1"><Link to="/blog">healthy advice</Link></span>
-                                                    <span className="m-1"><Link to="/blog">healthy life</Link></span>
-                                                    <span className="m-1"><Link to="/blog">ibs</Link></span>
-                                                    <span className="m-1"><Link to="/blog">life style</Link></span>
-                                                    <span className="m-1"><Link to="/blog">pcr</Link></span>
-                                                    <span className="m-1"><Link to="/blog">symptoms</Link></span>
-                                                    <span className="m-1"><Link to="/blog">fitness</Link></span>
+                                                    <span className="m-1"><Link to="/blog">مولد المضاد</Link></span>
+                                                    <span className="m-1"><Link to="/blog">سعرات حراريه</Link></span>
+                                                    <span className="m-1"><Link to="/blog">فيروس كورونا</Link></span>
+                                                    <span className="m-1"><Link to="/blog">كوفيد-19</Link></span>
+                                                    <span className="m-1"><Link to="/blog">نصيحة صحية</Link></span>
+                                                    <span className="m-1"><Link to="/blog">حياة صحية</Link></span>
+                                                    <span className="m-1"><Link to="/blog">متلازمة القولون المتهيج</Link></span>
+                                                    <span className="m-1"><Link to="/blog">أسلوب الحياة</Link></span>
+                                                    <span className="m-1"><Link to="/blog">بى سى أر</Link></span>
+                                                    <span className="m-1"><Link to="/blog">أعراض</Link></span>
+                                                    <span className="m-1"><Link to="/blog">لياقة بدنية</Link></span>
                                                 </div>
                                             </div>
                                         </div>
@@ -168,7 +168,7 @@ export default function Blog() {
                 </div>
 
             </div>
-            <Footer />
+            <FooterAr />
         </div>
     )
 }
