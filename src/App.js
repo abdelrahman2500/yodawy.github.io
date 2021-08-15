@@ -4,9 +4,14 @@ import { Context } from "./context/Context";
 import Home from "./pages/home/Home";
 import HomeAr from "./pages/home/HomeAr";
 import { Route, Switch } from "react-router-dom";
-import ForPharmacies from './pages/pharmacies/ForPharmacies';
-import ForDoctors from './pages/doctors/Doctors';
+import ForInsurers from "./pages/insurers/insurers";
+import AboutUs from "./pages/about-us/AboutUs";
+import ForPharmacies from "./pages/pharmacies/ForPharmacies";
+import ForDoctors from "./pages/doctors/Doctors";
 import Contact from "./pages/contact/Contact";
+import ContactAr from "./pages/contact/ContactAr";
+import Shop from "./pages/shop/Shop";
+import ShopAr from "./pages/shop/ShopAr";
 
 function App() {
   const context = useContext(Context);
@@ -20,17 +25,20 @@ function App() {
             <Route path="/" exact>
               <Home />
             </Route>
+            <Route path="/shop" exact>
+              <Shop />
+            </Route>
             <Route path="/pharamcies" exact>
               <ForPharmacies />
             </Route>
             <Route path="/insurers" exact>
-              <Home />
+              <ForInsurers />
             </Route>
             <Route path="/doctors" exact>
               <ForDoctors />
             </Route>
             <Route path="/about" exact>
-              <Home />
+              <AboutUs />
             </Route>
             <Route path="/blog" exact>
               <Home />
@@ -47,6 +55,9 @@ function App() {
             <Route path="/" exact>
               <HomeAr />
             </Route>
+            <Route path="/shop" exact>
+              <ShopAr />
+            </Route>
             <Route path="/pharamcies" exact>
               <ForPharmacies />
             </Route>
@@ -63,7 +74,7 @@ function App() {
               <HomeAr />
             </Route>
             <Route path="/contact" exact>
-              <HomeAr />
+              <ContactAr />
             </Route>
           </Switch>
         </div>

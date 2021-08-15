@@ -23,14 +23,20 @@ export default function NavbarAr(props) {
               </span>
             </div>
             <div className="col-6 text-start icons">
-              <span>
-                <i className="fab fa-facebook-f"></i>
+            <span>
+                <a href="https://www.facebook.com/">
+                  <i className="fab fa-facebook-f"></i>
+                </a>
               </span>
               <span>
-                <i className="fab fa-instagram"></i>
+                <a href="https://www.instagram.com/">
+                  <i className="fab fa-instagram"></i>
+                </a>
               </span>
               <span>
-                <i className="fab fa-linkedin-in"></i>
+                <a href="https://www.linkedin.com/">
+                  <i className="fab fa-linkedin-in"></i>
+                </a>
               </span>
               <button
                 className="btn btn-light"
@@ -50,7 +56,7 @@ export default function NavbarAr(props) {
               to="/"
             >
               <div className="box">
-                <img src={"/images/logo/Yodawy-logo-ar.png"} />
+                <img src={"/images/logo/arabic-logo-300x137.png"} />
               </div>
             </Link>
             <button

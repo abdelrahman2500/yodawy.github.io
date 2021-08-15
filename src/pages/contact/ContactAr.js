@@ -1,36 +1,34 @@
 import React from "react";
 import "./index.scss";
-import Navbar from "../../components/navbar/Navbar";
-import Branches from "../../components/branches/Branches";
-import Footer from "../../components/footer/Footer";
+import NavbarAr from "../../components/navbar/NavbarAr";
+import BranchesAr from "../../components/branches/BranchesAr";
+import FooterAr from './../../components/footer/FooterAr';
 
-export default function Contact() {
+export default function ContactAr() {
   return (
-    <>
-      <Navbar compo={true} />
-      <Branches nothome={false} />
+    <div className="ar">
+      <NavbarAr compo={true} />
+      <BranchesAr nothome={false} />
 
       <div className="container-fluid ">
         <div className="row main-div p-4">
-          <div className="col-12 col-md-7 mb-4 accordion-div">
-            <h2 className="vc-custom-heading  head1">
-              Frequently Asked Questions
-            </h2>
+          <div className="col-12 col-md-7 mb-4 accordion-div text-end">
+            <h2 className="vc-custom-heading  head1">الأسئلة الشائعة</h2>
             <p className="lead">
-              Please read our FAQs before sending us a message.
+              .اقرأ الأسئلة الشائعة التالية وإجاباتها قبل التواصل معنا
             </p>
             <div className="accordion " id="accordionExample">
-              <div className="accordion-item ">
-                <h2 className="accordion-header" id="headingOne">
+              <div className="accordion-item  ">
+                <h2 className="accordion-header " id="headingOne">
                   <button
-                    className="accordion-button fw-bold "
+                    className="accordion-button fw-bold  "
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#collapseOne"
                     aria-expanded="true"
                     aria-controls="collapseOne"
                   >
-                    How Can I Order From Yodawy
+                    كيف أطلب من يُداوى ؟
                   </button>
                 </h2>
                 <div
@@ -40,8 +38,9 @@ export default function Contact() {
                   data-bs-parent="#accordionExample"
                 >
                   <div className="accordion-body">
-                    You just have to download the App, add your items, upload a
-                    prescription or product image and we’ll do the rest!
+                    كل ما عليك فعله هو تنزيل التطبيق ثم إضافة منتجات الصيدلية
+                    المرغوبة، أو تحميل صورة الروشتة أو صورة المنتج، وسيتكفّل
+                    .فريقنا بتوصيل الطلب إلى منزلك من أقرب صيدلية
                   </div>
                 </div>
               </div>
@@ -55,7 +54,7 @@ export default function Contact() {
                     aria-expanded="false"
                     aria-controls="collapseTwo"
                   >
-                    How can i place an insurance order ?
+                    كيف أطلب روشتات التأمين من يُداوى ؟
                   </button>
                 </h2>
                 <div
@@ -65,9 +64,9 @@ export default function Contact() {
                   data-bs-parent="#accordionExample"
                 >
                   <div className="accordion-body">
-                    If your insurance company is one of our partners, you can
-                    simply register with your card details, snap a picture of
-                    your prescription and place your order.
+                    إذا كانت شركة تأمينك من شركاء يُداوي، تستطيع بكل بساطة إدخال
+                    بيانات بطاقتك التأمينية على التطبيق، وتحميل صورة من الروشتة
+                    .لتقديم الطلب
                   </div>
                 </div>
               </div>
@@ -81,7 +80,7 @@ export default function Contact() {
                     aria-expanded="false"
                     aria-controls="collapseThree"
                   >
-                    What regions do you cover ?
+                    ما هى المناطق التى يُغطيها يُداوى ؟
                   </button>
                 </h2>
                 <div
@@ -91,12 +90,12 @@ export default function Contact() {
                   data-bs-parent="#accordionExample"
                 >
                   <div className="accordion-body">
-                    Yodawy covers nearly all of Egypt, you can place an order
-                    and we’ll deliver from the best-matching pharmacy near your
-                    geo-location. If we’re not covering your area, fill in the
-                    form beside or send us through our social media platforms
-                    and we’ll make sure we improve our coverage next time you
-                    order.
+                    يُغطّي يُداوي 28 محافظة في مصر. وبمجرد تقديم الطلب على
+                    التطبيق، يُرسله فريقنا إلى أقرب صيدلية مُعتمدة ليصلك في أسرع
+                    وقت. إذا لم تكن شبكة صيدليات يُداوي تُغطي منطقتك، فيُمكنك
+                    التواصل معنا عبر صفحاتنا على شبكات التواصل الاجتماعي أو ملء
+                    الطلب أسفل الصفحة، وسنعمل على ضمّ صيدليات أقرب لمنطقتك قبل
+                    .طلبك التالي
                   </div>
                 </div>
               </div>
@@ -110,7 +109,7 @@ export default function Contact() {
                     aria-expanded="false"
                     aria-controls="collapseFour"
                   >
-                    How much time does it take for my order to be delivered ?
+                    كم يستغرق توصيل الطلبات عبر يُداوى ؟
                   </button>
                 </h2>
                 <div
@@ -120,10 +119,9 @@ export default function Contact() {
                   data-bs-parent="#accordionExample"
                 >
                   <div className="accordion-body">
-                    We work hard on improving the delivery speed, orders
-                    delivery time may vary based on order components and their
-                    availability, we usually deliver in less than 45 to 60
-                    minutes in normal orders.
+                    يعمل فريقنا على تحسين سرعة التوصيل. وربما تختلف مواعيد تسليم
+                    الطلبات حسب محتويات الطلب وتوافرها. ويستغرق توصيل الطلبات في
+                    .المعتاد أقل من 45 إلى 60 دقيقة في المعتاد
                   </div>
                 </div>
               </div>
@@ -137,7 +135,7 @@ export default function Contact() {
                     aria-expanded="false"
                     aria-controls="collapseFive"
                   >
-                    I'm facing an issue with my order ?
+                    هل تواجهك مشكلة فى الطلب من يُداوى ؟
                   </button>
                 </h2>
                 <div
@@ -147,9 +145,9 @@ export default function Contact() {
                   data-bs-parent="#accordionExample"
                 >
                   <div className="accordion-body">
-                    You can contact us through our social media pages or the
-                    hotline 15005, and our team will make sure they have your
-                    issue solved.
+                    يمكنك التواصل معنا عبر صفحاتنا على شبكات التواصل الاجتماعي
+                    أو على الرقم الساخن 15005، وسيعمل فريقنا على حلها في أقرب
+                    .وقت
                   </div>
                 </div>
               </div>
@@ -163,7 +161,7 @@ export default function Contact() {
                     aria-expanded="false"
                     aria-controls="collapseSix"
                   >
-                    I didn't recieve a verification code ?
+                    لم يصلك رمز التحقق ؟
                   </button>
                 </h2>
                 <div
@@ -173,27 +171,26 @@ export default function Contact() {
                   data-bs-parent="#accordionExample"
                 >
                   <div className="accordion-body">
-                    To make sure you sign up with your real number, we’ll send
-                    you a verification code via SMS which you need to enter to
-                    sign up. If the SMS with the code does not arrive, you can
-                    reach out on our social media platforms (Facebook or
-                    Instagram) or send us an email at hello@yodawy.com with the
-                    registered number for the account and our team will look
-                    into your issue as soon as possible.
+                    لنضمن تسجيل حسابك برقم هاتفك الحقيقي، سنرسل لك رمز التحقق
+                    عبر رسالة نصية، ويجب عليك إدخاله للتسجيل. وإذا لم تصلك رسالة
+                    نصية بالرمز، فعليك التواصل معنا عبر صفحاتنا على شبكات
+                    التواصل الاجتماعي (فيسبوك وإنستغرام)، أو راسلنا عبر البريد
+                    الإلكتروني hello@yodawy.com برقمك الذي استخدمته للتسجيل،
+                    .وسيعمل فريقنا على حل مشكلتك في أقرب وقتٍ مُمكن
                   </div>
                 </div>
               </div>
-              <div className="accordion-item">
+              <div className="accordion-item ">
                 <h2 className="accordion-header" id="headingSeven">
                   <button
-                    className="accordion-button collapsed fw-bold"
+                    className="accordion-button collapsed fw-bold "
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#collapseSeven"
                     aria-expanded="false"
                     aria-controls="collapseSeven"
                   >
-                    I have a pharmacy and i want to join your network ?
+                    هل لديك صيدلية وترغب فى الانضمام إلى شبكة يُداوى ؟
                   </button>
                 </h2>
                 <div
@@ -203,73 +200,76 @@ export default function Contact() {
                   data-bs-parent="#accordionExample"
                 >
                   <div className="accordion-body">
-                    We’re always looking forward to growing our network, please
-                    leave your pharmacy and contact details in the Contact us
-                    form and we’ll reach out as soon as possible.
+                    يتطلّع يُداوي باستمرار إلى توسيع شبكة الصيدليات المعتمدة
+                    لتُغطّي جميع المناطق. اترك لنا بيانات صيدليتك ومعلومات
+                    التواصل معك باستخدام الطلب أسفل الصفحة، وسنتواصل معك في أسرع
+                    .وقتٍ ممكن
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div className="col-12 col-md-5  form-div">
-            <h2 className="head2">Fill up this form if you have any question</h2>
-            <form class="row g-3 form">
+          <div className="col-12 col-md-5  form-div text-end">
+            <h2 className="head2">
+              .املأ الطلب إذا كان لديك سؤال أو استفسار آخر
+            </h2>
+            <form class="row g-3 form ">
               <div class="col-12">
                 <input
                   type="text"
-                  class="form-control name"
+                  class="form-control name text-end"
                   id="inputAddress"
-                  placeholder="Name and Surname"
+                  placeholder="الاسم الاول والاخير"
                 />
               </div>
               <div class="col-md-12">
                 <input
                   type="email"
-                  class="form-control email"
+                  class="form-control email text-end"
                   id="inputEmail4"
-                  placeholder="Your E-mail"
+                  placeholder="بريدك الالكترونى"
                 />
               </div>
 
               <div class="col-12">
                 <input
                   type="text"
-                  class="form-control phone"
+                  class="form-control phone text-end"
                   id="inputAddress"
-                  placeholder="Phone"
+                  placeholder="رقم التليفون"
                 />
               </div>
               <div class="mb-3">
                 <textarea
-                  class="form-control message"
+                  class="form-control message text-end"
                   id="exampleFormControlTextarea1"
-                  placeholder="Message"
+                  placeholder="رسالة"
                   rows="3"
                 ></textarea>
               </div>
 
-              <div class="col-12">
-                <div class="form-check">
+              <div class="col-12 ">
+                <div class="form-check ">
                   <input
                     class="form-check-input"
                     type="checkbox"
                     id="gridCheck"
                   />
                   <label class="form-check-label" for="gridCheck">
-                    I'm not a robot
+                    أنا لست برنامج روبوت
                   </label>
                 </div>
               </div>
               <div class="col-12">
                 <button type="submit" class="btn fw-bold ">
-                  Send message
+                  أرسل
                 </button>
               </div>
             </form>
           </div>
         </div>
-        <Footer />
       </div>
-    </>
+      <FooterAr />
+    </div>
   );
 }

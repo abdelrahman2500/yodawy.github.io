@@ -6,8 +6,26 @@
   .icons {
     span {
       margin-inline: 10px;
-
-      i {
+      a{
+        color: #12233f;
+      }
+      .fa-facebook-f{
+        transition: .3s;
+        &:hover{
+          color: #1877f2;
+        }
+      }
+      .fa-instagram{
+        transition: .3s;
+        &:hover{
+          color: #833ab4;
+        }
+      }
+      .fa-linkedin-in{
+        transition: .3s;
+        &:hover{
+          color: #0077b5;
+        }
       }
       button {
       }

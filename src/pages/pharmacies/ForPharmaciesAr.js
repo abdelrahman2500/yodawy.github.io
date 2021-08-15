@@ -15,9 +15,9 @@ export default function ForPharmacies() {
                             <div className="row h-100 align-items-center">
                                 <div className="col-12">
                                     <div className="row justify-content-center">
-                                        <h1 className="col-10 p-1">Meet Your Growth Partner</h1>
-                                        <h2 className="col-10 p-1">Yodawy helps grow your business from day one</h2>
-                                        <p className="col-10 p-1 px-2">Grow your sales, gain exposure to customers beyond your usual zone and get instant access to exclusive rebate rates and products. Pharmacies can now process more orders through our dedicated portals that are designed for speed and agility.</p>
+                                        <h1 className="col-10 p-1">يُداوي… شريكك الجديد في النمو</h1>
+                                        <h2 className="col-10 p-1">يساعدك يُداوي على النمو سريعًا</h2>
+                                        <p className="col-10 p-1 px-2">يُمكنك الآن زيادة مبيعاتك، والوصول إلى مستهلكين أكبر داخل وخارج منطقتك الجغرافية، والاستفادة فورًا بعروض الخصومات والمنتجات الحصرية. وتستطيع الصيدليات استقبال المزيد من الطلبات عبر بوابة يُداوي المُصمّمة لتحقيق أقصى درجات السرعة والدقة</p>
                                     </div>
                                 </div>
                             </div>
@@ -30,9 +30,9 @@ export default function ForPharmacies() {
                             <div className="row h-100 align-items-center">
                                 <div className="col-12 text-center">
                                     <div className="row justify-content-center">
-                                        <h1 className="col-10 p-1">Grow Your Sales</h1>
-                                        <h2 className="col-10 p-1">Increased Traffic and Revenue</h2>
-                                        <p className="col-10 p-1 px-2">Yodawy’s pharmacy network enjoys increased order traffic to their channels via the Pharmacy and Partners Portal. The remarkable boost in sales and revenue encourages more than more 2,000 pharmacies in Egypt to consider Yodawy their digital gateway of choice.</p>
+                                        <h1 className="col-10 p-1">استمتع بزيادة في المبيعات</h1>
+                                        <h2 className="col-10 p-1">حركة طلبات وإيرادات متزايدة</h2>
+                                        <p className="col-10 p-1 px-2">تتمتّع شبكة صيدليات يُداوي بحركة طلبات متزايدة عبر بوابة الصيدليات والشركاء. الزيادة الملحوظة في المبيعات والإيرادات تجعل يُداوي الوجهة الرقمية المختارة لأكتر من 2000 صيدلية مرخصة في جميع أنحاء مصر</p>
                                     </div>
                                 </div>
                             </div>

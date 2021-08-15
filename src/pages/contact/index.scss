@@ -10,24 +10,23 @@
       margin-bottom: 20px;
     }
     .accordion {
+      border: none;
+      .accordion-item {
+        margin-bottom: 10px;
         border: none;
-        .accordion-item {
-            margin-bottom: 10px;
-            border: none;
-        }
+      }
       .accordion-button {
         background-color: #f0f2f5;
-          border: none;
+
+        border: none;
         &:active,
         &:focus {
           outline: none;
           box-shadow: none;
         }
-        
       }
+
       .accordion-button:not(.collapsed) {
-       
-        
         color: #12233f;
       }
     }
@@ -68,5 +67,12 @@
         }
       }
     }
+  }
+}
+
+.ar{
+  .accordion-button::after{
+    margin-left: 0;
+    margin-right: auto;
   }
 }
