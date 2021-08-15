@@ -34,11 +34,11 @@ export default function Shop() {
             {/* sidebar and products */}
             <div className="container my-3">
                 <div className="row">
-                    <div className="d-none d-sm-block col-3">
+                    <div className="d-none d-md-block col-3">
                         {/* sidebar */}
                         <Sidebar />
                     </div>
-                    <div className="col-12 col-sm-8">
+                    <div className="col-12 col-md-8">
                         {/* products */}
                         <div className="filter border p-2 bg-light">
                             <div className="container">
