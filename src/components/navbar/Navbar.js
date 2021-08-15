@@ -70,7 +70,7 @@ export default function Navbar(props) {
               to="/"
             >
               <div className="box">
-                <img src={"/images/logo/Yodawylogo.png"} />
+                <img src={"/images/logo/yodawy-logo-300x74.png"} />
               </div>
             </Link>
             <button
