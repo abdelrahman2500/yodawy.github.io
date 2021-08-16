@@ -63,7 +63,7 @@ export default function Product(props) {
           <div className="modal text-start fade" id={`exampleModal${product.id}`} tabIndex="-1" aria-labelledby={`exampleModal${product.id}Label`} aria-hidden="true">
             <div className="modal-dialog">
               <div className="modal-content">
-                <div className="modal-header">
+                <div className="modal-header ">
                   <h5 className="modal-title" id={`exampleModal${product.id}Label`}>{product.productName}</h5>
                   <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
@@ -111,7 +111,7 @@ export default function Product(props) {
         </div>
 
         <div className="my-0 py-1  border-top w-100 bottom">
-          <p className="my-2 mb-3">Price £{product.price}</p>
+          <p className="my-2 mb-3">Price {product.price}£</p>
           
 
           <button className="my-0 py-1">
