@@ -7,7 +7,7 @@ export default function Sidebar() {
             {/* categories */}
 
             {/* brands */}
-            <Brands/>
+            <Brands />
         </div>
     )
 }
