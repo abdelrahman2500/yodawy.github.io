@@ -29,7 +29,7 @@ export default function Branches(props) {
                 key={branch}
                 className="col-md-4 col-lg-auto my-2 text-uppercase fw-bold "
               >
-                <Link to="/shop" className="hoverA">
+                <Link to="/shop"  onClick={()=> context.setFilterd(context.products.filter(p => p.categoryName == branch))} className="hoverA">
                   <span>{branch}</span>
                 </Link>
               </li>

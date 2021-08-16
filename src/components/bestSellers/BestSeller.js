@@ -5,7 +5,13 @@ import "./index.scss";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useContext } from 'react';
+import { Context } from './../../context/Context';
+import { useState } from 'react';
 export default function BestSeller() {
+  const context = useContext(Context)
+  const[best,setBest] = useState(context.products.filter(pro => pro.id <= 14))
+
   function SampleNextArrow(props) {
     const { className, style, onClick } = props;
     return (
@@ -47,7 +53,7 @@ export default function BestSeller() {
   }
 
   const settings = {
-    slidesToShow: 1,
+    slidesToShow: 5,
     slidesToScroll: 1,
     dots: false,
     focusOnSelect: true,
@@ -98,16 +104,17 @@ export default function BestSeller() {
     <div className="best_seller my-4">
       <div className="container">
         <div className="row my-3">
-          <div className="text-center head">Best Sellers</div>
+          <h2 className="text-center h1 fw-bold head">Best Sellers</h2>
         </div>
         <div className="main mx-3 row justify-content-center justify-content-md-start">
           <Slider {...settings} className="mb-4" style={{}}>
             {/*  */}
-            <div className="card pt-4 mb-3">
+            {best.map(el => 
+              <div className="card pt-4 mb-3">
               <div>
                 <img
-                  src={"/images/header/mockup-slider-en.png"}
-                  style={{ width: "90px" }}
+                  src={`/images/products/${el.imagePath}`}
+                  style={{ width: "90px", height:"288px" }}
                   className="slick-slide-image mx-auto"
                 />
               </div>
@@ -119,269 +126,11 @@ export default function BestSeller() {
                 }}
                 className="slick-slide-label py-1 mx-auto text-center pt-3"
               >
-                Bebelac 1 Infant Milk Formula, From 0-6 Months, 400 GM
+                {el.productName}
               </p>
             </div>
-            {/*  */}
-            <div className="card pt-4">
-              <div className="">
-                <img
-                  src={"/images/header/mockup-slider-en.png"}
-                  style={{ width: "90px" }}
-                  className="slick-slide-image mx-auto"
-                />
-              </div>
-
-              <p
-                style={{
-                  width: "9.8rem",
-                  fontSize: "14.2px",
-                }}
-                className="slick-slide-label py-1 mx-auto text-center pt-3"
-              >
-                Bebelac 1 Infant Milk Formula, From 0-6 Months, 400 GM
-              </p>
-            </div>
-            {/*  */}
-            <div className="card pt-4">
-              <div className="">
-                <img
-                  src={"/images/header/mockup-slider-en.png"}
-                  style={{ width: "90px" }}
-                  className="slick-slide-image mx-auto"
-                />
-              </div>
-
-              <p
-                style={{
-                  width: "9.8rem",
-                  fontSize: "14.2px",
-                }}
-                className="slick-slide-label py-1 mx-auto text-center pt-3"
-              >
-                Bebelac 1 Infant Milk Formula, From 0-6 Months, 400 GM
-              </p>
-            </div>
-            {/*  */}
-            <div className="card pt-4">
-              <div className="">
-                <img
-                  src={"/images/header/mockup-slider-en.png"}
-                  style={{ width: "90px" }}
-                  className="slick-slide-image mx-auto"
-                />
-              </div>
-
-              <p
-                style={{
-                  width: "9.8rem",
-                  fontSize: "14.2px",
-                }}
-                className="slick-slide-label py-1 mx-auto text-center pt-3"
-              >
-                Bebelac 1 Infant Milk Formula, From 0-6 Months, 400 GM
-              </p>
-            </div>
-            {/*  */}
-            <div className="card pt-4">
-              <div className="">
-                <img
-                  src={"/images/header/mockup-slider-en.png"}
-                  style={{ width: "90px" }}
-                  className="slick-slide-image mx-auto"
-                />
-              </div>
-
-              <p
-                style={{
-                  width: "9.8rem",
-                  fontSize: "14.2px",
-                }}
-                className="slick-slide-label py-1 mx-auto text-center pt-3"
-              >
-                Bebelac 1 Infant Milk Formula, From 0-6 Months, 400 GM
-              </p>
-            </div>
-            {/*  */}
-            <div className="card pt-4">
-              <div className="">
-                <img
-                  src={"/images/header/mockup-slider-en.png"}
-                  style={{ width: "90px" }}
-                  className="slick-slide-image mx-auto"
-                />
-              </div>
-
-              <p
-                style={{
-                  width: "9.8rem",
-                  fontSize: "14.2px",
-                }}
-                className="slick-slide-label py-1 mx-auto text-center pt-3"
-              >
-                Bebelac 1 Infant Milk Formula, From 0-6 Months, 400 GM
-              </p>
-            </div>
-            {/*  */}
-            <div className="card pt-4">
-              <div className="">
-                <img
-                  src={"/images/header/mockup-slider-en.png"}
-                  style={{ width: "90px" }}
-                  className="slick-slide-image mx-auto"
-                />
-              </div>
-
-              <p
-                style={{
-                  width: "9.8rem",
-                  fontSize: "14.2px",
-                }}
-                className="slick-slide-label py-1 mx-auto text-center pt-3"
-              >
-                Bebelac 1 Infant Milk Formula, From 0-6 Months, 400 GM
-              </p>
-            </div>
-            {/*  */}
-            <div className="card pt-4">
-              <div className="">
-                <img
-                  src={"/images/header/mockup-slider-en.png"}
-                  style={{ width: "90px" }}
-                  className="slick-slide-image mx-auto"
-                />
-              </div>
-
-              <p
-                style={{
-                  width: "9.8rem",
-                  fontSize: "14.2px",
-                }}
-                className="slick-slide-label py-1 mx-auto text-center pt-3"
-              >
-                Bebelac 1 Infant Milk Formula, From 0-6 Months, 400 GM
-              </p>
-            </div>
-            {/*  */}
-            <div className="card pt-4">
-              <div className="">
-                <img
-                  src={"/images/header/mockup-slider-en.png"}
-                  style={{ width: "90px" }}
-                  className="slick-slide-image mx-auto"
-                />
-              </div>
-
-              <p
-                style={{
-                  width: "9.8rem",
-                  fontSize: "14.2px",
-                }}
-                className="slick-slide-label py-1 mx-auto text-center pt-3"
-              >
-                Bebelac 1 Infant Milk Formula, From 0-6 Months, 400 GM
-              </p>
-            </div>
-            {/*  */}
-            <div className="card pt-4">
-              <div className="">
-                <img
-                  src={"/images/header/mockup-slider-en.png"}
-                  style={{ width: "90px" }}
-                  className="slick-slide-image mx-auto"
-                />
-              </div>
-
-              <p
-                style={{
-                  width: "9.8rem",
-                  fontSize: "14.2px",
-                }}
-                className="slick-slide-label py-1 mx-auto text-center pt-3"
-              >
-                Bebelac 1 Infant Milk Formula, From 0-6 Months, 400 GM
-              </p>
-            </div>
-            {/*  */}
-            <div className="card pt-4">
-              <div className="">
-                <img
-                  src={"/images/header/mockup-slider-en.png"}
-                  style={{ width: "90px" }}
-                  className="slick-slide-image mx-auto"
-                />
-              </div>
-
-              <p
-                style={{
-                  width: "9.8rem",
-                  fontSize: "14.2px",
-                }}
-                className="slick-slide-label py-1 mx-auto text-center pt-3"
-              >
-                Bebelac 1 Infant Milk Formula, From 0-6 Months, 400 GM
-              </p>
-            </div>
-            {/*  */}
-            <div className="card pt-4">
-              <div className="">
-                <img
-                  src={"/images/header/mockup-slider-en.png"}
-                  style={{ width: "90px" }}
-                  className="slick-slide-image mx-auto"
-                />
-              </div>
-
-              <p
-                style={{
-                  width: "9.8rem",
-                  fontSize: "14.2px",
-                }}
-                className="slick-slide-label py-1 mx-auto text-center pt-3"
-              >
-                Bebelac 1 Infant Milk Formula, From 0-6 Months, 400 GM
-              </p>
-            </div>
-            {/*  */}
-            <div className="card pt-4">
-              <div className="">
-                <img
-                  src={"/images/header/mockup-slider-en.png"}
-                  style={{ width: "90px" }}
-                  className="slick-slide-image mx-auto"
-                />
-              </div>
-
-              <p
-                style={{
-                  width: "9.8rem",
-                  fontSize: "14.2px",
-                }}
-                className="slick-slide-label py-1 mx-auto text-center pt-3"
-              >
-                Bebelac 1 Infant Milk Formula, From 0-6 Months, 400 GM
-              </p>
-            </div>
-            {/*  */}
-            <div className="card pt-4">
-              <div className="">
-                <img
-                  src={"/images/header/mockup-slider-en.png"}
-                  style={{ width: "90px" }}
-                  className="slick-slide-image mx-auto"
-                />
-              </div>
-
-              <p
-                style={{
-                  width: "9.8rem",
-                  fontSize: "14.2px",
-                }}
-                className="slick-slide-label py-1 mx-auto text-center pt-3"
-              >
-                Bebelac 1 Infant Milk Formula, From 0-6 Months, 400 GM
-              </p>
-            </div>
+            )}
+            
           </Slider>
         </div>
       </div>

@@ -12,11 +12,12 @@ import Contact from "./pages/contact/Contact";
 import ContactAr from "./pages/contact/ContactAr";
 import Shop from "./pages/shop/Shop";
 import ShopAr from "./pages/shop/ShopAr";
+import Blog from './pages/blog/Blog';
+import BlogAr from './pages/blog/BlogsAr';
 import ForPharmaciesAr from "./pages/pharmacies/ForPharmaciesAr";
 import ForInsurersAr from "./pages/insurers/insurersAr";
 import ForDoctorsAr from "./pages/doctors/DoctorsAr";
 import AboutUsAr from "./pages/about-us/AboutUsAr";
-
 
 function App() {
   const context = useContext(Context);
@@ -46,7 +47,7 @@ function App() {
               <AboutUs />
             </Route>
             <Route path="/blog" exact>
-              <Home />
+              <Blog />
             </Route>
             <Route path="/contact" exact>
               <Contact />
@@ -76,7 +77,7 @@ function App() {
               <AboutUsAr />
             </Route>
             <Route path="/blog" exact>
-              <HomeAr />
+              <BlogAr />
             </Route>
             <Route path="/contact" exact>
               <ContactAr />

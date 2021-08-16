@@ -2,6 +2,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Context } from "../../context/Context";
 import "./index.scss";
+import { Link } from 'react-router-dom';
 export default function Brands() {
   const [brands, setBrands] = useState(new Set());
   const [myArr, setmyArr] = useState([]);
@@ -16,17 +17,18 @@ export default function Brands() {
 
   return (
     <div className="brands  my-3">
-      <div className="container" id="brand__container">
+      <h3 className="mb-3 fw-bold" onClick={()=> context.setFilterd(context.products)}>brands</h3>
+      <div className="brand__container w-100">
         <ul className="column justify-content-center list-unstyled mb-0">
-          {myArr.map((brands) => {
+          {myArr.map((brand) => {
             return (
               <li
-                key={brands}
-                className="col-md-4 col-lg-auto my-2 text-uppercase fw-bold "
+                key={brand}
+                className="col-12 my-2 text-uppercase fw-bold "
               >
-                <a href="https://www.yodawy.com/shop/" className="hoverA">
-                  <span className="m-2">{brands}</span>
-                </a>
+                <Link to="/shop" onClick={()=> context.setFilterd(context.products.filter(p => p.brand == brand))} className="hoverA">
+                  <span className="m-2">{brand}</span>
+                </Link>
               </li>
             );
           })}

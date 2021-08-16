@@ -1,0 +1,35 @@
+.sidebar{
+    h3{
+        cursor: pointer;
+        font-size: 18px;
+        transition: .3s;
+       color: #159EDA;
+      }
+      h5{
+        font-size: 16px;
+        transition: .3s;
+        &:hover{
+            color: #f59a2a;
+        }
+      }
+    .accordion{
+        font-size: 16px;
+    }
+    .accordion-button:not(.collapsed){
+        color: #12233f;
+        background-color: #fff;
+        box-shadow: none;
+    }
+    .accordion-button:focus{
+        box-shadow: none;
+    }
+    .branch{
+        cursor: pointer;
+        transition: .3s;
+        font-size: 14px;
+        &:hover{
+            color: #f59a2a;
+        }
+    }
+}
+

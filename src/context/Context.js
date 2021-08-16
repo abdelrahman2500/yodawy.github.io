@@ -7,7 +7,8 @@ export const Context = createContext();
 
 export function ContextProvider(props) {
 
-    const [products, setProducts] = useState([])
+    const [products, setProducts] = useState(data.products)
+    const [filterd, setFilterd] = useState(data.products)
     const [lang, setLang] = useState(localStorage.setItem("lang", localStorage.getItem("lang") === null ? "en" : localStorage.getItem("lang")))
 
     const changeLang = function () {
@@ -20,11 +21,11 @@ export function ContextProvider(props) {
     }, [lang, changeLang])
 
     useEffect(() => {
-        setProducts(data.products);
+        // setProducts(data.products);
     });
 
     return (
-        <Context.Provider value={{ lang, changeLang, products }}>
+        <Context.Provider value={{ lang, changeLang, products ,filterd,setFilterd}}>
             {props.children}
         </Context.Provider>
     )

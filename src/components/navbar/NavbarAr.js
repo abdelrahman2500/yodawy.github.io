@@ -76,7 +76,7 @@ export default function NavbarAr(props) {
             >
               <ul className="navbar-nav m-auto mb-2 mb-lg-0">
                 <li className="nav-item ">
-                  <NavLink className="nav-link" aria-current="page" to="/shop">
+                  <NavLink onClick={()=> context.setFilterd(context.products)} className="nav-link" aria-current="page" to="/shop">
                     السوق
                   </NavLink>
                 </li>
@@ -97,7 +97,7 @@ export default function NavbarAr(props) {
                 </li>
                 <li className="nav-item">
                   <NavLink className="nav-link" to="/about">
-                   عن يداوي
+                    عن يداوي  
                   </NavLink>
                 </li>
                 <li className="nav-item">
