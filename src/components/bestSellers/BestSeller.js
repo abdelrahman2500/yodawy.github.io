@@ -53,7 +53,7 @@ export default function BestSeller() {
   }
 
   const settings = {
-    slidesToShow: 1,
+    slidesToShow: 5,
     slidesToScroll: 1,
     dots: false,
     focusOnSelect: true,
