@@ -10,6 +10,8 @@ import NavbarAr from './../../components/navbar/NavbarAr';
 import BranchesAr from './../../components/branches/BranchesAr';
 import SidebarAr from './../../components/sidebar/SidebarAr';
 import FooterAr from './../../components/footer/FooterAr';
+import Product from './../../components/products/Product';
+import ProductAr from './../../components/products/ProductAr';
 
 export default function ShopAr() {
     const context = useContext(Context)
@@ -69,7 +71,11 @@ export default function ShopAr() {
                             <div className="row">
                                 {products.map(product =>
                                     <div className={`col-12 col-sm-${show}`} key={product.id}>
-                                        {product.brandAr}
+                                    <ProductAr
+                                        name={product.nameAr}
+                                        price={product.price}
+                                        image={product.imagePath}
+                                        />
                                     </div>
                                 )}
                             </div>

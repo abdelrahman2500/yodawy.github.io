@@ -49,16 +49,16 @@ export default function Product(props) {
 
   return (
     <div className="product">
-      <div class="product_inner">
-        <div className="h-50 w-100">
-          <img src={`/images/products/${props.image}`} className="h-100 w-50" />
+      <div class="product_inner text-center">
+        <div className=" w-100 top1">
+          <img src={`/images/products/${props.image}`} className="" />
         </div>
-        <div className="h-25">
+        <div className=" middle">
           <p className="my-3">{props.name}</p>
-          <p className="my-2 mb-3">Price £{props.price}</p>
         </div>
 
-        <button className="my-0 py-1 h-25">
+        <p className="my-2 mb-3">Price £{props.price}</p>
+        <button className="add-btn my-0 py-1">
           <i class="fas fa-shopping-cart fa-2x"></i>
         </button>
       </div>
