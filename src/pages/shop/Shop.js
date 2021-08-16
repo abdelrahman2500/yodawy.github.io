@@ -75,9 +75,7 @@ export default function Shop() {
                 {products.map((product) => (
                   <div className={`col-12 col-sm-${show}`} key={product.id}>
                     <Product
-                      name={product.productName}
-                      price={product.price}
-                      image={product.imagePath}
+                      product={product}
                     />
                   </div>
                 ))}

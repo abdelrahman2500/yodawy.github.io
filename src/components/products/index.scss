@@ -27,6 +27,7 @@
   img {
     max-width: 100%;
     max-height: 100%;
+    cursor: pointer;
     // height: 100px !important;
     text-align: center;
   }
@@ -40,15 +41,18 @@
     p:nth-child(odd) {
       font-weight: bold;
     }
-    button {
-      border: none;
-      color: #ffb055;
-      background: none;
-      cursor: pointer;
-      margin: 1em 0 0 0;
-      &:hover {
-        color: #2b2d42;
-      }
+    .bottom{
+      button {
+        border: none;
+        color: #ffb055;
+        background: none;
+        cursor: pointer;
+        margin: 1em 0 0 0;
+        z-index: 2;
+        &:hover {
+          color: #2b2d42;
+        }
+    }
     }
   }
   &_overlay {
@@ -74,5 +78,11 @@
       color: rgba(43, 45, 66, 0.7);
       font-size: 1.5em;
     }
+  }
+  .iconss{
+    font-size: 12px;
+  }
+  .modal-dialog {
+    max-width: 100%;
   }
 }
