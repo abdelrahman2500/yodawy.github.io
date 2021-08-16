@@ -31,7 +31,7 @@ export default function SidebarAr() {
             <div className="cate">
             <h3 className="mb-3 fw-bold" onClick={()=> context.setFilterd(context.products)}>المصنفات</h3>
                 {cateArr.map((el,i) => 
-                    <div>
+                    <div  key={el}>
                         <div className="accordion accordion-flush" id="accordionFlushExample">
                             <div className="accordion-item">
                                 <h2 className="accordion-header" id={`flush-heading${i}`}>
@@ -42,7 +42,7 @@ export default function SidebarAr() {
                                 <div id={`flush-collapse${i}`} className="accordion-collapse collapse" aria-labelledby={`flush-heading${i}`} data-bs-parent="#accordionFlushExample">
                                     {brArr.map(b => {for(let j =0 ; j< context.products.length; j++){
                                             if(context.products[j].categoryNameAr == el && context.products[j].categoryBranchNameAr == b){
-                                                return (<div className="accordion-body py-1 ">
+                                                return (<div className="accordion-body py-1 " key={b}>
                                                     <span className="branch" onClick={()=> context.setFilterd(context.products.filter(p => p.categoryBranchNameAr == b))}>{b}</span>
                                                 </div>)
                                             }

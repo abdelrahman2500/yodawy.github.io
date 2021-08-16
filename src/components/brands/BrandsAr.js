@@ -13,8 +13,6 @@ export default function Brands() {
     setmyArr([...brands]);
   }, [context.products]);
 
-  console.log(myArr);
-
   return (
     <div className="brands  my-3">
       <h3 className="mb-3 fw-bold" onClick={()=> context.setFilterd(context.products)}>الماركات</h3>

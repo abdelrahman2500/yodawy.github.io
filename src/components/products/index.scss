@@ -81,8 +81,17 @@
   }
   .iconss{
     font-size: 12px;
+    p{
+      font-weight: normal;
+    }
   }
   .modal-dialog {
     max-width: 100%;
+  }
+}
+.ar{
+  .modal-header .btn-close {
+    padding: 0.5rem 0.5rem;
+    margin: -0.5rem auto -0.5rem -0.5rem ;
   }
 }

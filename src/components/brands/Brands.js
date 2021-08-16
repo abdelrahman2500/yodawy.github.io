@@ -13,7 +13,6 @@ export default function Brands() {
     setmyArr([...brands]);
   }, [context.products]);
 
-  console.log(myArr);
 
   return (
     <div className="brands  my-3">

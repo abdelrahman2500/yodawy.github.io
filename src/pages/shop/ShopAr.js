@@ -52,13 +52,13 @@ export default function ShopAr() {
                                     <div className="d-none d-md-block col-5">
                                         <div className="icons">
                                             <button className="btn" onClick={() => showStyle(12)}>
-                                                <i class="fas fa-bars" ></i>
+                                                <i className="fas fa-bars" ></i>
                                             </button>
                                             <button className="btn" onClick={() => showStyle(6)}>
-                                                <i class="fas fa-th-large"></i>
+                                                <i className="fas fa-th-large"></i>
                                             </button>
                                             <button className="btn" onClick={() => showStyle(4)}>
-                                                <i class="fas fa-th" ></i>
+                                                <i className="fas fa-th" ></i>
                                             </button>
                                         </div>
                                     </div>
@@ -72,9 +72,7 @@ export default function ShopAr() {
                                 {products.map(product =>
                                     <div className={`col-12 col-sm-${show}`} key={product.id}>
                                     <ProductAr
-                                        name={product.nameAr}
-                                        price={product.price}
-                                        image={product.imagePath}
+                                        product={product}
                                         />
                                     </div>
                                 )}
