@@ -69,12 +69,12 @@ export default function ProductAr(props) {
                 </div>
                 <div className="modal-body">
                   <div className="row">
-                    <div className="col-4 row align-items-center">
-                      <div className="box">
+                    <div className="col-12 col-md-4 row align-items-center">
+                      <div className="box row justify-content-center ">
                         <img src={`/images/products/${product.imagePath}`}  className="" />
                       </div>
                     </div>
-                    <div className="col-8">
+                    <div className="col-12 col-md-8">
                       <div className="row">
                         <div className="col-12 py-2">
                           <p className="lead badge bg-success text-white">متاح</p>
