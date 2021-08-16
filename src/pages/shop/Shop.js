@@ -22,8 +22,8 @@ export default function Shop() {
     }, [show])
 
     useEffect(() => {
-        setProducts(context.products)
-    }, [context.products])
+        setProducts(context.filterd)
+    }, [context.filterd])
 
     return (
         <div className="shop">
@@ -65,7 +65,7 @@ export default function Shop() {
                             <div className="row">
                                 {products.map(product =>
                                     <div className={`col-12 col-sm-${show}`} key={product.id}>
-                                        {product.price}
+                                        {product.brand}
                                     </div>
                                 )}
                             </div>

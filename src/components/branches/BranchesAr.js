@@ -28,7 +28,7 @@ export default function BranchesAr(props) {
           {myArr.map((branch) => {
             return (
               <li key={branch} className="col-md-4 col-lg-auto my-2 fw-bold ">
-                <Link to="/shop" className="hoverA">
+                <Link to="/shop"  onClick={()=> context.setFilterd(context.products.filter(p => p.categoryNameAr == branch))} className="hoverA">
                   <span>{branch}</span>
                 </Link>
               </li>

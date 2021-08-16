@@ -213,55 +213,55 @@ export default function ContactAr() {
             <h2 className="head2">
               .املأ الطلب إذا كان لديك سؤال أو استفسار آخر
             </h2>
-            <form class="row g-3 form ">
-              <div class="col-12">
+            <form className="row g-3 form ">
+              <div className="col-12">
                 <input
                   type="text"
-                  class="form-control name text-end"
+                  className="form-control name text-end"
                   id="inputAddress"
                   placeholder="الاسم الاول والاخير"
                 />
               </div>
-              <div class="col-md-12">
+              <div className="col-md-12">
                 <input
                   type="email"
-                  class="form-control email text-end"
+                  className="form-control email text-end"
                   id="inputEmail4"
                   placeholder="بريدك الالكترونى"
                 />
               </div>
 
-              <div class="col-12">
+              <div className="col-12">
                 <input
                   type="text"
-                  class="form-control phone text-end"
+                  className="form-control phone text-end"
                   id="inputAddress"
                   placeholder="رقم التليفون"
                 />
               </div>
-              <div class="mb-3">
+              <div className="mb-3">
                 <textarea
-                  class="form-control message text-end"
+                  className="form-control message text-end"
                   id="exampleFormControlTextarea1"
                   placeholder="رسالة"
                   rows="3"
                 ></textarea>
               </div>
 
-              <div class="col-12 ">
-                <div class="form-check ">
+              <div className="col-12 ">
+                <div className="form-check ">
                   <input
-                    class="form-check-input"
+                    className="form-check-input"
                     type="checkbox"
                     id="gridCheck"
                   />
-                  <label class="form-check-label" for="gridCheck">
+                  <label className="form-check-label" for="gridCheck">
                     أنا لست برنامج روبوت
                   </label>
                 </div>
               </div>
-              <div class="col-12">
-                <button type="submit" class="btn fw-bold ">
+              <div className="col-12">
+                <button type="submit" className="btn fw-bold ">
                   أرسل
                 </button>
               </div>

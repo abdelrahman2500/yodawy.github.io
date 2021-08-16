@@ -90,7 +90,7 @@ export default function Navbar(props) {
             >
               <ul className="navbar-nav m-auto mb-2 mb-lg-0">
                 <li className="nav-item ">
-                  <NavLink className="nav-link" aria-current="page" to="/shop">
+                  <NavLink onClick={()=> context.setFilterd(context.products)} className="nav-link" aria-current="page" to="/shop">
                     shop
                   </NavLink>
                 </li>

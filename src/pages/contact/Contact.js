@@ -213,55 +213,55 @@ export default function Contact() {
           </div>
           <div className="col-12 col-md-5  form-div">
             <h2 className="head2">Fill up this form if you have any question</h2>
-            <form class="row g-3 form">
-              <div class="col-12">
+            <form className="row g-3 form">
+              <div className="col-12">
                 <input
                   type="text"
-                  class="form-control name"
+                  className="form-control name"
                   id="inputAddress"
                   placeholder="Name and Surname"
                 />
               </div>
-              <div class="col-md-12">
+              <div className="col-md-12">
                 <input
                   type="email"
-                  class="form-control email"
+                  className="form-control email"
                   id="inputEmail4"
                   placeholder="Your E-mail"
                 />
               </div>
 
-              <div class="col-12">
+              <div className="col-12">
                 <input
                   type="text"
-                  class="form-control phone"
+                  className="form-control phone"
                   id="inputAddress"
                   placeholder="Phone"
                 />
               </div>
-              <div class="mb-3">
+              <div className="mb-3">
                 <textarea
-                  class="form-control message"
+                  className="form-control message"
                   id="exampleFormControlTextarea1"
                   placeholder="Message"
                   rows="3"
                 ></textarea>
               </div>
 
-              <div class="col-12">
-                <div class="form-check">
+              <div className="col-12">
+                <div className="form-check">
                   <input
-                    class="form-check-input"
+                    className="form-check-input"
                     type="checkbox"
                     id="gridCheck"
                   />
-                  <label class="form-check-label" for="gridCheck">
+                  <label className="form-check-label" for="gridCheck">
                     I'm not a robot
                   </label>
                 </div>
               </div>
-              <div class="col-12">
-                <button type="submit" class="btn fw-bold ">
+              <div className="col-12">
+                <button type="submit" className="btn fw-bold ">
                   Send message
                 </button>
               </div>
