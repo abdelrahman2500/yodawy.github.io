@@ -63,7 +63,7 @@ export default function Sidebar() {
                 )}
             </div>
             {/* brands */}
-            <Brands/>
+            <Brands />
         </div>
     )
 }
