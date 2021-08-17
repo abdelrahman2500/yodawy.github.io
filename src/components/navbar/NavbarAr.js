@@ -160,17 +160,17 @@ export default function NavbarAr(props) {
                   onChange={(e)=>setSearchValue(e.target.value)}
                 />
                 <span className="input-group-text" id="basic-addon2">
-                <Link to='/shop' onClick={() => context.setFilterd(context.products.filter(el=> 
-                    el.brand.toLowerCase().indexOf(searchValue.toLowerCase()) != -1
-                    || el.categoryName.toLowerCase().indexOf(searchValue.toLowerCase()) != -1
-                    || el.categoryBranchName.toLowerCase().indexOf(searchValue.toLowerCase()) != -1
-                    || el.description.toLowerCase().indexOf(searchValue.toLowerCase()) != -1
-                    || el.productName.toLowerCase().indexOf(searchValue.toLowerCase()) != -1
-                    || el.brandAr.toLowerCase().indexOf(searchValue.toLowerCase()) != -1
-                    || el.categoryNameAr.toLowerCase().indexOf(searchValue.toLowerCase()) != -1
-                    || el.categoryBranchNameAr.toLowerCase().indexOf(searchValue.toLowerCase()) != -1
-                    || el.descriptionAr.toLowerCase().indexOf(searchValue.toLowerCase()) != -1
-                    || el.nameAr.toLowerCase().indexOf(searchValue.toLowerCase()) != -1
+                <Link to={searchValue.trim()== ""?"" : '/shop'} onClick={() => context.setFilterd(context.products.filter(el=> 
+                    el.brand.toLowerCase().indexOf(searchValue.trim().toLowerCase()) != -1
+                    || el.categoryName.toLowerCase().indexOf(searchValue.trim().toLowerCase()) != -1
+                    || el.categoryBranchName.toLowerCase().indexOf(searchValue.trim().toLowerCase()) != -1
+                    || el.description.toLowerCase().indexOf(searchValue.trim().toLowerCase()) != -1
+                    || el.productName.toLowerCase().indexOf(searchValue.trim().toLowerCase()) != -1
+                    || el.brandAr.toLowerCase().indexOf(searchValue.trim().toLowerCase()) != -1
+                    || el.categoryNameAr.toLowerCase().indexOf(searchValue.trim().toLowerCase()) != -1
+                    || el.categoryBranchNameAr.toLowerCase().indexOf(searchValue.trim().toLowerCase()) != -1
+                    || el.descriptionAr.toLowerCase().indexOf(searchValue.trim().toLowerCase()) != -1
+                    || el.nameAr.toLowerCase().indexOf(searchValue.trim().toLowerCase()) != -1
                     ))}>
                     <i className="fas fa-search"></i>
                   </Link>
