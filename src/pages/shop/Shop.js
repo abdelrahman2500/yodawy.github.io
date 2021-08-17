@@ -40,13 +40,21 @@ export default function Shop() {
       <Navbar compo={true} />
       {/* barnches */}
       <Branches nothome={false} />
+      
       {/* sidebar and products */}
+      
       <div className="container my-3">
         <div className="row">
           <div className="d-none d-md-block col-3">
             {/* sidebar */}
             <Sidebar />
           </div>
+          {products.length != context.filterd.length ? 
+            <div className="container loading">
+              <div class="spinner-grow text-info" role="status">
+                <span class="visually-hidden m-auto">Loading...</span>
+              </div>
+            </div> :
           <div className="col-12 col-md-9">
             {/* products */}
             <div className="filter border p-2 bg-light">
@@ -82,8 +90,10 @@ export default function Shop() {
               </div>
             </div>
           </div>
+          }
         </div>
       </div>
+      
       {/* footer */}
       <Footer />
     </div>

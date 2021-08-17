@@ -1,12 +1,25 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./index.scss";
 import { NavLink } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { Context } from './../../context/Context';
 
 export default function NavbarAr(props) {
-
   const context = useContext(Context)
+
+  const [visible, setVisible] = useState(false)
+  const[searchValue,setSearchValue] = useState('')
+
+  useEffect(() => {
+      window.onscroll = () => {
+          let currentScrollPos = window.pageYOffset;
+          setVisible(currentScrollPos > 300 ? true: false)
+      }
+  },[ setVisible])
+
+  useEffect(()=>{
+    setSearchValue(searchValue)
+  },[searchValue, setSearchValue])
 
   return (
     <div className="main-navbar ar-style">
@@ -48,7 +61,11 @@ export default function NavbarAr(props) {
           </div>
         </div>
       </div>
-      <div className={props.compo==false?"middle fw-bold p-0 fixed-top ":"middle fw-bold p-0 d-none d-md-block "}>
+      <div className={
+          props.compo === false
+            ? "middle fw-bold p-0 fixed-top "
+            : visible ? "middle fw-bold p-0 fixed-top": "middle fw-bold p-0 "
+        }>
         <nav className={props.compo==false?"navbar navbar-expand-lg navbar-dark bg-transparent":"navbar navbar-expand-lg navbar-dark"}>
           <div className="container">
             <Link
@@ -111,7 +128,7 @@ export default function NavbarAr(props) {
                   </NavLink>
                 </li>
                 <button
-                  className={props.compo == true ? "d-none" : "btn btn-light"}
+                  className={props.compo == true ? visible? "btn btn-light" : "d-block d-md-none" : "btn btn-light"}
                   onClick={() => context.changeLang()}
                 >
                   English
@@ -139,9 +156,24 @@ export default function NavbarAr(props) {
                   placeholder="ابحث عن منتج"
                   aria-label="Recipient's username"
                   aria-describedby="basic-addon2"
+                  value={searchValue}
+                  onChange={(e)=>setSearchValue(e.target.value)}
                 />
                 <span className="input-group-text" id="basic-addon2">
-                  <i className="fas fa-search"></i>
+                <Link to='/shop' onClick={() => context.setFilterd(context.products.filter(el=> 
+                    el.brand.toLowerCase().indexOf(searchValue.toLowerCase()) != -1
+                    || el.categoryName.toLowerCase().indexOf(searchValue.toLowerCase()) != -1
+                    || el.categoryBranchName.toLowerCase().indexOf(searchValue.toLowerCase()) != -1
+                    || el.description.toLowerCase().indexOf(searchValue.toLowerCase()) != -1
+                    || el.productName.toLowerCase().indexOf(searchValue.toLowerCase()) != -1
+                    || el.brandAr.toLowerCase().indexOf(searchValue.toLowerCase()) != -1
+                    || el.categoryNameAr.toLowerCase().indexOf(searchValue.toLowerCase()) != -1
+                    || el.categoryBranchNameAr.toLowerCase().indexOf(searchValue.toLowerCase()) != -1
+                    || el.descriptionAr.toLowerCase().indexOf(searchValue.toLowerCase()) != -1
+                    || el.nameAr.toLowerCase().indexOf(searchValue.toLowerCase()) != -1
+                    ))}>
+                    <i className="fas fa-search"></i>
+                  </Link>
                 </span>
               </div>
             </div>
