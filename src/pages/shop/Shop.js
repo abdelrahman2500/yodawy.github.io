@@ -49,12 +49,6 @@ export default function Shop() {
             {/* sidebar */}
             <Sidebar />
           </div>
-          {products.length != context.filterd.length ? 
-            <div className="container loading">
-              <div class="spinner-grow text-info" role="status">
-                <span class="visually-hidden m-auto">Loading...</span>
-              </div>
-            </div> :
           <div className="col-12 col-md-9">
             {/* products */}
             <div className="filter border p-2 bg-light">
@@ -90,7 +84,6 @@ export default function Shop() {
               </div>
             </div>
           </div>
-          }
         </div>
       </div>
       
