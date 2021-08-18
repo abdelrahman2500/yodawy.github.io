@@ -149,7 +149,7 @@ export default function Navbar(props) {
                     to="/cart"
                   >
                     <i className="fas fa-shopping-cart "></i>
-                    <span style={{fontSize:"10px"}} className="badge bg-info rounded position-absolute">{JSON.parse(localStorage.getItem("cart-items")).length}</span>
+                    <span style={{fontSize:"10px"}} className="badge bg-info rounded position-absolute">{localStorage.getItem("cart-items")? JSON.parse(localStorage.getItem("cart-items")).length : 0}</span>
                   </NavLink>
                 </li>
                 <button
