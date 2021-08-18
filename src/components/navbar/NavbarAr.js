@@ -24,9 +24,9 @@ export default function NavbarAr(props) {
   const[count, setCount] = useState()
 
 
-  useEffect(()=>{
-    setCount(localStorage.getItem("cart-items") != null ? JSON.parse(localStorage.getItem("cart-items")).length : 0)
-  },[])
+  // useEffect(()=>{
+  //   setCount(localStorage.getItem("cart-items") != null ? JSON.parse(localStorage.getItem("cart-items")).length : 0)
+  // },[])
 
   return (
     <div className="main-navbar ar-style">
@@ -140,7 +140,7 @@ export default function NavbarAr(props) {
                     to="/cart"
                   >
                     <i style={{transform:"rotateY(180deg)"}} className="fas fa-shopping-cart "></i>
-                    <span style={{fontSize:"10px"}} className="badge bg-info rounded position-absolute">{count}</span>
+                    <span style={{fontSize:"10px"}} className="badge bg-info rounded position-absolute">{JSON.parse(localStorage.getItem("cart-items")).length}</span>
                   </NavLink>
                 </li>
                 <button
