@@ -8,9 +8,10 @@ import "slick-carousel/slick/slick-theme.css";
 import { useContext } from 'react';
 import { Context } from './../../context/Context';
 import { useState } from 'react';
+import { Link } from "react-router-dom";
 export default function BestSeller() {
   const context = useContext(Context)
-  const[best,setBest] = useState(context.products.filter(pro => pro.id <= 14))
+  const[best,setBest] = useState(context.products.filter(pro => pro.price <= 400 && pro.price >= 300))
 
   function SampleNextArrow(props) {
     const { className, style, onClick } = props;
@@ -66,21 +67,21 @@ export default function BestSeller() {
         breakpoint: 1400,
         settings: {
           slidesToShow: 5,
-          slidesToScroll: 3,
+          slidesToScroll: 1,
         },
       },
       {
         breakpoint: 1200,
         settings: {
           slidesToShow: 4,
-          slidesToScroll: 2,
+          slidesToScroll: 1,
         },
       },
       {
         breakpoint: 890,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 2,
+          slidesToScroll: 1,
         },
       },
       {
@@ -107,17 +108,18 @@ export default function BestSeller() {
           <h2 className="text-center h1 fw-bold head">Best Sellers</h2>
         </div>
         <div className="main mx-3 row justify-content-center justify-content-md-start">
-          <Slider {...settings} className="mb-4" style={{}}>
+          <Slider {...settings} className="mb-4">
             {/*  */}
             {best.map(el => 
-              <div className="card pt-4 mb-3">
-              <div>
-                <img
-                  src={`/images/products/${el.imagePath}`}
-                  style={{ width: "90px", height:"288px" }}
-                  className="slick-slide-image mx-auto"
-                />
-              </div>
+              <div className="card pt-4 mb-3" key={el.id}>
+              <Link to="/shop" onClick={()=> context.setFilterd(context.products.filter(p => p.id == el.id))}>
+                <div className="boxx">
+                  <img
+                    src={`/images/products/${el.imagePath}`}
+                    className="slick-slide-image mx-auto"
+                  />
+                </div>
+              </Link>
 
               <p
                 style={{

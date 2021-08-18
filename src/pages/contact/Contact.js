@@ -261,7 +261,7 @@ export default function Contact() {
                 </div>
               </div>
               <div className="col-12">
-                <button type="submit" className="btn fw-bold ">
+                <button  onClick={(e)=> e.preventDefault()} className="btn fw-bold ">
                   Send message
                 </button>
               </div>

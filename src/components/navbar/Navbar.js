@@ -21,6 +21,9 @@ export default function Navbar(props) {
     setSearchValue(searchValue)
   },[searchValue, setSearchValue])
 
+  // console.log(JSON.parse(localStorage.getItem("cart-items")).length)
+
+
   return (
     <div className="main-navbar">
       <div
@@ -140,8 +143,17 @@ export default function Navbar(props) {
                     contact
                   </NavLink>
                 </li>
+                <li className="nav-item fw-bolder">
+                  <NavLink
+                    className="nav-link"
+                    to="/cart"
+                  >
+                    <i className="fas fa-shopping-cart "></i>
+                    <span style={{fontSize:"10px"}} className="badge bg-info rounded position-absolute">{JSON.parse(localStorage.getItem("cart-items")).length}</span>
+                  </NavLink>
+                </li>
                 <button
-                  className={props.compo == true ? visible? "btn btn-light" : "d-block d-md-none" : "btn btn-light"}
+                  className={props.compo == true ? visible? "btn btn-light mx-2" : "d-block d-md-none" : "btn btn-light mx-2"}
                   onClick={() => context.changeLang()}
                 >
                   العربية

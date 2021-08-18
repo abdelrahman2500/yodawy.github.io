@@ -11,6 +11,45 @@ export function ContextProvider(props) {
     const [filterd, setFilterd] = useState()
     const [lang, setLang] = useState(localStorage.setItem("lang", localStorage.getItem("lang") === null ? "en" : localStorage.getItem("lang")))
 
+    const [cart, setCart] = useState(localStorage.getItem("cart-items") ? JSON.parse(localStorage.getItem("cart-items")) : [])
+
+    const[count, setCount] = useState(cart.length)
+
+
+    useEffect(()=>{
+        setCount(cart.length)
+    })
+    
+    function addToCart(product){
+        let areadyInCart = false ;
+        cart.slice().forEach((item) => {
+            if(item.id === product.id){
+                areadyInCart = true
+                item.count++
+            }
+        })
+        if(!areadyInCart){
+            cart.push({...product , count: 1})
+        }
+        localStorage.setItem("cart-items", JSON.stringify(cart))
+    }
+
+    function removeFromCart(product){
+        let cartItem = cart.slice()
+        let filtered = cartItem.filter((x) => x.id !== product.id)
+        setCart(filtered)
+        localStorage.setItem("cart-items", JSON.stringify(filtered))
+    }
+
+    function deleteAll(){
+        if(cart.length === 0)
+            return
+        else{
+            setCart([])
+        }
+        localStorage.setItem("cart-items", JSON.stringify([]))
+    }
+
     const changeLang = function () {
         localStorage.setItem("lang", localStorage.getItem("lang") === "ar" ? "en" : "ar")
         setLang(localStorage.getItem("lang"))
@@ -31,7 +70,7 @@ export function ContextProvider(props) {
     // },[]);
 
     return (
-        <Context.Provider value={{ lang, changeLang, products ,filterd,setFilterd}}>
+        <Context.Provider value={{ lang, changeLang, products , filterd, setFilterd ,count, cart,setCart, addToCart, removeFromCart,deleteAll}}>
             {props.children}
         </Context.Provider>
     )

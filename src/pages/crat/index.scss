@@ -1,0 +1,20 @@
+.cart{
+    .inner{
+        min-height: 50vh;
+        border-bottom: 2px solid #EEE;
+    }
+}
+.en{
+    .btn-close{
+        position: absolute;
+        right: 5px;
+        top: 5px;
+    }
+}
+.ar{
+    .btn-close{
+        position: absolute;
+        left: 5px;
+        top: 5px;
+    }
+}

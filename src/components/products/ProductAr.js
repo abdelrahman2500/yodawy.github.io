@@ -100,7 +100,7 @@ export default function ProductAr(props) {
                 </div>
                 <div className="modal-footer">
                   <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">غلق</button>
-                  <button type="button" className="btn btn-success ">أضف إلى العربة</button>
+                  <button type="button" className="btn btn-success " data-bs-dismiss="modal" onClick={()=> context.addToCart(product)}>أضف إلى العربة</button>
                 </div>
               </div>
             </div>
@@ -111,10 +111,10 @@ export default function ProductAr(props) {
         </div>
 
         <div className="my-0 py-1  border-top w-100 bottom">
-          <p className="my-2 mb-3">السعر {product.price} يورو</p>
+          <p className="my-2 mb-3">السعر {product.price} جنيه مصري</p>
           
 
-          <button className="my-0 py-1">
+          <button className="my-0 py-1" onClick={()=> context.addToCart(product)}>
             <i className="fas fa-shopping-cart fa-2x"></i>
           </button>
         </div>

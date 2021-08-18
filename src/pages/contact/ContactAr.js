@@ -211,7 +211,7 @@ export default function ContactAr() {
           </div>
           <div className="col-12 col-md-5  form-div text-end">
             <h2 className="head2">
-              .املأ الطلب إذا كان لديك سؤال أو استفسار آخر
+              املأ الطلب إذا كان لديك سؤال أو استفسار آخر.
             </h2>
             <form className="row g-3 form ">
               <div className="col-12">
@@ -255,13 +255,13 @@ export default function ContactAr() {
                     type="checkbox"
                     id="gridCheck"
                   />
-                  <label className="form-check-label" for="gridCheck">
+                  <label className="form-check-label" htmlFor="gridCheck">
                     أنا لست برنامج روبوت
                   </label>
                 </div>
               </div>
               <div className="col-12">
-                <button type="submit" className="btn fw-bold ">
+                <button onClick={(e)=> e.preventDefault()} className="btn fw-bold ">
                   أرسل
                 </button>
               </div>

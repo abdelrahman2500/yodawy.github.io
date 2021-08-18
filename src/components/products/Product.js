@@ -100,7 +100,7 @@ export default function Product(props) {
                 </div>
                 <div className="modal-footer">
                   <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                  <button type="button" className="btn btn-success ">Add To Cart</button>
+                  <button type="button" className="btn btn-success"  data-bs-dismiss="modal" onClick={()=> context.addToCart(product)}>Add To Cart</button>
                 </div>
               </div>
             </div>
@@ -111,16 +111,16 @@ export default function Product(props) {
         </div>
 
         <div className="my-0 py-1  border-top w-100 bottom">
-          <p className="my-2 mb-3">Price {product.price}£</p>
+          <p className="my-2 mb-3">Price {product.price} L.E</p>
           
 
-          <button className="my-0 py-1">
+          <button className="my-0 py-1" onClick={()=> context.addToCart(product)}>
             <i className="fas fa-shopping-cart fa-2x"></i>
           </button>
         </div>
       </div>
       <div className="product_overlay">
-        <h2>Added to basket</h2>
+        <h2>Added to cart</h2>
         <i className="fa fa-check"></i>
       </div>
     </div>

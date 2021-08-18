@@ -21,6 +21,13 @@ export default function NavbarAr(props) {
     setSearchValue(searchValue)
   },[searchValue, setSearchValue])
 
+  const[count, setCount] = useState()
+
+
+  useEffect(()=>{
+    setCount(localStorage.getItem("cart-items") != null ? JSON.parse(localStorage.getItem("cart-items")).length : 0)
+  },[])
+
   return (
     <div className="main-navbar ar-style">
       <div
@@ -127,8 +134,17 @@ export default function NavbarAr(props) {
                     تواصل معنا
                   </NavLink>
                 </li>
+                <li className="nav-item fw-bolder">
+                  <NavLink
+                    className="nav-link"
+                    to="/cart"
+                  >
+                    <i style={{transform:"rotateY(180deg)"}} className="fas fa-shopping-cart "></i>
+                    <span style={{fontSize:"10px"}} className="badge bg-info rounded position-absolute">{count}</span>
+                  </NavLink>
+                </li>
                 <button
-                  className={props.compo == true ? visible? "btn btn-light" : "d-block d-md-none" : "btn btn-light"}
+                  className={props.compo == true ? visible? "btn btn-light mx-2" : "d-block d-md-none" : "btn btn-light mx-2"}
                   onClick={() => context.changeLang()}
                 >
                   English

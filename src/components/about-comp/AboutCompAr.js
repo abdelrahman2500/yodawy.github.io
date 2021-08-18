@@ -13,7 +13,7 @@ export default function AboutCompAr() {
                     </div>
                     <div className="col-12 col-md-7 m-auto my-3">
                         <div className="box text-center">
-                            <img src={"/images/about-comp/about.png"}/>
+                            <img src={"/images/header/mockup-popup.png"}/>
                         </div>
                     </div>
                     <div className="d-block d-md-none col-12 my-auto text-center">
