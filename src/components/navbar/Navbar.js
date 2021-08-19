@@ -163,17 +163,18 @@ export default function Navbar(props) {
           </div>
         </nav>
       </div>
-      <div className={props.compo == false ? "d-none" : "search py-2"}>
+      <div className={props.compo == false ? "d-none" : "search pt-2"}>
         <div className="container">
-          <div className="row align-items-center ">
-            <div className="col-3">
+          <div className="row align-items-center justify-content-around">
+            <div className="col-3 col-md-2">
               <div className="box  m-lg-4">
                 <Link to="/">
                   <img src={"/images/logo/Yodawylogo.png"} />
                 </Link>
               </div>
             </div>
-            <div className="col-9 search-input ">
+            
+            <div className="col-9 col-md-6 search-input ">
               <div className="input-group mb-0">
                 <input
                   type="text"
@@ -184,7 +185,6 @@ export default function Navbar(props) {
                   value={searchValue}
                   onChange={(e)=>setSearchValue(e.target.value)}
                 />
-                <span className="input-group-text" id="basic-addon2">
                   <Link to={searchValue.trim()== ""?"" : '/shop'} onClick={() => context.setFilterd(context.products.filter(el=> 
                     el.brand.toLowerCase().indexOf(searchValue.trim().toLowerCase()) != -1
                     || el.categoryName.toLowerCase().indexOf(searchValue.trim().toLowerCase()) != -1
@@ -197,9 +197,10 @@ export default function Navbar(props) {
                     || el.descriptionAr.toLowerCase().indexOf(searchValue.trim().toLowerCase()) != -1
                     || el.nameAr.toLowerCase().indexOf(searchValue.trim().toLowerCase()) != -1
                     ))}>
+                <span className="input-group-text search-span en" id="basic-addon2">
                     <i className="fas fa-search"></i>
-                  </Link>
                 </span>
+                  </Link>
               </div>
             </div>
           </div>

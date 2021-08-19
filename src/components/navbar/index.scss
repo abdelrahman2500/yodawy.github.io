@@ -88,9 +88,17 @@
         box-shadow: none;
       }
     }
-    span {
+    .search-span {
+      height: 100%;
+      background-color: #FFF;
+      transition: .3s;
+      &:hover{
+        background-color: #18A2D3;
+        color: #FFF;
+      }
       i {
       }
+
     }
   }
 }
@@ -111,3 +119,11 @@
 }
 }
 
+.search-span.en{
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.search-span.ar{
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}

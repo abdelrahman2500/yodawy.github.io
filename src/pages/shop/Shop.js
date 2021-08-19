@@ -57,7 +57,7 @@ export default function Shop() {
       
       {/* sidebar and products */}
       
-      {products.length !== context.filterd.length ? 
+      {products != context.filterd ? 
       <div className="loading row">
         <div className="spinner-border text-info" role="status">
           <span className="visually-hidden">Loading...</span>
