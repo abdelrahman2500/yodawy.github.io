@@ -13,6 +13,9 @@ import Product from "../../components/products/Product";
 export default function Shop() {
   const context = useContext(Context);
   const [products, setProducts] = useState([]);
+  const [sort, setSort] = useState('')
+
+
   const [show, setShow] = useState(
     localStorage.setItem(
       "show-style",
@@ -25,6 +28,17 @@ export default function Shop() {
   function showStyle(col) {
     setShow(localStorage.setItem("show-style", col));
   }
+
+  function handleSortProucts(e){
+    let sort = e.target.value ;
+    setSort(sort)
+    setProducts(products.slice().sort((a,b) => (
+        sort === 'low' ? ((a.price > b.price) ? 1 : -1) 
+        : sort === 'high' ?  ((a.price < b.price) ? 1 : -1) 
+        : sort === 'latest' ?  (a.date < b.date ? 1 : -1) 
+        : ( a.id < b.id ? 1 : -1 )
+    )))
+}
 
   useEffect(() => {
     setShow(localStorage.getItem("show-style"));
@@ -67,8 +81,15 @@ export default function Shop() {
                       </button>
                     </div>
                   </div>
-                  <div className="col-6 col-md-4"></div>
                   <div className="col-6 col-md-3"></div>
+                  <div className="col-6 col-md-4">
+                    <select classNamey="form-select form-select-sm" aria-label=".form-select-sm example" value={sort} onChange={handleSortProucts}>
+                      <option defaultValue="">All</option>
+                      <option value="latest">Latest</option>
+                      <option value="low">Price: Low To High</option>
+                      <option value="high">Price: High To Low</option>
+                    </select>
+                  </div>
                 </div>
               </div>
             </div>

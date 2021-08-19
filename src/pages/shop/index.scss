@@ -16,3 +16,22 @@
     align-items: center;
     justify-content: center;
 }
+
+select{
+    &:focus{
+        box-shadow: none !important;
+        outline: none;
+    }
+    option{
+        &:hover{
+            background-color: #FFF !important;
+
+        }
+    }
+}
+input, button, textarea ,select{
+    &:focus{
+        box-shadow: none !important;
+        outline: none;
+    }
+}

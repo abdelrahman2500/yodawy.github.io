@@ -80,7 +80,7 @@ export default function ProductAr(props) {
                           <p className="lead badge bg-success text-white">متاح</p>
                         </div>
                         <div className="col-12 py-2">
-                          <Link to="/shop" className="text-decoration-none" onClick={()=> context.setFilterd(context.products.filter(p => p.brand == product.brandAr))}>{product.brandAr}</Link>
+                          <Link to="/shop" className="text-decoration-none" data-bs-dismiss="modal" onClick={()=> context.setFilterd(context.products.filter(p => p.brandAr == product.brandAr))}>{product.brandAr}</Link>
                         </div>
                         <div className="col-12 py-2 border-bottom">
                           <h2 className="h3 fw-bold">{product.offerAr == "لا"? product.descriptionAr : `(${product.offerAr}) ${product.descriptionAr}`}</h2>

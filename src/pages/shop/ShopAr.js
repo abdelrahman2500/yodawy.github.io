@@ -18,6 +18,18 @@ export default function ShopAr() {
     const [products, setProducts] = useState([])
     const [show, setShow] = useState(localStorage.setItem("show-style", localStorage.getItem("show-style") === null ? 4 : localStorage.getItem("show-style")))
 
+    const [sort, setSort] = useState('')
+
+    function handleSortProucts(e){
+        let sort = e.target.value ;
+        setSort(sort)
+        setProducts(products.slice().sort((a,b) => (
+            sort === 'low' ? ((a.price > b.price) ? 1 : -1) 
+            : sort === 'high' ?  ((a.price < b.price) ? 1 : -1) 
+            : sort === 'latest' ?  (a.date < b.date ? 1 : -1) 
+            : ( a.id < b.id ? 1 : -1 )
+        )))
+    }
 
     function showStyle(col) {
         setShow(localStorage.setItem("show-style", col))
@@ -62,8 +74,15 @@ export default function ShopAr() {
                                             </button>
                                         </div>
                                     </div>
-                                    <div className="col-6 col-md-4"></div>
                                     <div className="col-6 col-md-3"></div>
+                                    <div className="col-6 col-md-4">
+                                        <select className="form-select form-select-sm" aria-label=".form-select-sm example" value={sort} onChange={handleSortProucts}>
+                                            <option defaultValue="">الكل</option>
+                                            <option value="latest">الأجدد</option>
+                                            <option value="low">السعر: الأقل للأعلى</option>
+                                            <option value="high">السعر: الأعلى للأقل</option>
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
                         </div>

@@ -80,7 +80,7 @@ export default function Product(props) {
                           <p className="lead badge bg-success text-white">in stock</p>
                         </div>
                         <div className="col-12 py-2">
-                          <Link to="/shop" className="text-decoration-none" onClick={()=> context.setFilterd(context.products.filter(p => p.brand == product.brand))}>{product.brand}</Link>
+                          <Link to="/shop" className="text-decoration-none" data-bs-dismiss="modal" onClick={()=> context.setFilterd(context.products.filter(p => p.brand == product.brand))}>{product.brand}</Link>
                         </div>
                         <div className="col-12 py-2 border-bottom">
                           <h2 className="h3 fw-bold">{product.offer == "no"? product.description : `(${product.offer}) ${product.description}`}</h2>

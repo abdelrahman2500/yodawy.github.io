@@ -60,13 +60,13 @@ export function ContextProvider(props) {
     }, [lang, changeLang])
 
     useEffect(() => {
-        setFilterd(data.products.sort((a,b)=> a.date < b.date? 1 :-1));
+        setFilterd(data.products);
     },[]);
 
     // useEffect(() => {
     //     fetch('http://localhost:3001/products')
     //         .then((response) => response.json())
-    //         .then((data) => setFilterd(data.sort((a,b)=> a.date < b.date? 1 :-1)));
+    //         .then((data) => setFilterd(data));
     // },[]);
 
     return (
