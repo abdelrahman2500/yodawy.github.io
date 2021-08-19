@@ -57,56 +57,65 @@ export default function Shop() {
       
       {/* sidebar and products */}
       
-      <div className="container my-3">
-        <div className="row">
-          <div className="d-none d-md-block col-3">
-            {/* sidebar */}
-            <Sidebar />
-          </div>
-          <div className="col-12 col-md-9">
-            {/* products */}
-            <div className="filter border p-2 bg-light">
-              <div className="container">
-                <div className="row">
-                  <div className="d-none d-md-block col-5">
-                    <div className="icons">
-                      <button className="btn" onClick={() => showStyle(12)}>
-                        <i className="fas fa-bars"></i>
-                      </button>
-                      <button className="btn" onClick={() => showStyle(6)}>
-                        <i className="fas fa-th-large"></i>
-                      </button>
-                      <button className="btn" onClick={() => showStyle(4)}>
-                        <i className="fas fa-th"></i>
-                      </button>
+      {products.length !== context.filterd.length ? 
+      <div className="loading row">
+        <div className="spinner-border text-info" role="status">
+          <span className="visually-hidden">Loading...</span>
+        </div>
+      </div>
+        : 
+        <div className="container my-3">
+          <div className="row">
+            <div className="d-none d-md-block col-3">
+              {/* sidebar */}
+              <Sidebar />
+            </div>
+            
+            <div className="col-12 col-md-9">
+              {/* products */}
+              <div className="filter border p-2 bg-light">
+                <div className="container">
+                  <div className="row">
+                    <div className="d-none d-md-block col-5">
+                      <div className="icons">
+                        <button className="btn" onClick={() => showStyle(12)}>
+                          <i className="fas fa-bars"></i>
+                        </button>
+                        <button className="btn" onClick={() => showStyle(6)}>
+                          <i className="fas fa-th-large"></i>
+                        </button>
+                        <button className="btn" onClick={() => showStyle(4)}>
+                          <i className="fas fa-th"></i>
+                        </button>
+                      </div>
                     </div>
-                  </div>
-                  <div className="col-6 col-md-3"></div>
-                  <div className="col-6 col-md-4">
-                    <select classNamey="form-select form-select-sm" aria-label=".form-select-sm example" value={sort} onChange={handleSortProucts}>
-                      <option defaultValue="">All</option>
-                      <option value="latest">Latest</option>
-                      <option value="low">Price: Low To High</option>
-                      <option value="high">Price: High To Low</option>
-                    </select>
+                    <div className="col-6 col-md-3"></div>
+                    <div className="col-6 col-md-4">
+                      <select className="form-select form-select-sm" aria-label=".form-select-sm example" value={sort} onChange={handleSortProucts}>
+                        <option defaultValue="">All</option>
+                        <option value="latest">Latest</option>
+                        <option value="low">Price: Low To High</option>
+                        <option value="high">Price: High To Low</option>
+                      </select>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="products mt-3">
-              <div className="row">
-                {products.map((product) => (
-                  <div className={`col-12 col-sm-${show}`} key={product.id}>
-                    <Product
-                      product={product}
-                    />
-                  </div>
-                ))}
+              <div className="products mt-3">
+                <div className="row">
+                  {products.map((product) => (
+                    <div className={`col-12 col-sm-${show}`} key={product.id}>
+                      <Product
+                        product={product}
+                      />
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      }
       
       {/* footer */}
       <Footer />

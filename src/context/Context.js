@@ -60,6 +60,10 @@ export function ContextProvider(props) {
     }, [lang, changeLang])
 
     useEffect(() => {
+        setProducts(data.products);
+    },[]);
+
+    useEffect(() => {
         setFilterd(data.products);
     },[]);
 

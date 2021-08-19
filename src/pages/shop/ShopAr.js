@@ -50,7 +50,14 @@ export default function ShopAr() {
             {/* barnches */}
             <BranchesAr nothome={false} />
             {/* sidebar and products */}
-            <div className="container my-3">
+            {products.length !== context.filterd.length ? 
+                <div className="loading row">
+                    <div className="spinner-border text-info" role="status">
+                    <span className="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+                : 
+                <div className="container my-3">
                 <div className="row">
                     <div className="d-none d-md-block col-3">
                         {/* sidebar */}
@@ -100,6 +107,8 @@ export default function ShopAr() {
                     </div>
                 </div>
             </div>
+            }
+            
             {/* footer */}
             <FooterAr />
 
