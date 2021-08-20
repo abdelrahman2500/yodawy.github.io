@@ -32,7 +32,7 @@ export default function Shop() {
   function handleSortProucts(e){
     let sort = e.target.value ;
     setSort(sort)
-    setProducts(products.slice().sort((a,b) => (
+    setProducts(products.sort((a,b) => (
         sort === 'low' ? ((a.price > b.price) ? 1 : -1) 
         : sort === 'high' ?  ((a.price < b.price) ? 1 : -1) 
         : sort === 'latest' ?  (a.date < b.date ? 1 : -1) 
