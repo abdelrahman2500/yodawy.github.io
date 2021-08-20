@@ -3,6 +3,19 @@
         min-height: 50vh;
         border-bottom: 2px solid #EEE;
     }
+    .p-small{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        span{
+            font-weight: 400;
+            line-height: 1.5;
+            padding: 0.375rem 0.75rem;
+            font-size: 1rem;
+            border-radius: 0.25rem;
+            vertical-align: middle;
+        }
+    }
 }
 .en{
     .btn-close{

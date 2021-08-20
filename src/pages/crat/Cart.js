@@ -11,7 +11,22 @@ import { Link } from 'react-router-dom';
 
 export default function Cart() {
     const context = useContext(Context)
+    // const[cart, setCart] = useState()
 
+    useEffect(()=> {
+        context.setCart(context.cart)
+    },[])
+
+    function increament(id){
+        context.cart.map(el => el.id == id ? el.count< el.amount? el.count++ : "" : "")
+        localStorage.setItem("cart-items", JSON.stringify(context.cart))
+        context.setCart(JSON.parse(localStorage.getItem("cart-items")))
+    }
+    function decreament(id){
+        context.cart.map(el => el.id == id && el.count >1 ? el.count-- : "")
+        localStorage.setItem("cart-items", JSON.stringify(context.cart))
+        context.setCart(JSON.parse(localStorage.getItem("cart-items")))
+    }
 
     return (
         <div className="cart en">
@@ -40,10 +55,12 @@ export default function Cart() {
                                         <div className="card-body">
                                             <h5 className="card-title">{item.productName}</h5>
                                             <p className="card-text">{item.description}</p>
-                                            <p className="card-text">
+                                            <p className="card-text p-small">
                                                 count :
-                                                <small className="text-muted">
-                                                    {item.count}
+                                                <small className="text-muted fw-bold">
+                                                    <button className="btn btn-info px-4" onClick={()=> decreament(item.id)}>-</button>
+                                                        <span>{item.count}</span> 
+                                                    <button className="btn btn-info px-4" onClick={()=> increament(item.id)}>+</button>
                                                 </small>
                                             </p>
                                             <p className="card-text"><small className="text-muted">price : {item.price * item.count} L.E</small></p>

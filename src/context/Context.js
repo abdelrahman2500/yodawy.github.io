@@ -15,7 +15,6 @@ export function ContextProvider(props) {
 
     const[count, setCount] = useState(cart.length)
 
-
     useEffect(()=>{
         setCount(cart.length)
     })

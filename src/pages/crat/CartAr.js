@@ -12,7 +12,20 @@ import FooterAr from './../../components/footer/FooterAr';
 export default function CartAr() {
     const context = useContext(Context)
 
+    useEffect(()=> {
+        context.setCart(context.cart)
+    },[])
 
+    function increament(id){
+        context.cart.map(el => el.id == id ? el.count< el.amount? el.count++ : "" : "")
+        localStorage.setItem("cart-items", JSON.stringify(context.cart))
+        context.setCart(JSON.parse(localStorage.getItem("cart-items")))
+    }
+    function decreament(id){
+        context.cart.map(el => el.id == id && el.count >1 ? el.count-- : "")
+        localStorage.setItem("cart-items", JSON.stringify(context.cart))
+        context.setCart(JSON.parse(localStorage.getItem("cart-items")))
+    }
     return (
         <div className="cart ar">
             <NavbarAr compo={true}/>
@@ -40,10 +53,12 @@ export default function CartAr() {
                                         <div className="card-body">
                                             <h5 className="card-title">{item.nameAr}</h5>
                                             <p className="card-text">{item.descriptionAr}</p>
-                                            <p className="card-text">
+                                            <p className="card-text p-small">
                                                 الكمية :
-                                                <small className="text-muted">
-                                                    {item.count}
+                                                <small className="text-muted fw-bold">
+                                                    <button className="btn btn-info px-4" onClick={()=> decreament(item.id)}>-</button>
+                                                        <span>{item.count}</span> 
+                                                    <button className="btn btn-info px-4" onClick={()=> increament(item.id)}>+</button>
                                                 </small>
                                             </p>
                                             <p className="card-text"><small className="text-muted">السعر : {item.price * item.count} جنيه مصري</small></p>
