@@ -255,7 +255,7 @@ export default function Contact() {
                     type="checkbox"
                     id="gridCheck"
                   />
-                  <label className="form-check-label" for="gridCheck">
+                  <label className="form-check-label" htmlFor="gridCheck">
                     I'm not a robot
                   </label>
                 </div>
