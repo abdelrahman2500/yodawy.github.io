@@ -33,7 +33,7 @@ function App() {
             <Route path="/" exact>
               <Home />
             </Route>
-            <Route path="/shop" exact>
+            <Route path="/shop" >
               <Shop />
             </Route>
             <Route path="/pharamcies" exact>
@@ -66,7 +66,7 @@ function App() {
             <Route path="/" exact>
               <HomeAr />
             </Route>
-            <Route path="/shop" exact>
+            <Route path="/shop" >
               <ShopAr />
             </Route>
             <Route path="/pharamcies" exact>

@@ -9,6 +9,33 @@
             }
         }
     }
+    .products{
+
+        nav{ 
+            ul{
+                a{
+                    text-decoration: none;
+                    &.active{
+                        background-color: #18A2D3;
+                        color: #FFF;
+                        li{
+                            span{
+                                text-decoration: none;
+                                background: transparent;
+                                color: #FFF;
+                                box-shadow: none;
+                            }
+                        }
+                    }
+                    li{
+                        span{
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 .loading{
     display: flex;
