@@ -143,8 +143,28 @@ export default function NavbarAr(props) {
                     <span style={{fontSize:"10px"}} className="badge bg-info rounded position-absolute">{localStorage.getItem("cart-items")? JSON.parse(localStorage.getItem("cart-items")).length : 0}</span>
                   </NavLink>
                 </li>
+                {localStorage.getItem("username") ? 
+                <li className="nav-item fw-bolder mx-3">
+                  <NavLink
+                    className="nav-link"
+                    to="/login" exact
+                  >
+                    <i className="fas fa-sign-out-alt "></i>
+                    <span style={{fontSize:"10px"}} className="badge bg-success rounded position-absolute">{localStorage.getItem("username")? localStorage.getItem("username") : ""}</span>
+                  </NavLink>
+                </li> : 
+                <li className="nav-item fw-bolder mx-3">
+                  <NavLink
+                    className="nav-link"
+                    to="/login" exact
+                  >
+                    <i className="fas fa-sign-out-alt "></i>
+                    <span style={{fontSize:"10px"}} className="badge bg-secondary rounded position-absolute">login</span>
+                  </NavLink>
+                </li>
+                }
                 <button
-                  className={props.compo == true ? visible? "btn btn-light mx-2" : "d-block d-md-none" : "btn btn-light mx-2"}
+                  className={props.compo == true ? visible? "btn btn-light mx-5" : "d-block d-md-none" : "btn btn-light mx-2"}
                   onClick={() => context.changeLang()}
                 >
                   English

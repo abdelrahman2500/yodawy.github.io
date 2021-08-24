@@ -24,7 +24,7 @@ export function ContextProvider(props) {
         cart.slice().forEach((item) => {
             if(item.id === product.id){
                 areadyInCart = true
-                item.count++
+                item.count < product.amount ? item.count++ : item.count= item.count
             }
         })
         if(!areadyInCart){
@@ -71,6 +71,8 @@ export function ContextProvider(props) {
     //         .then((response) => response.json())
     //         .then((data) => setFilterd(data));
     // },[]);
+
+    
 
     return (
         <Context.Provider value={{ lang, changeLang, products , filterd, setFilterd ,count, cart,setCart, addToCart, removeFromCart,deleteAll}}>

@@ -20,6 +20,10 @@ import ForDoctorsAr from "./pages/doctors/DoctorsAr";
 import AboutUsAr from "./pages/about-us/AboutUsAr";
 import Cart from './pages/crat/Cart';
 import CartAr from './pages/crat/CartAr';
+import Login from './pages/login/Login';
+import LoginAr from './pages/login/LoginAr';
+import AddProduct from './pages/addProducr/AddProduct';
+import AddProductAr from './pages/addProducr/AddProductAr';
 
 function App() {
   const context = useContext(Context);
@@ -57,6 +61,12 @@ function App() {
             <Route path="/cart" exact>
               <Cart />
             </Route>
+            <Route path="/login" exact>
+              <Login />
+            </Route>
+            <Route path="/addproduct" exact>
+              <AddProduct />
+            </Route>
           </Switch>
         </div>
       ) : (
@@ -89,6 +99,12 @@ function App() {
             </Route>
             <Route path="/cart" exact>
               <CartAr />
+            </Route>
+            <Route path="/login" exact>
+              <LoginAr />
+            </Route>
+            <Route path="/addproduct" exact>
+              <AddProductAr />
             </Route>
           </Switch>
         </div>

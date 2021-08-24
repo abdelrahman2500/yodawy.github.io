@@ -15,7 +15,7 @@ export default function Shop() {
   const context = useContext(Context);
   const [products, setProducts] = useState([]);
   const [sort, setSort] = useState('')
-  const[proCount,setProCount] = useState(10)
+  const[proCount,setProCount] = useState(40)
   const[page,setPage] = useState(1)
 
 
@@ -46,11 +46,11 @@ export default function Shop() {
 function handleProCount(e){
   let proCount = e.target.value ;
   setProCount(proCount)
-  setProducts(products.sort((a,b) => (
-      proCount === '20' ? setProCount(20) 
-      : proCount === '40' ?  setProCount(40)
-      : proCount === '60' ?  setProCount(60) 
+  setProducts(products.sort(() => (
+      proCount === '40' ? setProCount(40) 
+      : proCount === '60' ?  setProCount(60)
       : proCount === '80' ?  setProCount(80) 
+      : proCount === '100' ?  setProCount(100) 
       : setProCount(products.length)
   )))
 }
@@ -62,7 +62,7 @@ function handleProCount(e){
   useEffect(() => {
     setProducts(context.filterd);
     setPage(1)
-    setProCount(20) 
+    setProCount(40) 
   }, [context.filterd]);
 
   return (
@@ -108,10 +108,10 @@ function handleProCount(e){
                     </div>
                     <div className="col-6 col-md-3">
                       <select className="form-select form-select-sm" aria-label=".form-select-sm example" value={proCount} onChange={handleProCount}>
-                        <option defaultValue="20">20</option>
-                        <option value="40">40</option>
+                        <option defaultValue="40">40</option>
                         <option value="60">60</option>
                         <option value="80">80</option>
+                        <option value="100">100</option>
                       </select>
                     </div>
                     <div className="col-6 col-md-4">
