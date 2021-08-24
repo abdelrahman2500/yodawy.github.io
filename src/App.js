@@ -40,8 +40,7 @@ function App() {
             <Route path="/home" exact>
               <Home />
             </Route>
-            <Redirect exact from="/shop" to="/shop/1" />
-            <Route path="/shop/1" >
+            <Route path="/shop" >
               <Shop />
             </Route>
             <Route path="/pharamcies" exact>
@@ -84,8 +83,7 @@ function App() {
             <Route path="/home" exact>
               <HomeAr />
             </Route>
-            <Redirect exact from="/shop" to="/shop/1" />
-            <Route path="/shop/1" >
+            <Route path="/shop" >
               <ShopAr />
             </Route>
             <Route path="/pharamcies" exact>
