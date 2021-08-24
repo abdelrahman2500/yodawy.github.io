@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { Context } from "./context/Context";
 import Home from "./pages/home/Home";
 import HomeAr from "./pages/home/HomeAr";
-import { Route, Switch } from "react-router-dom";
+import { Redirect, Route, Switch } from "react-router-dom";
 import ForInsurers from "./pages/insurers/insurers";
 import AboutUs from "./pages/about-us/AboutUs";
 import ForPharmacies from "./pages/pharmacies/ForPharmacies";
@@ -24,6 +24,8 @@ import Login from './pages/login/Login';
 import LoginAr from './pages/login/LoginAr';
 import AddProduct from './pages/addProducr/AddProduct';
 import AddProductAr from './pages/addProducr/AddProductAr';
+import NotFound from './components/notFound/NotFound';
+import NotFoundAr from './components/notFound/NotFoundAr';
 
 function App() {
   const context = useContext(Context);
@@ -34,10 +36,12 @@ function App() {
         <div className="AppEn">
           {/* hello english */}
           <Switch>
-            <Route path="/" exact>
+            <Redirect exact from="/" to="/home" />
+            <Route path="/home" exact>
               <Home />
             </Route>
-            <Route path="/shop" >
+            <Redirect exact from="/shop" to="/shop/1" />
+            <Route path="/shop/1" >
               <Shop />
             </Route>
             <Route path="/pharamcies" exact>
@@ -67,16 +71,21 @@ function App() {
             <Route path="/addproduct" exact>
               <AddProduct />
             </Route>
+            <Route path="*">
+              <NotFound />
+            </Route>
           </Switch>
         </div>
       ) : (
         <div className="AppAr" dir="rtl">
           {/* hello arabic */}
           <Switch>
-            <Route path="/" exact>
+            <Redirect exact from="/" to="/home" />
+            <Route path="/home" exact>
               <HomeAr />
             </Route>
-            <Route path="/shop" >
+            <Redirect exact from="/shop" to="/shop/1" />
+            <Route path="/shop/1" >
               <ShopAr />
             </Route>
             <Route path="/pharamcies" exact>
@@ -105,6 +114,9 @@ function App() {
             </Route>
             <Route path="/addproduct" exact>
               <AddProductAr />
+            </Route>
+            <Route path="*">
+              <NotFoundAr />
             </Route>
           </Switch>
         </div>

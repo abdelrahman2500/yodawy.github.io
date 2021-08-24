@@ -4927,6 +4927,12 @@
       "password": "1234",
       "role": "buyer",
       "id": 5
+    },
+    {
+      "username": "asdf",
+      "password": "asdf",
+      "role": "seller",
+      "id": 6
     }
   ]
 }

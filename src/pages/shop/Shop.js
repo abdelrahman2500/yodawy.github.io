@@ -128,7 +128,7 @@ function handleProCount(e){
               <div className="products mt-3">
                 <div className="row">
                   {products.map((product,i) => (
-                    i > (page-1) * proCount && i <= page * proCount  ?  
+                    i >= (page-1) * proCount && i < page * proCount  ?  
                     <div className={`col-12 col-sm-${show}`} key={product.id}>
                       <Product
                         product={product}
@@ -138,7 +138,7 @@ function handleProCount(e){
                 </div>
                 <nav aria-label="Page navigation example">
                   <ul className="pagination justify-content-center py-0">
-                    {context.products.map((el,i) => 
+                    {context.filterd.map((el,i) => 
                       i < Math.ceil(context.filterd.length / proCount) ? 
                       <NavLink to={`/shop/${i+1}`} onClick={()=>setPage(i+1)} key={el.id}>
                         <li className="page-item"><span className="page-link">{i+1}</span></li>

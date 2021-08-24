@@ -60,11 +60,11 @@ export function ContextProvider(props) {
 
     useEffect(() => {
         setProducts(data.products);
-    },[]);
+    },[data.products]);
 
     useEffect(() => {
         setFilterd(data.products);
-    },[]);
+    },[data.products]);
 
     // useEffect(() => {
     //     fetch('http://localhost:3001/products')

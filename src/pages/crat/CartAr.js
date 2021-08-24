@@ -39,7 +39,7 @@ export default function CartAr() {
                 <h2 className="h1">عربة التسوق فارغة!</h2>
             </div>
              : 
-                <div className="row">
+                <div className="row my-3">
                     <div className="col-12 col-md-8">
                         {context.cart.map((item) => 
                             <div className="card mb-3" style={{maxWidth: "100%"}} key={item.id}>

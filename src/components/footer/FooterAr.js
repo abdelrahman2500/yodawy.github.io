@@ -7,7 +7,7 @@ export default function FooterAr() {
             <div className="need-help bg-dark text-white p-3">
                 <div className="row">
                     <div className="col-12 col-md-6 mb-3">
-                        <h2 className="h5 fw-bold my-3 mx-0">هل تريد مساعدة؟?</h2>
+                        <h2 className="h5 fw-bold my-3 mx-0">هل تريد مساعدة؟</h2>
                         <h3 className="h2 fw-bold my-3 mx-0">15005</h3>
                     </div>
                     <div className="col-12 col-md-6">

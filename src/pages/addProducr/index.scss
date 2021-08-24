@@ -1,0 +1,22 @@
+.add-product{
+    input,textarea{
+        font-size: 14px;
+        &::placeholder{
+            font-size: 14px;
+        }
+    }
+    select{
+        font-size: 14px;
+    }
+    label{
+        font-weight: 600;
+    }
+    .not-found{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 250px;
+        font-size: 120px;
+        flex-direction: column;
+    }
+}

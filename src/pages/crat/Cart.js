@@ -41,7 +41,7 @@ export default function Cart() {
                 <h2 className="h1">Your cart is empty!</h2>
             </div>
              : 
-                <div className="row">
+                <div className="row my-3">
                     <div className="col-12 col-md-8">
                         {context.cart.map((item) => 
                             <div className="card mb-3" style={{maxWidth: "100%"}} key={item.id}>
