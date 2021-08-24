@@ -1,16 +1,11 @@
 import React, { useContext, useEffect, useState } from 'react'
-import Branches from '../../components/branches/Branches'
-import Navbar from '../../components/navbar/Navbar'
-import Sidebar from '../../components/sidebar/Sidebar';
 import { Context } from './../../context/Context';
 
 import './index.scss'
-import Footer from './../../components/footer/Footer';
 import NavbarAr from './../../components/navbar/NavbarAr';
 import BranchesAr from './../../components/branches/BranchesAr';
 import SidebarAr from './../../components/sidebar/SidebarAr';
 import FooterAr from './../../components/footer/FooterAr';
-import Product from './../../components/products/Product';
 import ProductAr from './../../components/products/ProductAr';
 import { NavLink } from 'react-router-dom';
 
@@ -19,7 +14,7 @@ export default function ShopAr() {
     const [products, setProducts] = useState([])
     const [show, setShow] = useState(localStorage.setItem("show-style", localStorage.getItem("show-style") === null ? 4 : localStorage.getItem("show-style")))
     const [sort, setSort] = useState('')
-    const[proCount,setProCount] = useState(40)
+    const[proCount,setProCount] = useState(30)
     const[page,setPage] = useState(1)
 
     function handleSortProucts(e){
@@ -35,11 +30,11 @@ export default function ShopAr() {
     function handleProCount(e){
         let proCount = e.target.value ;
         setProCount(proCount)
-        setProducts(products.sort((a,b) => (
-            proCount === '40' ? setProCount(40) 
+        setProducts(products.sort(() => (
+            proCount === '30' ? setProCount(30) 
             : proCount === '60' ?  setProCount(60)
-            : proCount === '80' ?  setProCount(80) 
-            : proCount === '100' ?  setProCount(100) 
+            : proCount === '90' ?  setProCount(90) 
+            : proCount === '102' ?  setProCount(120) 
             : setProCount(products.length)
         )))
       }
@@ -55,7 +50,7 @@ export default function ShopAr() {
     useEffect(() => {
         setProducts(context.filterd);
         setPage(1)
-        setProCount(40) 
+        setProCount(30) 
     }, [context.filterd]);
 
     return (
@@ -98,10 +93,10 @@ export default function ShopAr() {
                                     </div>
                                     <div className="col-6 col-md-3">
                                     <select className="form-select form-select-sm" aria-label=".form-select-sm example" value={proCount} onChange={handleProCount}>
-                                        <option defaultValue="40">40</option>
+                                        <option defaultValue="30">30</option>
                                         <option value="60">60</option>
-                                        <option value="80">80</option>
-                                        <option value="100">100</option>
+                                        <option value="90">90</option>
+                                        <option value="120">120</option>
                                     </select>
                                     </div>
                                     <div className="col-6 col-md-4">
