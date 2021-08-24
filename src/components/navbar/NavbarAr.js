@@ -159,7 +159,7 @@ export default function NavbarAr(props) {
                     to="/login" exact
                   >
                     <i className="fas fa-sign-out-alt "></i>
-                    <span style={{fontSize:"10px"}} className="badge bg-secondary rounded position-absolute">login</span>
+                    <span style={{fontSize:"10px"}} className="badge bg-secondary rounded position-absolute">دخول</span>
                   </NavLink>
                 </li>
                 }

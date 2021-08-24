@@ -4901,6 +4901,25 @@
       "nameAr": "جليد بخاخ معطر جو أوتوماتيك فانيليا اعادة تعبئه, 175 ج",
       "date": 1629758811667,
       "id": 258
+    },
+    {
+      "categoryName": "baby",
+      "categoryBranchName": "baby accessories",
+      "brand": "aaaa",
+      "offer": "aaaa",
+      "description": "aaaa",
+      "productName": "aaaaa",
+      "amount": 2,
+      "price": 5,
+      "imagePath": "sssss",
+      "categoryNameAr": "مستلزمات الأطفال",
+      "categoryBranchNameAr": "مستلزمات الأطفال",
+      "brandAr": "aaaa",
+      "offerAr": "aaaa",
+      "descriptionAr": "aaaa",
+      "nameAr": "aaaa",
+      "date": 1629846719342,
+      "id": 259
     }
   ],
   "users": [
@@ -4933,6 +4952,12 @@
       "password": "asdf",
       "role": "seller",
       "id": 6
+    },
+    {
+      "username": "ahmed",
+      "password": "12345",
+      "role": "seller",
+      "id": 7
     }
   ]
 }
