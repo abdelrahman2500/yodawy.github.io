@@ -11,7 +11,7 @@ export default function BlogAr() {
         <div className="blog ar">
         <NavbarAr  compo={true}/>
         <BranchesAr nothome={false} />
-            <div className="container">
+            <div className="container mt-2">
                 <div className="row">
                     <div className="col-sm-12 col-md-8 col-lg-8 ">
                         <div className="blogcard row">

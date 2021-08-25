@@ -93,7 +93,10 @@ export default function ProductAr(props) {
                           <p className="m-1"><i className="fas fa-shopping-bag"></i> شراء هذا المنتج بسعر أقل</p>
                           <p className="m-1"><i className="fas fa-cart-arrow-down"></i>اشتري هذا المنتج كجزء من مجموعات وعروض يُداوي!</p>
                         </div>
-                        <div className="col-12 py-2"></div>
+                        
+                        <div className="col-12 py-2">
+                          <h5>السعر : {product.price} جنيها</h5>
+                        </div>
                       </div>
                     </div>
                   </div>

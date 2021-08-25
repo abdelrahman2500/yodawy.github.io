@@ -93,7 +93,9 @@ export default function Product(props) {
                           <p className="m-1"><i className="fas fa-shopping-bag"></i> Buy this item for less</p>
                           <p className="m-1"><i className="fas fa-cart-arrow-down"></i> Buy this item as a part of a bundle</p>
                         </div>
-                        <div className="col-12 py-2"></div>
+                        <div className="col-12 py-2">
+                          <h5>Price : {product.price} L.E</h5>
+                        </div>
                       </div>
                     </div>
                   </div>
