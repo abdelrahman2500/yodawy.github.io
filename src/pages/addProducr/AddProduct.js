@@ -28,9 +28,24 @@ export default function AddProduct() {
     const[productNameAr, setProductNameAr] = useState("")
     const[amount, setAmount] = useState("")
     const[price, setPrice] = useState("")
-    
     const[imagePath, setImagePath] = useState("")
-
+    function reset(){
+        setCateg("")
+        setCategAr("")
+        setCategBranch("")
+        setCategBranchAr("")
+        setBrand("")
+        setBrandAr("")
+        setOffer("")
+        setOfferAr("")
+        setDescription("")
+        setDescriptionAr("")
+        setProductName("")
+        setProductNameAr("")
+        setAmount("")
+        setPrice("")
+        setImagePath("")
+    }
     const[current, setCurrent] = useState([])
 
     useEffect(()=>{
@@ -204,7 +219,9 @@ export default function AddProduct() {
                 },
                 })
                 .then((response) => response.json())
-                .then((json) => console.log(json));
+                .then(() => reset())
+                .then(()=> alert("You Added New Product"))
+
             }else{
                 setStatus("")
                 console.log(status)

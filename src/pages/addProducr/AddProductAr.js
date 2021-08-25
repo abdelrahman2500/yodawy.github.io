@@ -31,6 +31,24 @@ export default function AddProductAr() {
     
     const[imagePath, setImagePath] = useState("")
 
+    function reset(){
+        setCateg("")
+        setCategAr("")
+        setCategBranch("")
+        setCategBranchAr("")
+        setBrand("")
+        setBrandAr("")
+        setOffer("")
+        setOfferAr("")
+        setDescription("")
+        setDescriptionAr("")
+        setProductName("")
+        setProductNameAr("")
+        setAmount("")
+        setPrice("")
+        setImagePath("")
+    }
+
     const[current, setCurrent] = useState([])
 
     useEffect(()=>{
@@ -204,7 +222,8 @@ export default function AddProductAr() {
                 },
                 })
                 .then((response) => response.json())
-                .then((json) => console.log(json));
+                .then(() => reset())
+                .then(()=> alert("لقد قمت بإضافة منتج جديد"))
             }else{
                 setStatus("")
                 console.log(status)
