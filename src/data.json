@@ -4930,28 +4930,10 @@
       "id": 1
     },
     {
-      "username": "aaaa",
-      "password": "aaaa",
-      "role": "seller",
-      "id": 3
-    },
-    {
-      "username": "asda",
-      "password": "asda",
-      "role": "buyer",
-      "id": 4
-    },
-    {
       "username": "ahmed",
       "password": "1234",
       "role": "buyer",
       "id": 5
-    },
-    {
-      "username": "asdf",
-      "password": "asdf",
-      "role": "seller",
-      "id": 6
     },
     {
       "username": "ahmed",
