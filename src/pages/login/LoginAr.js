@@ -7,14 +7,6 @@ import { Link } from 'react-router-dom';
 export default function LoginAr() {
 
     const[users, setUsers] = useState()
-
-    useEffect(()=>{
-        fetch('http://localhost:3001/users')
-            .then((response) => response.json())
-            .then((usersData) => setUsers(usersData));
-        // setUsers(data.users)
-    },[])
-
     const [login, setLogin] = useState(true)
     const [loginUser, setLoginUser] = useState("")
     const [loginUserValid, setLoginUserValid] = useState("d-none")
@@ -28,12 +20,27 @@ export default function LoginAr() {
     const [signupPassReValid, setSignupPassReValid] = useState("d-none")
     const [radio, setRadio] = useState("")
     const [radioValid, setRadioValid] = useState("d-none")
-    const[allSignupValid, setAllSignupValid] = useState(false)
     const[status, setStatus] = useState(false)
+    
+    const[validMsg, setValidMsg] = useState("d-none")
+
+    function reset(){
+        setSignupUser("")
+        setSignupPass("")
+        setSignupPassRe("")
+        setRadio("")
+    }
+    useEffect(()=>{
+        fetch('http://localhost:3001/users')
+            .then((response) => response.json())
+            .then((usersData) => setUsers(usersData));
+    },[radio])
+
 
     useEffect(()=>{
         setStatus(status)
     },[status])
+
 
     function signUpValidation(){
         // console.log(signupUser.length)
@@ -42,19 +49,41 @@ export default function LoginAr() {
         signupPassRe != signupPass ? setSignupPassReValid("") : setSignupPassReValid("d-none") 
         radio == "seller" || radio == "buyer" ? setRadioValid("d-none") : setRadioValid("")
         if(signupUser.length >=3 && signupPass.length >=3 && signupPassRe == signupPass && (radio == "seller" || radio == "buyer")){
-            fetch('http://localhost:3001/users', {
-                method: 'POST',
-                    body: JSON.stringify({
-                        username: signupUser,
-                        password: signupPass,
-                        role: radio,
-                    }),
-                    headers: {
-                        'Content-type': 'application/json; charset=UTF-8',
-                    },
-                })
-                .then((response) => response.json())
-            setLogin(true)
+            let valid = true
+            users.map(user => {
+                for(let i =0; i< users.length; i++){
+                    if(valid == true){
+                        if(user.username == signupUser){
+                            valid = false;
+                            setValidMsg("")
+                            console.log(valid)
+                        }
+                        else{
+                            valid = true
+                            console.log(valid)
+                        }
+                    }
+                }
+            })
+            if(valid == true){
+                fetch('http://localhost:3001/users', {
+                    method: 'POST',
+                        body: JSON.stringify({
+                            username: signupUser,
+                            password: signupPass,
+                            role: radio,
+                        }),
+                        headers: {
+                            'Content-type': 'application/json; charset=UTF-8',
+                        },
+                    })
+                    .then((response) => response.json())
+                    reset()
+                setLogin(true)
+            }else{
+                
+            }
+            
             
         }
     }
@@ -138,6 +167,7 @@ export default function LoginAr() {
                         <label htmlFor="" className="form_label">اسم المستخدم</label>
                     </div>    
                     <p className={`${signupUserValid} text-danger`}>اسم المستخدم الذى أدخلته غير صحيح</p>
+                    <p className={`${validMsg} text-danger`}>اسم المستخدم الذى أدخلته موجود بالفعل</p>
                     <div className="form_div">
                         <input type="password" className="form_input" placeholder=" " required value={signupPass} onChange={(e)=> setSignupPass(e.target.value)}/>
                         <label htmlFor="" className="form_label">الرقم السرى</label>

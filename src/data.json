@@ -4966,18 +4966,6 @@
       "password": "aaaa",
       "role": "seller",
       "id": 1
-    },
-    {
-      "username": "ahmed",
-      "password": "1234",
-      "role": "buyer",
-      "id": 5
-    },
-    {
-      "username": "ahmed",
-      "password": "12345",
-      "role": "seller",
-      "id": 7
     }
   ]
 }
