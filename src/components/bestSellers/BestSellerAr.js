@@ -11,7 +11,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 export default function BestSeller() {
   const context = useContext(Context)
-  const[best,setBest] = useState(context.products.filter(pro => pro.id <= 14))
+  const[best,setBest] = useState(context.products.filter(pro => pro.price <= 400 && pro.price >= 300))
 
   function SampleNextArrow(props) {
     const { className, style, onClick } = props;
