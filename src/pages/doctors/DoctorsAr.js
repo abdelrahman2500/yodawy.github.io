@@ -79,7 +79,7 @@ export default function ForDoctorsAr() {
                                                 <div className="row justify-content-center">
                                                     <h1 className="col-12 col-10 p-1">قاعدة بيانات الأطباء</h1>
                                                     <p className="col-12 col-10 p-1">يفتخر يُداوي بتقديم قاعدة بيانات متطورة تسمح للأطباء بالاختيار بين مجموعة كبيرة من الاختيارات المتاحة في السوق، وهي مصممة لتلبية احتياجات كل تخصص. وباستخدام التطبيق، يُمكن للأطباء الآن:</p>
-                                                    <ul className="col-8 col-lg-4 m-auto">
+                                                    <ul className="col-12 col-lg-4 m-auto">
                                                         <li>البحث عن احتياجاتهم من الصيدلية</li>
                                                         <li>التحقق من توافر المنتجات في السوق</li>
                                                         <li>معرفة أحدث الأسعار</li>

@@ -79,7 +79,7 @@ export default function ForDoctors() {
                                                 <div className="row justify-content-center">
                                                     <h1 className="col-12 col-10 p-1">Yodawy Doctors Database</h1>
                                                     <p className="col-12 col-10 p-1">Yodawy takes pride in its cutting-edge database where doctors can easily choose from a wide spectrum of available items specifically-tailored for each speciality.</p>
-                                                    <ul className="col-8 col-lg-4 m-auto">
+                                                    <ul className="col-12 col-lg-4 m-auto">
                                                         <li>Search for pharmacy needs</li>
                                                         <li>Check for availability</li>
                                                         <li>Find updated prices</li>

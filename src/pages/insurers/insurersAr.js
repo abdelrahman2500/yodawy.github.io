@@ -74,7 +74,7 @@ export default function ForInsurersAr() {
                                                 <div className="row justify-content-center">
                                                     <h1 className="col-10 p-1">صوّر بطاقة التأمين</h1>
                                                     <p className="col-10 p-1">بمجرد تسجيل الدخول على تطبيق يُداوي، تستطيع إكمال التسجيل في بضع دقائق عن طريق إضافة بيانات بطاقة التأمين.</p>
-                                                    <ul className="col-11 col-lg-4 m-auto">
+                                                    <ul className="col-12 col-lg-4 m-auto">
                                                         <li>اختر مقدم خدمة التأمين الصحي</li>
                                                         <li>صوّر بطاقة التأمين</li>
                                                         <li>احصل على موافقة فورية</li>
@@ -91,7 +91,7 @@ export default function ForInsurersAr() {
                                                 <div className="row justify-content-center">
                                                     <h1 className="col-10 p-1">حمّل روشتتك الطبية</h1>
                                                     <p className="col-10 p-1">بعد تسجيل بياناتك التأمينية، قُم بتحميل روشتتك الطبية. ولا تشغل بالك بمجرد تأكيد طلبك، حيث سيقوم يُداوي بالمطلوب</p>
-                                                    <ul className="col-8 col-lg-4 m-auto">
+                                                    <ul className="col-12 col-lg-4 m-auto">
                                                         <li>حمّل روشتتك الطبية</li>
                                                         <li>أضف عنوان التوصيل</li>
                                                         <li>اختر طريقة الدفع</li>
@@ -108,7 +108,7 @@ export default function ForInsurersAr() {
                                                 <div className="row justify-content-center">
                                                     <h1 className="col-10 p-1">احصل على موافقة التأمين</h1>
                                                     <p className="col-10 p-1">بمجرد استلامنا للروشتة، سيقوم المُحرّك المدعوم بالذكاء الاصطناعي بسرعةٍ شبه فورية بتنفيذ الآتي</p>
-                                                    <ul className="col-10 col-lg-4 m-auto">
+                                                    <ul className="col-12 col-lg-4 m-auto">
                                                         <li>تحويل الطلب إلى شركة التأمين الخاصة</li>
                                                         <li>الحصول على الموافقة</li>
                                                         <li>إرسال الموافقة التأمينية مع طلبك</li>
@@ -126,7 +126,7 @@ export default function ForInsurersAr() {
                                                 <div className="row justify-content-center">
                                                     <h1 className="col-10 p-1">احصل على طلبات روشتة التأمين في المنزل</h1>
                                                     <p className="col-10 p-1">في أسرع وقتٍ ممكن، ستصلك طلبات روشتة التأمين بأقل مجهود إلى باب منزلك.</p>
-                                                    <ul className="col-8 col-lg-4 m-auto">
+                                                    <ul className="col-12 col-lg-4 m-auto">
                                                         <li>بدون الانتظار في طوابير</li>
                                                         <li>بدون ملء استمارات</li>
                                                         <li>بدون زيارة صيدليات</li>
