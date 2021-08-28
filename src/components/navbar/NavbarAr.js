@@ -153,7 +153,7 @@ export default function NavbarAr(props) {
                     <span style={{fontSize:"10px"}} className="badge bg-success rounded position-absolute">{localStorage.getItem("username")? localStorage.getItem("username") : ""}</span>
                   </NavLink>
                 </li> : 
-                <li className="nav-item fw-bolder mx-3">
+                <li className={props.compo == false ? "d-none" : "nav-item fw-bolder mx-3"}>
                   <NavLink
                     className="nav-link"
                     to="/login" exact

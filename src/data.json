@@ -4958,6 +4958,25 @@
       "nameAr": "vvvvvvvvvvvvv",
       "date": 1629924120603,
       "id": 261
+    },
+    {
+      "categoryName": "baby",
+      "categoryBranchName": "baby accessories",
+      "brand": "wwww",
+      "offer": "wwww",
+      "description": "wwww",
+      "productName": "wwww",
+      "amount": 2,
+      "price": 2,
+      "imagePath": "wwww",
+      "categoryNameAr": "مستلزمات الأطفال",
+      "categoryBranchNameAr": "مستلزمات الأطفال",
+      "brandAr": "wwww",
+      "offerAr": "www",
+      "descriptionAr": "wwww",
+      "nameAr": "wwww",
+      "date": 1630070344103,
+      "id": 262
     }
   ],
   "users": [
@@ -4966,6 +4985,18 @@
       "password": "aaaa",
       "role": "seller",
       "id": 1
+    },
+    {
+      "username": "eman",
+      "password": "1234",
+      "role": "seller",
+      "id": 2
+    },
+    {
+      "username": "ali2",
+      "password": "1234",
+      "role": "buyer",
+      "id": 3
     }
   ]
 }
