@@ -1,9 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Footer from '../../components/footer/Footer'
 import Navbar from '../../components/navbar/Navbar'
 import "./index.scss"
+import { Context } from './../../context/Context';
 
 export default function AddProduct() {
+    const context = useContext(Context)
+
     let baby = ["baby accessories", "baby bath", "Baby Skin Care"];
     let bath_body = ["Shower", "Soap", "Tissues"];
     let beauty = ["Acne Treatment", "Anti-Aging", "facial care"];
@@ -194,6 +197,24 @@ export default function AddProduct() {
             && amount != "" && price != "" && imagePath != "" && categAr != "" && categBranchAr != ""  && brandAr != "" 
             && offerAr != "" && descriptionAr != "" && productNameAr != ""){
             setStatus("d-none")
+            context.products.push({
+                categoryName: categ,
+                categoryBranchName: categBranch,
+                brand:brand,
+                offer:offer,
+                description:description,
+                productName:productName,
+                amount:Number(amount),
+                price:Number(price),
+                imagePath:imagePath,
+                categoryNameAr:categAr,
+                categoryBranchNameAr:categBranchAr,
+                brandAr:brandAr,
+                offerAr:offerAr,
+                descriptionAr:descriptionAr,
+                nameAr:productNameAr,
+                date: new Date().getTime()
+            })
             fetch('http://localhost:3001/products', {
                 method: 'POST',
                 body: JSON.stringify({

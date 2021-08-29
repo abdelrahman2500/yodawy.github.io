@@ -4977,6 +4977,25 @@
       "nameAr": "wwww",
       "date": 1630070344103,
       "id": 262
+    },
+    {
+      "categoryName": "men care",
+      "categoryBranchName": "shaving",
+      "brand": "zzzz",
+      "offer": "zzzz",
+      "description": "zzzzzzzzz",
+      "productName": "zzzzzzzzz",
+      "amount": 2,
+      "price": 3,
+      "imagePath": "xxxxxxxxx",
+      "categoryNameAr": "مستلزمات الرجال",
+      "categoryBranchNameAr": "الحلاقة",
+      "brandAr": "xxxxxxxxx",
+      "offerAr": "xxxxxxxxxx",
+      "descriptionAr": "xxxxxxxxxxxx",
+      "nameAr": "xxxxxxxxxxxxx",
+      "date": 1630238605631,
+      "id": 263
     }
   ],
   "users": [
@@ -4997,6 +5016,12 @@
       "password": "1234",
       "role": "buyer",
       "id": 3
+    },
+    {
+      "username": "admin2",
+      "password": "1234",
+      "role": "seller",
+      "id": 4
     }
   ]
 }
