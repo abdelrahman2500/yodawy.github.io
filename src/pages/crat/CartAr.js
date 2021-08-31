@@ -74,7 +74,7 @@ export default function CartAr() {
                             <div className="card-header">الدفع</div>
                             <div className="card-body">
                                 <h5 className="card-title mb-3">الإجمالي : {context.cart.reduce((a,c) => a + c.price*c.count , 0)}  جنيه مصري</h5>
-                                <button className="btn btn-light">إكمال عملية الدفع</button>
+                                <button className="btn btn-light" onClick={()=> context.buyNow()}>إكمال عملية الدفع</button>
                             </div>
                         </div>
                         <button className="btn btn-danger mb-3" onClick={()=> window.confirm('هل أنت متأكد أنك ترغب في حذف كافة منتجات العربة')? context.deleteAll(): ""}>حذف الكل من عربة التسوق</button>

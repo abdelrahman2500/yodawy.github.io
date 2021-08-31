@@ -49,6 +49,10 @@ export function ContextProvider(props) {
         localStorage.setItem("cart-items", JSON.stringify([]))
     }
 
+    function buyNow(){
+        alert("Backend needed to continue")
+    }
+
     const changeLang = function () {
         localStorage.setItem("lang", localStorage.getItem("lang") === "ar" ? "en" : "ar")
         setLang(localStorage.getItem("lang"))
@@ -75,7 +79,7 @@ export function ContextProvider(props) {
     
 
     return (
-        <Context.Provider value={{ lang, changeLang, products , filterd, setFilterd ,count, cart,setCart, addToCart, removeFromCart,deleteAll}}>
+        <Context.Provider value={{ lang, changeLang, products , filterd, setFilterd ,count, cart,setCart, addToCart, removeFromCart,deleteAll, buyNow}}>
             {props.children}
         </Context.Provider>
     )

@@ -76,7 +76,7 @@ export default function Cart() {
                             <div className="card-header">Checkout</div>
                             <div className="card-body">
                                 <h5 className="card-title mb-3">total price : {context.cart.reduce((a,c) => a + c.price*c.count , 0)} L.E</h5>
-                                <button className="btn btn-light">Proceed to checkout</button>
+                                <button className="btn btn-light" onClick={()=> context.buyNow()}>Proceed to checkout</button>
                             </div>
                         </div>
                         <button className="btn btn-danger mb-3" onClick={()=> window.confirm('Are you sure you wish to delete all items?')? context.deleteAll(): ""}>delete all from cart</button>
