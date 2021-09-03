@@ -180,7 +180,7 @@ export default function NavbarAr(props) {
             <div className="col-3 col-md-2">
               <div className="box  m-lg-4">
                 <Link to="/">
-                  <img src={"/images/logo/Yodawy-logo-ar.png"} />
+                  <img src={"/images/logo/yodawy-logo-ar.png"} />
                 </Link>
               </div>
             </div>

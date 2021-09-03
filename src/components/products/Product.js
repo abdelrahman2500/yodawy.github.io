@@ -58,7 +58,7 @@ export default function Product(props) {
     <div className="product">
       <div className="product_inner text-center">
         <div className=" w-100 top1">
-          <img src={`/images/products/${product.imagePath}`}  data-bs-toggle="modal" data-bs-target={`#exampleModal${product.id}`} className="" />
+          <img src={process.env.PUBLIC_URL +`/images/products/${product.imagePath}`}  data-bs-toggle="modal" data-bs-target={`#exampleModal${product.id}`} className="" />
 
           <div className="modal text-start fade" id={`exampleModal${product.id}`} tabIndex="-1" aria-labelledby={`exampleModal${product.id}Label`} aria-hidden="true">
             <div className="modal-dialog">

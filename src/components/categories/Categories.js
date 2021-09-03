@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import "./index.scss";
+import { Context } from './../../context/Context';
 
 export default function Categories(){
+    const context = useContext(Context)
     return(
         <div className="categories text-center my-4">
             <div className="container">
@@ -16,9 +18,9 @@ export default function Categories(){
                             className="w-100 h-100"
                             alt=""
                             />
-                            <Link to="/shop">
+                            <Link to="/shop" onClick={()=> context.setFilterd(context.products.filter(p => p.categoryName == "dermocosmetics"))}>
                                 <div className="title rounded position-absolute mb-4">
-                                    <h4 className="fw-bold">dermocosmatics</h4>
+                                    <h4 className="fw-bold">dermocosmetics</h4>
                                 </div>
                             </Link>
                         </div>
@@ -28,7 +30,7 @@ export default function Categories(){
                             className="w-100 h-100"
                             alt=""
                             />
-                            <Link to="/shop">
+                            <Link to="/shop" onClick={()=> context.setFilterd(context.products.filter(p => p.categoryName == "personal care"))}>
                                 <div className="title rounded position-absolute mb-4">
                                     <h4 className="fw-bold">personal care</h4>
                                 </div>
@@ -40,7 +42,7 @@ export default function Categories(){
                             className="w-100 h-100"
                             alt=""
                             />
-                            <Link to="/shop">
+                            <Link to="/shop" onClick={()=> context.setFilterd(context.products.filter(p => p.categoryName == "oral care"))}>
                                 <div className="title rounded position-absolute mb-4">
                                     <h4 className="fw-bold">oral care</h4>
                                 </div>
@@ -56,7 +58,7 @@ export default function Categories(){
                             className="w-100 h-100"
                             alt=""
                             />
-                            <Link to="/shop">
+                            <Link to="/shop" onClick={()=> context.setFilterd(context.products.filter(p => p.categoryName == "men care"))}>
                                 <div className="title rounded position-absolute mb-4">
                                     <h4 className="fw-bold">men care</h4>
                                 </div>
@@ -68,7 +70,7 @@ export default function Categories(){
                             className="w-100 h-100"
                             alt=""
                             />
-                            <Link to="/shop">
+                            <Link to="/shop" onClick={()=> context.setFilterd(context.products.filter(p => p.categoryName == "baby"))}>
                                 <div className="title rounded position-absolute mb-4">
                                     <h4 className="fw-bold">baby</h4>
                                 </div>
@@ -85,7 +87,7 @@ export default function Categories(){
                             className="w-100 h-100"
                             alt=""
                             />
-                            <Link to="/shop">
+                            <Link to="/shop" onClick={()=> context.setFilterd(context.products.filter(p => p.categoryName == "bath body"))}>
                                 <div className="title rounded position-absolute mb-4">
                                     <h4 className="fw-bold">bath & body</h4>
                                 </div>
@@ -97,7 +99,7 @@ export default function Categories(){
                             className="w-100 h-100"
                             alt=""
                             />
-                            <Link to="/shop">
+                            <Link to="/shop" onClick={()=> context.setFilterd(context.products.filter(p => p.categoryName == "hair care"))}>
                                 <div className="title rounded position-absolute mb-4">
                                     <h4 className="fw-bold">hair care</h4>
                                 </div>
@@ -109,9 +111,9 @@ export default function Categories(){
                             className="w-100 h-100"
                             alt=""
                             />
-                            <Link to="/shop">
+                            <Link to="/shop" onClick={()=> context.setFilterd(context.products.filter(p => p.categoryName == "contact lences"))}>
                                 <div className="title rounded position-absolute mb-4">
-                                    <h4 className="fw-bold">contact lenses</h4>
+                                    <h4 className="fw-bold">contact lences</h4>
                                 </div>
                             </Link>
                         </div>
