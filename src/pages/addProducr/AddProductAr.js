@@ -379,7 +379,7 @@ export default function AddProductAr() {
                 </div>
             </div>
             <div className="col-12 mb-5">
-                <p className={`${status} lead text-danger text-center fw-bold`}>يجب إدخل كل البيانات</p>
+                <p className={`${status} lead text-danger text-center fw-bold`}>يجب إدخال كل البيانات</p>
                 <button className="btn btn-primary w-100" type="button" onClick={()=>addProduct()}>أضف المنتج</button>
             </div>
         </form>
