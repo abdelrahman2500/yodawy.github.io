@@ -144,7 +144,7 @@ export default function NavbarAr(props) {
                   </NavLink>
                 </li>
                 {localStorage.getItem("username") ? 
-                <li className="nav-item fw-bolder mx-3">
+                <li className={props.compo == false ? "d-none" : "nav-item fw-bolder mx-3"}>
                   <NavLink
                     className="nav-link"
                     to="/login" exact
