@@ -303,7 +303,7 @@ export default function AddProductAr() {
                     </div>
                     <div className="mb-12">
                         <label htmlFor="description" className="form-label">describtion</label>
-                        <textarea className="form-control" id="description" placeholder="Required example textarea" value={description} onChange={(e)=> setDescription(e.target.value.trim())} required></textarea>
+                        <textarea className="form-control" id="description" placeholder="Product Describtion" value={description} onChange={(e)=> setDescription(e.target.value.trim())} required></textarea>
                         <div className="invalid-feedback">
                             Please enter the describtion of the product.
                         </div>
