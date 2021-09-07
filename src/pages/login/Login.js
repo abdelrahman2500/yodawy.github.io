@@ -24,6 +24,8 @@ export default function Login() {
     const[validMsg, setValidMsg] = useState("d-none")
 
     function reset(){
+        setLoginUser("")
+        setLoginPass("")
         setSignupUser("")
         setSignupPass("")
         setSignupPassRe("")
@@ -123,6 +125,11 @@ export default function Login() {
         localStorage.removeItem("role")
     }
 
+    function changeTo(){
+        setLogin(!login)
+        reset()
+    }
+
     return (
         <div>
         {localStorage.getItem("logged") == "true" ? 
@@ -157,7 +164,7 @@ export default function Login() {
                     <p className={`${loginPassValid} text-danger`}>Password u enterd isn't valid</p>
                     <input type="button" className="form_button mb-3" value="Login" onClick={()=>loginValidation()} />
 
-                    <p>dont't have account <button className="btn fw-bold" onClick={()=>setLogin(false)}>Sign Up</button></p>
+                    <p>dont't have account <button className="btn fw-bold" onClick={()=>changeTo()}>Sign Up</button></p>
                 </form>
             </div> : 
             <div className="l-from my-5">
@@ -192,7 +199,7 @@ export default function Login() {
 
                     <input type="button" className="form_button mb-3" value="Sign Up" onClick={()=> signUpValidation()}/>
 
-                    <p>you have an account <button className="btn fw-bold" onClick={()=>setLogin(true)}>Login</button></p>
+                    <p>you have an account <button className="btn fw-bold" onClick={()=>changeTo()}>Login</button></p>
                 </form>
             </div>
             }

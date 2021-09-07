@@ -25,6 +25,8 @@ export default function LoginAr() {
     const[validMsg, setValidMsg] = useState("d-none")
 
     function reset(){
+        setLoginUser("")
+        setLoginPass("")
         setSignupUser("")
         setSignupPass("")
         setSignupPassRe("")
@@ -81,7 +83,7 @@ export default function LoginAr() {
                     reset()
                 setLogin(true)
             }else{
-                
+                setValidMsg("")
             }
             
             
@@ -121,6 +123,11 @@ export default function LoginAr() {
         localStorage.removeItem("role")
     }
 
+    function changeTo(){
+        setLogin(!login)
+        reset()
+    }
+
     return (
         <div>
         {localStorage.getItem("logged") == "true" ? 
@@ -155,7 +162,7 @@ export default function LoginAr() {
                     <p className={`${loginPassValid} text-danger`}>الرقم السرى الذى أدخلته غير صحيح</p>
                     <input type="button" className="form_button mb-3" value="Login" onClick={()=>loginValidation()} />
 
-                    <p>لا تملك حساب <button className="btn fw-bold" onClick={()=>setLogin(false)}>مستخدم جديد</button></p>
+                    <p>لا تملك حساب <button className="btn fw-bold" onClick={()=>changeTo()}>مستخدم جديد</button></p>
                 </form>
             </div> : 
             <div className="l-from my-5">
@@ -190,7 +197,7 @@ export default function LoginAr() {
 
                     <input type="button" className="form_button mb-3" value="Sign Up" onClick={()=> signUpValidation()}/>
 
-                    <p>أنت تملك حساب <button className="btn fw-bold" onClick={()=>setLogin(true)}>تسجيل الدخول</button></p>
+                    <p>أنت تملك حساب <button className="btn fw-bold" onClick={()=>changeTo()}>تسجيل الدخول</button></p>
                 </form>
             </div>
             }
