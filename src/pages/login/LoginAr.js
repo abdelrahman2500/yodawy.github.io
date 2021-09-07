@@ -173,13 +173,13 @@ export default function LoginAr() {
                             <input type="text" className="form_input" placeholder=" " required value={signupUser} onChange={(e)=> setSignupUser(e.target.value)}/>
                             <label htmlFor="" className="form_label">اسم المستخدم</label>
                         </div>    
-                        <p className={`${signupUserValid} text-danger`}>اسم المستخدم يجبأن يكون أكثر من 3 حروف</p>
+                        <p className={`${signupUserValid} text-danger`}>اسم المستخدم يجب أن يكون أكثر من 3 حروف</p>
                         <p className={`${validMsg} text-danger`}>اسم المستخدم الذى أدخلته موجود بالفعل</p>
                         <div className="form_div">
                             <input type="password" className="form_input" placeholder=" " required value={signupPass} onChange={(e)=> setSignupPass(e.target.value)}/>
                             <label htmlFor="" className="form_label">الرقم السرى</label>
                         </div>   
-                        <p className={`${signupPassValid} text-danger`}>الرقم السرى يجبأن يكون أكثر من 3 حروف</p>
+                        <p className={`${signupPassValid} text-danger`}>الرقم السرى يجب أن يكون أكثر من 3 حروف</p>
                         <div className="form_div">
                             <input type="password" className="form_input" placeholder=" " required value={signupPassRe} onChange={(e)=> setSignupPassRe(e.target.value)}/>
                             <label htmlFor="" className="form_label">أعد الرقم السرى</label>
