@@ -129,81 +129,81 @@ export default function LoginAr() {
     }
 
     return (
-        <div>
-        {localStorage.getItem("logged") == "true" ? 
-        <div>
-            <NavbarAr compo={true}/>
-            <div className="my-5 text-center ">
-                <h2>مرحبا {localStorage.getItem("username")}</h2>
-                <h3 className="my-5 py-5">لقد سجلت الدخول .. عُد إلى <Link to="/">الصفحة الرئيسية</Link></h3>
-                {localStorage.getItem("role") == "seller" ? <button className="btn btn-light mx-2"><Link to="/addproduct">أضف منتج</Link></button>: ""}
-                <button className="btn btn-danger" onClick={()=> logout()}>تسجيل الخروج</button>
-            </div>
-            <FooterAr />
-        </div>:
+        <div className="login-ar">
+            {localStorage.getItem("logged") == "true" ? 
+            <div>
+                <NavbarAr compo={true}/>
+                <div className="my-5 text-center ">
+                    <h2>مرحبا {localStorage.getItem("username")}</h2>
+                    <h3 className="my-5 py-5">لقد سجلت الدخول .. عُد إلى <Link to="/">الصفحة الرئيسية</Link></h3>
+                    {localStorage.getItem("role") == "seller" ? <button className="btn btn-light mx-2"><Link to="/addproduct">أضف منتج</Link></button>: ""}
+                    <button className="btn btn-danger" onClick={()=> logout()}>تسجيل الخروج</button>
+                </div>
+                <FooterAr />
+            </div>:
 
-        <div className="login-signup">
-        <NavbarAr compo={true} />
-            {login ? 
-            <div className="l-from my-5 ">
-                <form action="" className="form">
-                    <h1 className="form_title">تسجيل الدخول</h1>
+            <div className="login-signup">
+            <NavbarAr compo={true} />
+                {login ? 
+                <div className="l-from my-5 ">
+                    <form action="" className="form">
+                        <h1 className="form_title">تسجيل الدخول</h1>
 
-                    <div className="form_div">
-                        <input type="text" className="form_input" placeholder=" " value={loginUser} onChange={(e)=> setLoginUser(e.target.value)}/>
-                        <label htmlFor="" className="form_label">اسم المستخدم</label>
-                    </div>    
-                        <p className={`${loginUserValid} text-danger`}>اسم المستخدم الذى أدخلته غير صحيح</p>
+                        <div className="form_div">
+                            <input type="text" className="form_input" placeholder=" " value={loginUser} onChange={(e)=> setLoginUser(e.target.value)}/>
+                            <label htmlFor="" className="form_label">اسم المستخدم</label>
+                        </div>    
+                            <p className={`${loginUserValid} text-danger`}>اسم المستخدم الذى أدخلته غير صحيح</p>
 
-                    <div className="form_div">
-                        <input type="password" className="form_input" placeholder=" " value={loginPass} onChange={(e)=> setLoginPass(e.target.value)}/>
-                        <label htmlFor="" className="form_label">الرقم السرى</label>
-                    </div>    
-                    <p className={`${loginPassValid} text-danger`}>الرقم السرى الذى أدخلته غير صحيح</p>
-                    <input type="button" className="form_button mb-3" value="Login" onClick={()=>loginValidation()} />
+                        <div className="form_div">
+                            <input type="password" className="form_input" placeholder=" " value={loginPass} onChange={(e)=> setLoginPass(e.target.value)}/>
+                            <label htmlFor="" className="form_label">الرقم السرى</label>
+                        </div>    
+                        <p className={`${loginPassValid} text-danger`}>الرقم السرى الذى أدخلته غير صحيح</p>
+                        <input type="button" className="form_button mb-3" value="Login" onClick={()=>loginValidation()} />
 
-                    <p>لا تملك حساب <button className="btn fw-bold" onClick={()=>changeTo()}>مستخدم جديد</button></p>
-                </form>
-            </div> : 
-            <div className="l-from my-5">
-                <form action="" className="form">
-                    <h1 className="form_title">تسجيل</h1>
+                        <p>لا تملك حساب <button className="btn fw-bold" onClick={()=>changeTo()}>مستخدم جديد</button></p>
+                    </form>
+                </div> : 
+                <div className="l-from my-5">
+                    <form action="" className="form">
+                        <h1 className="form_title">تسجيل</h1>
 
-                    <div className="form_div">
-                        <input type="text" className="form_input" placeholder=" " required value={signupUser} onChange={(e)=> setSignupUser(e.target.value)}/>
-                        <label htmlFor="" className="form_label">اسم المستخدم</label>
-                    </div>    
-                    <p className={`${signupUserValid} text-danger`}>اسم المستخدم الذى أدخلته غير صحيح</p>
-                    <p className={`${validMsg} text-danger`}>اسم المستخدم الذى أدخلته موجود بالفعل</p>
-                    <div className="form_div">
-                        <input type="password" className="form_input" placeholder=" " required value={signupPass} onChange={(e)=> setSignupPass(e.target.value)}/>
-                        <label htmlFor="" className="form_label">الرقم السرى</label>
-                    </div>   
-                    <p className={`${signupPassValid} text-danger`}>الرقم السرى الذى أدخلته غير صحيح</p>
-                    <div className="form_div">
-                        <input type="password" className="form_input" placeholder=" " required value={signupPassRe} onChange={(e)=> setSignupPassRe(e.target.value)}/>
-                        <label htmlFor="" className="form_label">أعد الرقم السرى</label>
-                    </div>  
-                    <p className={`${signupPassReValid} text-danger`}>الرقم السرى الذى ادخلته لا يطابق الرقم الذى أدخلته</p>
-                    <div className="form-check">
-                        <input type="radio" className="form-check-input" id="validationFormCheck2" name="radio-stacked" required   onChange={(e)=> e.target.value == "on" ? setRadio("seller"):""}/>
-                        <label className="form-check-label" htmlFor="validationFormCheck2">بائع و مشترى</label>
-                    </div>
-                    <div className="form-check mb-3">
-                        <input type="radio" className="form-check-input" id="validationFormCheck3" name="radio-stacked" required  onChange={(e)=> e.target.value == "on" ? setRadio("buyer"):""}/>
-                        <label className="form-check-label" htmlFor="validationFormCheck3">مشترى فقط</label>
-                    </div>
-                    <p className={`${radioValid} text-danger`}>يجب ان تختار واحدا منهم</p>
+                        <div className="form_div">
+                            <input type="text" className="form_input" placeholder=" " required value={signupUser} onChange={(e)=> setSignupUser(e.target.value)}/>
+                            <label htmlFor="" className="form_label">اسم المستخدم</label>
+                        </div>    
+                        <p className={`${signupUserValid} text-danger`}>اسم المستخدم الذى أدخلته غير صحيح</p>
+                        <p className={`${validMsg} text-danger`}>اسم المستخدم الذى أدخلته موجود بالفعل</p>
+                        <div className="form_div">
+                            <input type="password" className="form_input" placeholder=" " required value={signupPass} onChange={(e)=> setSignupPass(e.target.value)}/>
+                            <label htmlFor="" className="form_label">الرقم السرى</label>
+                        </div>   
+                        <p className={`${signupPassValid} text-danger`}>الرقم السرى الذى أدخلته غير صحيح</p>
+                        <div className="form_div">
+                            <input type="password" className="form_input" placeholder=" " required value={signupPassRe} onChange={(e)=> setSignupPassRe(e.target.value)}/>
+                            <label htmlFor="" className="form_label">أعد الرقم السرى</label>
+                        </div>  
+                        <p className={`${signupPassReValid} text-danger`}>الرقم السرى الذى ادخلته لا يطابق الرقم الذى أدخلته</p>
+                        <div className="form-check">
+                            <input type="radio" className="form-check-input" id="validationFormCheck2" name="radio-stacked" required   onChange={(e)=> e.target.value == "on" ? setRadio("seller"):""}/>
+                            <label className="form-check-label" htmlFor="validationFormCheck2">بائع و مشترى</label>
+                        </div>
+                        <div className="form-check mb-3">
+                            <input type="radio" className="form-check-input" id="validationFormCheck3" name="radio-stacked" required  onChange={(e)=> e.target.value == "on" ? setRadio("buyer"):""}/>
+                            <label className="form-check-label" htmlFor="validationFormCheck3">مشترى فقط</label>
+                        </div>
+                        <p className={`${radioValid} text-danger`}>يجب ان تختار واحدا منهم</p>
 
-                    <input type="button" className="form_button mb-3" value="Sign Up" onClick={()=> signUpValidation()}/>
+                        <input type="button" className="form_button mb-3" value="Sign Up" onClick={()=> signUpValidation()}/>
 
-                    <p>أنت تملك حساب <button className="btn fw-bold" onClick={()=>changeTo()}>تسجيل الدخول</button></p>
-                </form>
+                        <p>أنت تملك حساب <button className="btn fw-bold" onClick={()=>changeTo()}>تسجيل الدخول</button></p>
+                    </form>
+                </div>
+                }
+                <FooterAr />
             </div>
             }
-            <FooterAr />
-        </div>
-        }
         </div>
     )
 }

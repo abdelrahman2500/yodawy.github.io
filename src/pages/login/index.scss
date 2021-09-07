@@ -73,6 +73,7 @@
                 font-size: .75rem;
                 font-weight: 500;
                 z-index: 10;
+                width: fit-content;
             }
             
             /* Input Focus sticky top label */
@@ -90,8 +91,16 @@
             }
         }
     }
-    
-
-    
-    
+}
+.login-ar{
+    .form_label{
+        position:absolute;
+        right: 1rem;
+        top: 1rem;
+        padding: 0 .25rem;
+        background-color: #fff;
+        color: #80868B;
+        font-size:1rem;
+        transition: .3s;
+    }
 }
