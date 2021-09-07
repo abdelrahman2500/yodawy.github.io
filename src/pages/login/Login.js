@@ -175,13 +175,13 @@ export default function Login() {
                         <input type="text" className="form_input" placeholder=" " required value={signupUser} onChange={(e)=> setSignupUser(e.target.value)}/>
                         <label htmlFor="" className="form_label">Username</label>
                     </div>    
-                    <p className={`${signupUserValid} text-danger`}>Username u enterd isn't valid</p>
+                    <p className={`${signupUserValid} text-danger`}>Username u enterd should be more than 3</p>
                         <p className={`${validMsg} text-danger`}>Username u enterd is already exists</p>
                     <div className="form_div">
                         <input type="password" className="form_input" placeholder=" " required value={signupPass} onChange={(e)=> setSignupPass(e.target.value)}/>
                         <label htmlFor="" className="form_label">Password</label>
                     </div>   
-                    <p className={`${signupPassValid} text-danger`}>Password u enterd isn't valid</p>
+                    <p className={`${signupPassValid} text-danger`}>Password u enterd should be more than 3</p>
                     <div className="form_div">
                         <input type="password" className="form_input" placeholder=" " required value={signupPassRe} onChange={(e)=> setSignupPassRe(e.target.value)}/>
                         <label htmlFor="" className="form_label">repeat Password</label>
